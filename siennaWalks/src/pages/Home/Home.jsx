@@ -1,7 +1,8 @@
-
+import { useContext } from 'react';
 import './Home.css';  
+import { StoreContext } from '../../context/StoreContext';
 
-function Home() {
+function Home() {    
 return (
     <div className="home">
     <h1>Hola Mundo</h1>  

@@ -1,16 +1,10 @@
-import Header from './components/Header/Header';  
-import Footer from './components/Footer/Footer';  
-import Home from './pages/Home/Home';
 import '../src/global.css';            
+import AppContext from './context/AppContext';
 
 function App() {
-  
+
   return (
-    <div className="App">
-      <Header />   
-      <Home />     
-      <Footer />   
-    </div>
+        <AppContext/>
   );
 }
 
