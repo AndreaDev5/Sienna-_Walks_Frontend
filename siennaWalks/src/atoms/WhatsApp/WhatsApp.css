@@ -1,0 +1,13 @@
+.whatsApp-icon{
+    width: 3.2rem;
+    height: 3.2rem;   
+    position: fixed;
+    left: 86%;
+    top: 89%;
+}
+
+.whatsApp-icon img{
+    width: 100%;
+    height: 100%;
+}
+

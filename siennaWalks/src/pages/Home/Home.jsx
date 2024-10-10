@@ -1,12 +1,18 @@
-import { useContext } from 'react';
+import Collections from '../../components/Collections/Collections';
+import Hero from '../../components/Hero/Hero';
+import LastRelease from '../../components/LastRelease/LastRelease';
 import './Home.css';  
-import { StoreContext } from '../../context/StoreContext';
 
-function Home() {    
+
+function Home() {
 return (
-    <div className="home">
-    <h1>Hola Mundo</h1>  
-    </div>
+    <>
+        <Hero/>
+        <main className='home-container'>
+            <Collections/>
+            <LastRelease/>
+        </main>
+    </>
 );
 }
 

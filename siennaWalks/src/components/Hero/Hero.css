@@ -1,0 +1,128 @@
+@import url('../../global.css');
+
+.hero{
+    height: 56.8rem;
+    background-image: url('../../assets/images/background-sienna-cellphone.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    color: var(--first-white);
+}
+
+.hero .button-burguer{
+    width: 3rem;
+    height: 3rem;
+    margin-left: auto;
+    position: relative;
+}
+
+.button-burguer .button-first-line{
+    width: 24px;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: 6px;
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+.button-burguer .button-first-line-change{
+    width: 2.7rem;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: 1.2rem;
+    left: 2px;
+    transform: rotate(45deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+.button-burguer .button-second-line{
+    width: 24px;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: calc( 50% - 0.1rem);
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;    
+}
+
+.button-burguer .button-second-line-change{
+    width: 1.75rem;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    background: var(--first-white);
+    opacity: 0;
+    position: absolute;
+    top: calc( 50% - 0.1rem);
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;    
+}
+
+.button-burguer .button-third-line{
+    width: 24px;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: 2.2rem;
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+.button-burguer .button-third-line-change{
+    width: 2.7rem;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: 1.2rem;
+    left: 2px;
+    transform: rotate(-45deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+.hero-logo-sienna{
+    width: 16rem;
+    margin: 0 auto;
+    margin-top: 13rem;
+}
+
+.hero-logo-cta{
+    margin-top: 5.4rem;
+    font-size: 2.4rem;
+    font-family:  "Caveat", cursive;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero .hero-whatsapp-contact{
+    width: 70%;
+    height: 3.2rem;
+    background: var(--second-white);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--line-gray)
+}
