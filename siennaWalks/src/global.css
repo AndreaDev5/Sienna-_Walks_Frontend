@@ -40,5 +40,13 @@ body{
   font-style: normal;
 
   font weights: 400,500,600,700
+
+
+  .playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 }
  */

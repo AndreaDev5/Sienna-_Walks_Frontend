@@ -7,7 +7,7 @@ const initialData =[{
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
         thirdColor: "#673D25",
-        fourthColor: "C82C4C"
+        fourthColor: "#C82C4C"
     }
 },
 {
@@ -19,7 +19,7 @@ const initialData =[{
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
         thirdColor: "#673D25",
-        fourthColor: "C82C4C"
+        fourthColor: "#C82C4C"
     }
 },{
     id: 3,
@@ -81,7 +81,7 @@ const initialData =[{
 },
 { 
     id: 8,
-    collection: 'Colección 1',
+    collection: 'Opulence Sauvage',
     shoesName: 'Nombre de Zapato',
     shoesPrice: 300000,
     shoeStoreColors:{
@@ -93,7 +93,7 @@ const initialData =[{
 },
 { 
     id: 9,
-    collection: 'Colección 3',
+    collection: 'Noir Élégance',
     shoesName: 'Nombre de Zapato',
     shoesPrice: 300000,
     shoeStoreColors:{
@@ -105,7 +105,7 @@ const initialData =[{
 },
 { 
     id: 10,
-    collection: 'Colección 4',
+    collection: 'Ciel de Minuit',
     shoesName: 'Nombre de Zapato',
     shoesPrice: 300000,
     shoeStoreColors:{
@@ -117,7 +117,7 @@ const initialData =[{
 },
 { 
     id: 11,
-    collection: 'Colección 3',
+    collection: 'Opulence Sauvage',
     shoesName: 'Nombre de Zapato',
     shoesPrice: 300000,
     shoeStoreColors:{
@@ -129,7 +129,7 @@ const initialData =[{
 },
 { 
     id: 12,
-    collection: 'Colección 4',
+    collection: 'Velours Divin',
     shoesName: 'Nombre de Zapato',
     shoesPrice: 300000,
     shoeStoreColors:{

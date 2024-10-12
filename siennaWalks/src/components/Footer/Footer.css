@@ -1,0 +1,88 @@
+@import url('../../global.css');
+
+.footer-container{
+    width: 90%;
+    margin: 0 auto;
+    background: var(--first-white);
+    color: var(--black-font);
+}
+
+.footer .footer-recommended-links{
+    width: 16rem;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-tittle{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 2.4rem;
+}
+
+.footer-recommended-links a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--black-font);
+    margin-top: 2.4rem;
+}
+
+.footer-sinnea-tittle{
+    font-size: 2rem;
+}
+
+.footer .footer-nequi{
+    display: block;
+    width: 8rem;
+    height: 2.4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;   
+}
+
+.footer .footer-daviplata{
+    display: block;
+    width: 9rem;
+    height: 3rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+}
+
+.footer .footer-sienna-tittle{
+    text-align: center;
+    margin-top: 4.4rem;
+    font-size: 2.4rem;
+    font-family: "Playfair Display", serif;
+}
+
+.footer .footer-credits p:first-child{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 2.4rem;
+}
+
+.footer .footer-sienna-developers{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 2.4rem;
+    display: flex;
+    text-align: center;
+    margin-top: 2.4rem;
+    margin: 0 auto;
+    width: 24rem;
+}
+
+
+.footer .footer-sienna-developers a{
+    color: var(--black-font);
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.footer .footer-location{
+    text-align: center;
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+}

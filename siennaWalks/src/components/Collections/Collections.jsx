@@ -8,6 +8,7 @@ const CollectionItem = ({image,collectionName,collectionDescription,collectionLi
 
     useLayoutEffect(()=>{
       const collectionItemNode = collectionItem.current;
+      console.log(collectionItemNode);
       collectionItemNode.style.backgroundImage = image;
     },[])
 
@@ -57,7 +58,7 @@ const Collections = () => {
         <CollectionItem
           collectionLink='./colecciones/opulence-sauvage'
           image='url(src/assets/images/coleccion-5.png)'
-          collectionName='Opulence Sauvage'
+          collectionName='Ciel de Minuit'
           collectionDescription='Una fusión entre la elegancia salvaje y la opulencia moderna'
           />
          <CollectionItem

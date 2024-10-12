@@ -4,8 +4,9 @@ import ShoeStoreTarget from '../../atoms/ShoeStoreTarget/ShoeStoreTarget';
 import { initialData } from './initialData';
 import { Link } from 'react-router-dom';
 
-export default function LastRelease() {
+export default function LastRelease(){
   const [provisionalData,setProvisionalData] = useState([]);  
+
   useEffect(()=>{
     const data = { initialData }
     setProvisionalData(data)      
