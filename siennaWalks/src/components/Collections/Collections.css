@@ -72,3 +72,19 @@
     overflow-x: auto;
     width: auto;
 }
+
+@media only screen and (min-width: 568px){
+    .collections-tittle h1{
+        font-size: 3.6rem;
+        width: 13.4rem;
+        font-weight: 400;
+    }
+
+    .collections .collections-tittle-line{
+        width: 16.4rem;
+    }
+    
+    .collections .collection-item{
+        width: 25.2rem;
+    }
+}

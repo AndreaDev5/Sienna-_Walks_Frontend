@@ -8,7 +8,6 @@ const CollectionItem = ({image,collectionName,collectionDescription,collectionLi
 
     useLayoutEffect(()=>{
       const collectionItemNode = collectionItem.current;
-      console.log(collectionItemNode);
       collectionItemNode.style.backgroundImage = image;
     },[])
 

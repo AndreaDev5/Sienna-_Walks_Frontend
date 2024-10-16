@@ -1,0 +1,144 @@
+.sienna-collections-links{
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 15.4rem;
+    height: 3.2rem;
+    border: 1px solid var(--black-font);
+    padding: .6rem;  
+    border-radius: .4rem;
+    overflow-y: hidden;
+    background: var(--first-white);
+    transition: all 1.2s ease;
+    position: relative;
+}
+
+.sienna-collections-links-extended{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 15.4rem;
+    height: 23.5rem;
+    border: 1px solid var(--black-font);
+    padding: .6rem;  
+    border-radius: .4rem;
+    overflow-y: hidden;
+    transition: all 1.2s ease;
+    position: relative;
+}
+
+
+.sienna-collections-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sienna-collections-button p{
+    font-size: 1.6rem;
+}
+
+.sienna-collections-button .up-arrow{
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    transform: rotate(0deg);
+    transition-duration: 1.2s;
+}
+
+.sienna-collections-button .down-arrow{
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    transform: rotate(-180deg);
+    transition-duration: 1.2s;
+}
+
+
+.sienna-links{
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    width: 100%;
+    transition: all 1.5rem ease;
+}
+
+.sienna-links-extended{
+    display: flex;
+    flex-direction: column;
+    height: 19.2rem;
+    width: 100%;
+    transition: all 1.5rem ease;
+}
+
+.sienna-links a,.sienna-links-extended a{
+    display: flex;
+    width: 100%;
+    font-family: "Caveat", cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--black-font);
+    justify-content: space-between;
+}
+
+.sienna-links a > span,.sienna-links-extended a > span{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: block;
+    background-size: cover;
+}
+
+.sienna-links a:first-child,.sienna-links-extended a:first-child{
+    margin-top: 1.2rem;
+}
+
+.sienna-links a:first-child > span, .sienna-links-extended a:first-child > span{
+    background-image: url('../../assets/images/coleccion-1.jpg');
+}
+
+.sienna-links a:nth-child(2),.sienna-links-extended a:nth-child(2),
+.sienna-links a:nth-child(3),.sienna-links-extended a:nth-child(3),
+.sienna-links a:nth-child(4),.sienna-links-extended a:nth-child(4),
+.sienna-links a:nth-child(5),.sienna-links-extended a:nth-child(5),
+.sienna-links a:nth-child(6),.sienna-links-extended a:nth-child(6),
+.sienna-links a:nth-child(7),.sienna-links-extended a:nth-child(7){
+    margin-top: .8rem;
+}
+
+.sienna-links a:nth-child(2) > span,.sienna-links-extended a:nth-child(2) > span{
+    background-image: url('../../assets/images/coleccion-2.jpg');
+}
+
+
+.sienna-links a:nth-child(3) > span,.sienna-links-extended a:nth-child(3) > span{
+    background-image: url('../../assets/images/coleccion-3.jpg');
+}
+
+.sienna-links a:nth-child(4) > span,.sienna-links-extended a:nth-child(4) > span{
+    background-image: url('../../assets/images/coleccion-4.jpg');
+}
+
+.sienna-links a:nth-child(5) > span,.sienna-links-extended a:nth-child(5) > span{
+    background-image: url('../../assets/images/coleccion-5.png');
+}
+
+.sienna-links a:nth-child(6) > span, .sienna-links-extended a:nth-child(6) > span{
+    background-image: url('../../assets/images/coleccion-6.png');
+}
+
+.sienna-links a:nth-child(7) > span, .sienna-links-extended a:nth-child(7) > span {
+    background-image: url('../../assets/images/coleccion-7.png');
+}
+
+@media only screen and (min-width: 568px){
+    .sienna-collections-links{
+        order: 1;
+        margin: 0;
+    }
+}

@@ -31,7 +31,7 @@
 }
 
 .link-all-products{
-    width: 70%;
+    width: 22.2rem;
     height: 3.2rem;
     background: var(--second-white);
     color: var(--black-font);
@@ -45,4 +45,22 @@
     text-decoration: none;
     font-weight: 500;
     border: 1px solid var(--line-gray);
+}
+
+@media only screen and (min-width: 568px){
+    .releases-tittle h1{
+        font-size: 3.6rem;
+        font-weight: 400;
+        width: 36rem;
+    }
+
+    .releases .releases-tittle-line{
+        width: 13.4rem;
+    }
+
+    .release-products-container{
+        display: grid;
+        grid-template: repeat(6,1fr)/repeat(2,1fr);
+        gap: 1.2rem;
+    }
 }

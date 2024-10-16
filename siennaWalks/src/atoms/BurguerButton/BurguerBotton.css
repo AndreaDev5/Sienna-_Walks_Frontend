@@ -1,0 +1,93 @@
+.button-burguer{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 86%;
+    top: 16px;
+    z-index: 2;
+}
+
+.button-burguer .button-first-line{
+    width: 24px;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: 6px;
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+.button-burguer .button-first-line-change{
+    width: 2.7rem;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--black-font);
+    position: absolute;
+    top: 1.2rem;
+    left: 2px;
+    transform: rotate(45deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+.button-burguer .button-second-line{
+    width: 24px;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: calc( 50% - 0.1rem);
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;    
+}
+
+.button-burguer .button-second-line-change{
+    width: 1.75rem;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    background: var(--first-white);
+    opacity: 0;
+    position: absolute;
+    top: calc( 50% - 0.1rem);
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;    
+}
+
+.button-burguer .button-third-line{
+    width: 24px;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--first-white);
+    position: absolute;
+    top: 2.2rem;
+    left: calc( 50% - 0.875rem);
+    transform: rotate(0deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+.button-burguer .button-third-line-change{
+    width: 2.7rem;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background: var(--black-font);
+    position: absolute;
+    top: 1.2rem;
+    left: 2px;
+    transform: rotate(-45deg);
+    transition-duration: .8s;
+    transition-timing-function: ease-in;
+}
+
+@media only screen and (min-width: 568px) {
+    .button-burguer {
+      left: 90%;
+    }
+  }

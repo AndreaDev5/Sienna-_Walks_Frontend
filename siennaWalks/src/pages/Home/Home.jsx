@@ -7,10 +7,9 @@ import LastRelease from '../../components/LastRelease/LastRelease';
 import Promotions from '../../components/Promotions/Promotions';
 import './Home.css';  
 
-
 function Home() {
 return (
-    <React.Fragment>
+    <React.Fragment>   
         <Hero/>
         <main className='home-container'>
             <Collections/>

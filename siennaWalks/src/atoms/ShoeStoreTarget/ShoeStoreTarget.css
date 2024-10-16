@@ -36,3 +36,17 @@
 .shoe-store-target .shoe-store-price{
     color: #747272;
 }
+
+
+@media only screen and (min-width: 568px){
+    .shoe-store-target{
+        width: 26rem;
+        height: 41.2rem;
+        margin: 0;
+    }
+    
+    .shoe-store-image{
+        width: 20.4rem;
+        height: 24.8rem;
+    }    
+}
