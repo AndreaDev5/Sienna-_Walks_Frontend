@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutStore = () => {
   return (
-    <div>
+    <div className='About-me'>
       <h1>Acecar de Sienna Walks</h1>
     </div>
   )

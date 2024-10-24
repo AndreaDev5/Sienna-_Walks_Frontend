@@ -1,12 +1,11 @@
 :root{
     /*colores grises*/
-    --black-font: #565656;
+    --black-font: #2E2E2E;
     --line-gray: #A3A3A3;
     --first-white: #FEFEFE;
     --second-white: #F9F9F9;
     --light-gray-form: #ECECEC;
     --medium-button: #EEEEEE;
-
 }
 
 *{
@@ -39,5 +38,15 @@ body{
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+
+  font weights: 400,500,600,700
+
+
+  .playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 }
  */

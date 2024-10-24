@@ -1,0 +1,35 @@
+.whatsApp-icon{
+    width: 3.2rem;
+    height: 3.2rem;   
+    position: fixed;
+    left: 86%;
+    top: 89%;
+}
+
+.whatsApp-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 568px) {
+    .whatsApp-icon {
+      top: 80%;  
+      left: 90%;
+    }
+  }
+
+  @media only screen and (min-width: 744px){
+    .whatsApp-icon {
+      top: 75%;  
+      left: 93.5%;
+    }
+  }
+  
+  @media only screen and (min-width: 1133px){
+    .whatsApp-icon {
+      top: 75%;  
+      left: 93.5%;
+      width: 4rem;
+      height: 4rem;
+    }
+  }

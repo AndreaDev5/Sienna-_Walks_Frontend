@@ -1,0 +1,103 @@
+@import url('../../global.css');
+
+.hero{
+    height: 56.8rem;
+    background-image: url('../../assets/images/background-sienna-cellphone.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    color: var(--first-white);
+}
+
+.hero-logo-sienna{
+    width: 16rem;
+    margin: 0 auto;
+    margin-top: 13rem;
+}
+
+.hero-logo-cta{
+    margin-top: 5.4rem;
+    font-size: 2.4rem;
+    font-family:  "Caveat", cursive;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero .hero-whatsapp-contact{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--second-white);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--line-gray)
+}
+
+@media only screen and (min-width: 568px) {
+    .hero{
+        height: 32rem;
+        background-image: url('../../assets/images/background-sienna-tablet.jpg');
+    }
+
+    .hero-logo-sienna{
+        margin-top: 0;
+        width: 12rem;
+        height: 10rem;
+    }
+
+    .hero-logo-cta{
+        margin-top: 1.6rem;
+        width: 38rem;
+        margin: 0 auto;
+    }
+
+    .hero .hero-whatsapp-contact{
+        margin-top: 1.6rem;
+        max-width: 22.2rem;
+    }
+  }
+
+
+  @media only screen and (min-width: 744px){
+    .hero{
+        height: 60.9rem;
+    }
+
+    .hero-logo-sienna{
+        margin-top: 10rem;
+        height: 20.2rem;
+        width: 24rem;
+    }
+
+    .hero-logo-cta{
+        margin-top: 8.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 1133px){
+    .hero-logo-sienna{
+        margin-top: 2rem;
+    }
+
+    .hero-logo-cta{
+        margin-top: 0.8rem;
+        font-size: 2.8rem;
+        font-weight: 300;
+        width: 43rem;
+    }    
+  }  
+
+  @media only screen and (min-width: 1280px){
+        .hero{
+            height: 49.3rem;
+            background-image: url('../../assets/images/background-sienna-desktop.jpg');
+        }
+  }

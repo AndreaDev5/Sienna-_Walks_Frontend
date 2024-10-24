@@ -1,0 +1,17 @@
+.home-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+@media only screen and (min-width: 744px){
+    .home-container{
+        width: 95.6%;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .home-container{
+        width: 97.5%;
+    }
+}

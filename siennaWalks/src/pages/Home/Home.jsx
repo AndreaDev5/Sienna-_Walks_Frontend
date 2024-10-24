@@ -1,12 +1,23 @@
-import { useContext } from 'react';
-import './Home.css';  
-import { StoreContext } from '../../context/StoreContext';
+import React from 'react';
+import Collections from '../../components/Collections/Collections';
 
-function Home() {    
+import Form from '../../components/Form/Form';
+import Hero from '../../components/Hero/Hero';
+import LastRelease from '../../components/LastRelease/LastRelease';
+import Promotions from '../../components/Promotions/Promotions';
+import './Home.css';
+
+function Home() {
 return (
-    <div className="home">
-    <h1>Hola Mundo</h1>  
-    </div>
+    <React.Fragment>   
+        <Hero/>
+        <main className='home-container'>
+            <Collections/>
+            <LastRelease/>
+            <Promotions/>
+        </main>
+        <Form/>
+    </React.Fragment>
 );
 }
 

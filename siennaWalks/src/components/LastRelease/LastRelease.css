@@ -1,0 +1,102 @@
+@import url('../../global.css');
+
+.releases .releases-tittle{
+    display: flex;
+    font-size: 2.8rem;
+    font-family: "Caveat", cursive;
+    color: var(--brown-tittle);
+    align-items: center;
+    margin-top: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+    justify-content: space-around;
+}
+
+.releases .releases-tittle-line{
+    width: 5.4rem;
+    background: var(--black-font);
+    height: .1rem;
+}
+
+.releases-tittle h1{
+    width: 20rem;
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.release-products-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.link-all-products{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--second-white);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--line-gray);
+}
+
+@media only screen and (min-width: 568px){
+    .releases-tittle h1{
+        font-size: 3.6rem;
+        font-weight: 400;
+        width: 36rem;
+    }
+
+    .releases .releases-tittle-line{
+        width: 13.4rem;
+    }
+
+    .release-products-container{
+        display: grid;
+        grid-template: repeat(6,1fr)/repeat(2,1fr);
+        gap: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 744px){
+    .releases .releases-tittle{
+        width: 64.8rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+    }
+
+    .releases .releases-tittle-line{
+        width: 23.4rem;
+    }
+
+    .release-products-container{
+        justify-items: center;
+        width: 64.8rem;
+        margin: 0 auto;
+        gap: 2.8rem;
+        margin-top: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1133px){
+    .release-products-container{
+        grid-template: repeat(3,1fr)/repeat(4,1fr);
+        margin: 0 auto;
+        margin-top: 1.6rem;
+        gap: 1.6rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .release-products-container{
+        width: 118.8rem;
+    }
+}

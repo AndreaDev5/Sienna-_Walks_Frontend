@@ -1,0 +1,184 @@
+@import url('../../global.css');
+
+.sidebar{
+    background: var(--second-white);
+    color: var(--black-font);
+    height: 56.8rem;
+    left: 100%;
+    width: 100%;
+    transform: translateX(0px);
+    transition-delay: .2s; 
+    transition-duration: 1.2s;
+    transition-timing-function: ease-in-out;
+    position: fixed;
+}
+
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-change{
+    background: var(--second-white);
+    color: var(--black-font);
+    height: 56.8rem;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    transform: translateX(0px);
+    transition-delay: .2s; 
+    transition-duration: 1.2s;
+    transition-timing-function: ease-in-out;
+    position: fixed;
+}
+
+.sidebar-tittle{
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 3.4rem;
+    text-decoration: none;
+    display: block;
+    color: var(--black-font);
+}
+
+.sidebar-about-me,
+.sidebar-log-in,
+.sidebar-register{
+    font-size: 1.6rem;
+    text-align: center;
+    display: block;
+    margin-top: 2.4rem;
+    text-decoration: none;
+    color: var(--black-font);
+}
+
+.sidebar-overflow-buttons{
+    display: flex;
+    width: 3.6rem;
+    height: .8rem;
+    display: flex;
+    justify-content: space-between;
+   position: absolute;
+   top: 48.8rem;
+   left: calc( 50% - 1.8rem)
+}
+
+.sidebar-overflow-buttons .first-button,
+.sidebar-overflow-buttons .second-button{
+    height: .8rem;
+    width: .8rem;
+    border-radius: .4rem;
+    background: var(--line-gray); 
+}
+
+.sidebar-options-buttons{
+    width: 9.3rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 51.8rem;
+    left: calc( 50% - 4.65rem );
+}
+
+.sidebar-shoppping-cart{
+    position: relative;
+    z-index: 0;
+}
+
+.shopping-cart-marker{
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background: var(--black-font);
+    color: var(--first-white);
+    text-align: center;
+    align-content: center;
+    z-index: 1;
+    position: absolute;
+    top: -2px;
+    left: 18px;
+}
+
+@media only screen and (min-width: 568px) {
+    .sidebar, .sidebar-change{
+        padding: 1.6rem;
+        height: 32rem;
+    }
+    .sidebar-tittle{
+        margin-top: 0px;
+    }
+
+    .sidebar-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3.6rem;
+    }
+
+    .sidebar-about-me{
+        order: 2;
+        margin: 0;
+        align-self: flex-start;
+        margin-top: .8rem;
+    }
+
+    .sidebar-log-in{
+        order: 3;
+        margin: 0;
+        align-self: flex-start;
+        margin-top: .8rem;
+    }
+
+    .sidebar-register{
+        order: 4;
+        margin: 0;
+        align-self: flex-start;
+        margin-top: .8rem;
+    }
+
+
+    .sidebar-options-buttons{
+        top: 26.2rem;
+    }
+
+    .sidebar-overflow-buttons{
+        top: 23.8rem;
+    }
+  }
+
+
+  @media only screen and (min-width: 744px){  
+    .sidebar,.sidebar-change{
+        height: 113.3rem;
+        max-height: 74.4rem;
+    }
+
+    .sidebar-tittle{
+        margin-top: 9.4rem;
+    }
+
+    .sidebar-container{
+        flex-direction: column;
+        width: 15.4rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .sidebar-about-me,
+    .sidebar-log-in,
+    .sidebar-register{    
+        margin-top: 2.4rem;
+    }
+
+
+    .sidebar-options-buttons{
+        top: 59.4rem;
+    }
+
+    .sidebar-overflow-buttons{
+        top: 56.4rem;
+    }
+}
