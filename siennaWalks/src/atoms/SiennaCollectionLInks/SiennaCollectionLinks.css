@@ -15,6 +15,8 @@
 }
 
 .sienna-collections-links-extended{
+    margin: 0 auto;
+    margin-top: 3rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -26,6 +28,7 @@
     overflow-y: hidden;
     transition: all 1.2s ease;
     position: relative;
+    background: var(--first-white);
 }
 
 
@@ -137,8 +140,18 @@
 }
 
 @media only screen and (min-width: 568px){
-    .sienna-collections-links{
+    .sienna-collections-links,
+    .sienna-collections-links-extended{
         order: 1;
         margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .sienna-collections-links,
+    .sienna-collections-links-extended{
+        position: absolute;
+        top: 12px;
+        left: 211px;
     }
 }

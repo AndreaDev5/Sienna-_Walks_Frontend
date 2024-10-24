@@ -1,6 +1,8 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import './Collections.css';
 import { Link } from 'react-router-dom';
+import leftArrow from '../../assets/logos/chevron-left.svg';
+import rightArrow from '../../assets/logos/chevron-right.svg';
 
 const CollectionItem = ({image,collectionName,collectionDescription,collectionLink}) =>{
 
@@ -22,6 +24,39 @@ const CollectionItem = ({image,collectionName,collectionDescription,collectionLi
 } 
 
 const Collections = () => {
+  const containerRef = useRef(null);
+  
+  const onChangeRight = () =>{
+    /*saca el primer nodo*/
+    const firstNode = containerRef.current.firstChild;
+      
+    /*saco el ancho total del nodo*/ 
+    const totalScroll = firstNode.clientWidth * 3;
+  
+    /*obtener el contenedor*/ 
+    const containerRefNode = containerRef.current;
+    containerRefNode.scrollBy({
+      left:  totalScroll,
+      behavior: "smooth"  
+    })
+  }  
+  
+  const onChangeLeft = () =>{
+    /*saca el primer nodo*/
+    const firstNode = containerRef.current.firstChild;
+      
+    /*saco el ancho total del nodo*/ 
+    const totalScroll = firstNode.clientWidth * 3;
+  
+    /*obtener el contenedor*/ 
+    const containerRefNode = containerRef.current;
+
+    containerRefNode.scrollBy({
+      left: -totalScroll,
+      behavior: "smooth"  
+    })
+  }
+ 
   return (
     <section className='collections'>
       <article className='collections-tittle'>
@@ -29,8 +64,12 @@ const Collections = () => {
         <h1>Colecciones</h1>
         <div className='collections-tittle-line'></div>
       </article>
+      <section className='collection-grid'>
+      <figure className='collection-left-arrow' onClick={onChangeLeft}>
+        <img src={leftArrow}/>
+      </figure>    
       <div className='collection-container'>  
-      <div className='collection-set'>
+      <div className='collection-set' ref={containerRef}>
         <CollectionItem
           collectionLink='./colecciones/eclat-eternel'
           image='url(src/assets/images/coleccion-1.jpg)'
@@ -74,6 +113,10 @@ const Collections = () => {
           /> 
       </div>
       </div>
+      <figure className='collection-right-arrow' onClick={onChangeRight}>
+        <img src={rightArrow}/>
+      </figure>
+      </section>
     </section>
   )
 }

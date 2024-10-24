@@ -54,6 +54,7 @@
     margin-top: 1.2rem;
     width: 100%;
     border: none;
+    color: var(--first-white);
 }
 
 .form-sienna .form-cellphone input[type="text"]{
@@ -155,13 +156,43 @@
     .form-sienna .form-sienna-submit{
         grid-area: form-sienna-submit;
         justify-self: center;
-        
         margin-top: 0rem;
     }
 }
 
+@media only screen and (min-width: 744px){
+    .form-container{
+        padding: 1.6rem 0;
+    }
 
+    .form-sienna{
+        width: 57.7rem;
+        margin: 0 auto;
+    }
 
+    .form-container h1 + p{
+        font-size: 2rem;
+        width: 45.8rem;
+        margin: 0 auto;
+        margin-top: 2.4rem;
+    }
 
+    .form-container .form-sienna{
+        margin-top: 2.4rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .form-container{
+        padding: 2rem 0 3.6rem 0;
+    }
+    .form-container h1{
+        font-size: 3.6rem;
+    }
+
+    .form-container h1 + p{
+        margin-top: 1.6rem;
+    }
+}
 
 

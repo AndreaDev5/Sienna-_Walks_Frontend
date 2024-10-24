@@ -90,4 +90,16 @@
     .button-burguer {
       left: 90%;
     }
-  }
+}
+
+@media only screen and (min-width: 744px){
+    .button-burguer{
+        left: 93.5%;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .button-burguer{
+        display: none;
+    }
+}

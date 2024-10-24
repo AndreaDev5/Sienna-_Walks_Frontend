@@ -176,3 +176,28 @@
         margin-top: 1.4rem;
     }
 }
+
+
+@media only screen and (min-width: 744px){
+    .footer .footer-links-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-social-media .sienna-media-grid{
+        margin: 0;
+        margin-top: 2.4rem;
+    }
+
+    .footer .footer-nequi,.footer .footer-daviplata{
+        margin: 0;
+        margin-top: 2.4rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .footer{
+        width: 118.8rem;
+        margin: 0 auto;
+    }
+}

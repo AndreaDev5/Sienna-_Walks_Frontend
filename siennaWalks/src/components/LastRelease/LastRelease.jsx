@@ -9,7 +9,8 @@ export default function LastRelease(){
 
   useEffect(()=>{
     const data = { initialData }
-    setProvisionalData(data)      
+    setProvisionalData(data)
+
   },[])  
   
   let finalData = provisionalData.initialData;    

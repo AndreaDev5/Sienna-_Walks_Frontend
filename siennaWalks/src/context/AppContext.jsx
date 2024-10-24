@@ -12,6 +12,8 @@ import AdminDashboard from '../pages/AdminDashboard/AdminDashboard';
 import Whatsapp from '../atoms/WhatsApp/Whatsapp';
 import BurguerButton from '../atoms/BurguerButton/BurguerButton';
 import Sidebar from '../components/Sidebar/Sidebar';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
 
 const AppContext = () => {
   const [button,setButton] = React.useState(true);
@@ -21,29 +23,34 @@ const AppContext = () => {
     const onChangeBurguer = () =>{
       const burguerButtonNodes = buttonBurguerRef.current.querySelectorAll('div');
       const sidebarBurguerRefNodes = sidebarBurguerRef.current;
-
-      (button===true)?setButton(false):setButton(true)
+      let bodyClientWidth = document.body.clientWidth; 
+      console.log(bodyClientWidth)
+       
+      if(bodyClientWidth<1280){
+        (button===true)?setButton(false):setButton(true)
       
-      if(button){
-        burguerButtonNodes[0].classList.replace("button-first-line","button-first-line-change");
-        burguerButtonNodes[1].classList.replace("button-second-line","button-second-line-change");
-        burguerButtonNodes[2].classList.replace("button-third-line","button-third-line-change");
-        sidebarBurguerRefNodes.classList.replace("sidebar","sidebar-change");
-      }
-      else{
-        burguerButtonNodes[0].classList.replace("button-first-line-change","button-first-line");
-        burguerButtonNodes[1].classList.replace("button-second-line-change","button-second-line");
-        burguerButtonNodes[2].classList.replace("button-third-line-change","button-third-line");
-        sidebarBurguerRefNodes.classList.replace("sidebar-change","sidebar");
+        if(button){
+          burguerButtonNodes[0].classList.replace("button-first-line","button-first-line-change");
+          burguerButtonNodes[1].classList.replace("button-second-line","button-second-line-change");
+          burguerButtonNodes[2].classList.replace("button-third-line","button-third-line-change");
+          sidebarBurguerRefNodes.classList.replace("sidebar","sidebar-change");
+        }
+        else{
+          burguerButtonNodes[0].classList.replace("button-first-line-change","button-first-line");
+          burguerButtonNodes[1].classList.replace("button-second-line-change","button-second-line");
+          burguerButtonNodes[2].classList.replace("button-third-line-change","button-third-line");
+          sidebarBurguerRefNodes.classList.replace("sidebar-change","sidebar");
+        }
       }
     }
 
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeBurguer}}> 
         <BrowserRouter>
-          <BurguerButton/>
-          <Whatsapp/>
-          <Sidebar/>
+        <BurguerButton/>
+        <Whatsapp/>
+        <Sidebar/>
+        <Header/>
             <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/colecciones'>
@@ -62,7 +69,8 @@ const AppContext = () => {
             <Route path='/perfil' element={<UserProfile/>}/>
             <Route path="/editar-perfil" element={<EditUSerProflie/>}/>    
             <Route path='/admin' element={<AdminDashboard/>}/>
-            </Routes>  
+            </Routes>
+          <Footer/>
         </BrowserRouter>
     </StoreContext.Provider>
   )

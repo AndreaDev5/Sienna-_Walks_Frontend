@@ -73,7 +73,16 @@
     width: auto;
 }
 
+.collections .collection-left-arrow,
+.collections .collection-right-arrow{
+    display: none;
+}
+
 @media only screen and (min-width: 568px){
+    .collections .collection-item{
+        width: 25.2rem;
+    }
+
     .collections-tittle h1{
         font-size: 3.6rem;
         width: 13.4rem;
@@ -84,7 +93,81 @@
         width: 16.4rem;
     }
     
+}
+
+@media only screen and (min-width: 744px){
+    .collections .collections-tittle{
+        margin: 0 auto;
+        margin-top: 1.6rem;
+        width: 64.8rem;
+    }
+
+    .collections .collections-tittle-line{
+        width: 23rem;
+    }
+
+    .collections .collection-container{
+        margin-top: 1.6rem;
+        height: 32.1rem;
+    }
+
     .collections .collection-item{
-        width: 25.2rem;
+        width: 28.2rem;
+        height: 32.1rem;
     }
 }
+
+@media only screen and (min-width: 1280px){
+    .collections .collection-container{
+        width: 112.8rem;
+        height: 34.1rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+    }
+
+    .collections .collection-grid{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 124.8rem;
+        margin: 0 auto;
+    }
+
+    .collections .collection-set{
+        height: 34.1rem;
+        width: 120rem;
+        width: auto;
+    }
+
+    .collections .collection-left-arrow,
+    .collections .collection-right-arrow{
+        display: flex;
+        align-content: center;
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .collections .collection-item{
+        width: 28.2rem;
+        height: 32.1rem;
+    }
+
+    .collections ::-webkit-scrollbar {
+        width: 100%; /* Ancho de la barra de desplazamiento */
+        height: 1.2rem; /* Altura de la barra de desplazamiento horizontal */
+        border-radius: .6rem;
+        background-color: var(--second-white);
+      }
+    
+      .collections ::-webkit-scrollbar-thumb{
+        height: 100%;
+        border-radius: .6rem;
+        background-color: #e7e7e7;
+      }
+
+      .collections .collection-item-description{
+        height: 11rem;
+      }
+}
+
+

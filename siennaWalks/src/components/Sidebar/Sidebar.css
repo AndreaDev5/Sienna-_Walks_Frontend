@@ -148,3 +148,37 @@
         top: 23.8rem;
     }
   }
+
+
+  @media only screen and (min-width: 744px){  
+    .sidebar,.sidebar-change{
+        height: 113.3rem;
+        max-height: 74.4rem;
+    }
+
+    .sidebar-tittle{
+        margin-top: 9.4rem;
+    }
+
+    .sidebar-container{
+        flex-direction: column;
+        width: 15.4rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .sidebar-about-me,
+    .sidebar-log-in,
+    .sidebar-register{    
+        margin-top: 2.4rem;
+    }
+
+
+    .sidebar-options-buttons{
+        top: 59.4rem;
+    }
+
+    .sidebar-overflow-buttons{
+        top: 56.4rem;
+    }
+}

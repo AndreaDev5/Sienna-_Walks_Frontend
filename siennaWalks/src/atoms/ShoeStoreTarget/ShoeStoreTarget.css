@@ -50,3 +50,36 @@
         height: 24.8rem;
     }    
 }
+
+@media only screen and (min-width: 744px){
+    .shoe-store-target{
+        width: 28.2rem;
+        height: 43rem;
+        margin: 0;
+    }
+
+    .shoe-store-image{
+        width: 25.4rem;
+        height: 29.8rem;
+    }
+}
+
+@media only screen and (min-width: 1133px){
+    .shoe-store-target{
+        width: 26.3rem;
+        height: 41rem;
+        margin: 0;
+    }
+
+    .shoe-store-image{
+        width: 22.5rem;
+        height: 25.2rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .shoe-store-target{
+        width: 28.2rem;
+        height: 43rem;
+    }
+}

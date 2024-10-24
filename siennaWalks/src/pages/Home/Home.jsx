@@ -1,11 +1,11 @@
 import React from 'react';
 import Collections from '../../components/Collections/Collections';
-import Footer from '../../components/Footer/Footer';
+
 import Form from '../../components/Form/Form';
 import Hero from '../../components/Hero/Hero';
 import LastRelease from '../../components/LastRelease/LastRelease';
 import Promotions from '../../components/Promotions/Promotions';
-import './Home.css';  
+import './Home.css';
 
 function Home() {
 return (
@@ -17,7 +17,6 @@ return (
             <Promotions/>
         </main>
         <Form/>
-        <Footer/>
     </React.Fragment>
 );
 }

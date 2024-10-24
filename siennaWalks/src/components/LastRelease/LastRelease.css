@@ -64,3 +64,39 @@
         gap: 1.2rem;
     }
 }
+
+@media only screen and (min-width: 744px){
+    .releases .releases-tittle{
+        width: 64.8rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+    }
+
+    .releases .releases-tittle-line{
+        width: 23.4rem;
+    }
+
+    .release-products-container{
+        justify-items: center;
+        width: 64.8rem;
+        margin: 0 auto;
+        gap: 2.8rem;
+        margin-top: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1133px){
+    .release-products-container{
+        grid-template: repeat(3,1fr)/repeat(4,1fr);
+        margin: 0 auto;
+        margin-top: 1.6rem;
+        gap: 1.6rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .release-products-container{
+        width: 118.8rem;
+    }
+}

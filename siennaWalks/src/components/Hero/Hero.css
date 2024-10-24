@@ -64,3 +64,40 @@
         max-width: 22.2rem;
     }
   }
+
+
+  @media only screen and (min-width: 744px){
+    .hero{
+        height: 60.9rem;
+    }
+
+    .hero-logo-sienna{
+        margin-top: 10rem;
+        height: 20.2rem;
+        width: 24rem;
+    }
+
+    .hero-logo-cta{
+        margin-top: 8.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 1133px){
+    .hero-logo-sienna{
+        margin-top: 2rem;
+    }
+
+    .hero-logo-cta{
+        margin-top: 0.8rem;
+        font-size: 2.8rem;
+        font-weight: 300;
+        width: 43rem;
+    }    
+  }  
+
+  @media only screen and (min-width: 1280px){
+        .hero{
+            height: 49.3rem;
+            background-image: url('../../assets/images/background-sienna-desktop.jpg');
+        }
+  }
