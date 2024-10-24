@@ -4,8 +4,8 @@ import Collections from '../../components/Collections/Collections';
 import Form from '../../components/Form/Form';
 import Hero from '../../components/Hero/Hero';
 import LastRelease from '../../components/LastRelease/LastRelease';
-import Promotions from '../../components/Promotions/Promotions';
 import './Home.css';
+import PersonalizeShoes from '../../components/PersonalizeShoes/PersonalizeShoes';
 
 function Home() {
 return (
@@ -14,8 +14,8 @@ return (
         <main className='home-container'>
             <Collections/>
             <LastRelease/>
-            <Promotions/>
         </main>
+        <PersonalizeShoes/>
         <Form/>
     </React.Fragment>
 );
