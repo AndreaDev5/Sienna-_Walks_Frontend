@@ -1,0 +1,87 @@
+@import url('../../global.css');
+
+.personalize-shoes{
+    width: 100%;
+    height: 56.8rem;
+    background-image: url('../../assets/images/background-personalize-cellphone.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-top: 1.6rem;
+    font-weight: 300;
+}
+
+.personalize-shoes .personalize-shoes-container{
+    width: 26.7rem;
+    height: 20.6rem;
+    margin: 0 auto;
+}
+
+.personalize-shoes-container h3{
+    font-family: "Caveat", cursive;
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--first-white);
+}
+
+.personalize-shoes-container .personalize-shoes-whatsapp{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--second-white);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--line-gray);
+}
+
+@media only screen and (min-width: 568px){
+    .personalize-shoes{
+        width: 100%;
+        height: 32rem;
+        background-image: url('../../assets/images/background-pesronalize-tablet.jpg');
+        background-size: cover;
+    }
+
+    .personalize-shoes .personalize-shoes-container{
+        width: 40.5rem;
+        height: 15.4rem;
+    }
+}
+
+@media only screen and (min-width: 744px){
+    .personalize-shoes{
+        height: 60.2rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .personalize-shoes{
+        height: 51.8rem;
+        background-image: url('../../assets/images/background-personalize-desktop.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .personalize-shoes .personalize-shoes-container{
+        width: 60rem;
+        height: 20rem;
+    }
+
+    .personalize-shoes-container h3{
+        font-size: 3.6rem;
+    }
+
+    .personalize-shoes .personalize-shoes-container{
+        margin-top: 3.2rem;
+    }
+}
