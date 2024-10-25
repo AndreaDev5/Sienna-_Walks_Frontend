@@ -35,26 +35,26 @@ const Collections = () => {
   // ⬅️ Mover el carrusel hacia la derecha
   const onChangeRight = () => {
     const firstNode = containerRef.current.firstChild;
-    const totalScroll = firstNode.clientWidth * 3; // 🖱️ Ancho total para desplazar
+    const totalScroll = firstNode.clientWidth * 3;
     const containerRefNode = containerRef.current;
     containerRefNode.scrollBy({
       left: totalScroll,
-      behavior: "smooth" // ⚙️ Movimiento suave
+      behavior: "smooth" 
     });
   };
 
   // ➡️ Mover el carrusel hacia la izquierda
   const onChangeLeft = () => {
     const firstNode = containerRef.current.firstChild;
-    const totalScroll = firstNode.clientWidth * 3; // 🖱️ Ancho total para desplazar
+    const totalScroll = firstNode.clientWidth * 3; 
     const containerRefNode = containerRef.current;
     containerRefNode.scrollBy({
       left: -totalScroll,
-      behavior: "smooth" // ⚙️ Movimiento suave
+      behavior: "smooth" 
     });
   };
 
-  // Definición de las imágenes usando URL
+  
   const images = [
     new URL('../../assets/images/coleccion-1.jpg', import.meta.url).href,
     new URL('../../assets/images/coleccion-2.jpg', import.meta.url).href,
@@ -96,31 +96,31 @@ const Collections = () => {
             />
             <CollectionItem
               collectionLink='./colecciones/velours-divin'
-              image={`url(${images[2]})`} // Aquí usamos la URL generada
+              image={`url(${images[2]})`} 
               collectionName='Velours Divin'
               collectionDescription='Inspirada en la suavidad y el lujo del terciopelo divino'
             />
             <CollectionItem
               collectionLink='./colecciones/heritage-d`or'
-              image={`url(${images[3]})`} // Aquí usamos la URL generada
+              image={`url(${images[3]})`} 
               collectionName='Héritage d`Or '
               collectionDescription='Un legado dorado que combina tradición y lujo contemporáneo'
             />
             <CollectionItem
               collectionLink='./colecciones/opulence-sauvage'
-              image={`url(${images[4]})`} // Aquí usamos la URL generada
+              image={`url(${images[4]})`} 
               collectionName='Opulence Sauvage'
               collectionDescription='Una fusión entre la elegancia salvaje y la opulencia moderna'
             />
             <CollectionItem
               collectionLink='./colecciones/noir-elegance'
-              image={`url(${images[5]})`} // Aquí usamos la URL generada
+              image={`url(${images[5]})`} 
               collectionName='Noir Élégance'
               collectionDescription='Un clásico de la moda en negro, con un enfoque en la sofisticación pura'
             />
             <CollectionItem
               collectionLink='./colecciones/ciel-de-minuit'
-              image={`url(${images[6]})`} // Aquí usamos la URL generada
+              image={`url(${images[6]})`} 
               collectionName='Ciel de Minuit'
               collectionDescription='Inspirado en el misterio y el lujo del cielo nocturno'
             />
