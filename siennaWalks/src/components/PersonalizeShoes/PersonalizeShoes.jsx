@@ -1,7 +1,7 @@
-import React from 'react';
 import './PersonalizeShoes.css';
 import { Link } from 'react-router-dom';
 
+// Componente funcional que representa la sección de personalización de zapatos 👞
 export default function PersonalizeShoes() {
   return (
     <section className='personalize-shoes'>
