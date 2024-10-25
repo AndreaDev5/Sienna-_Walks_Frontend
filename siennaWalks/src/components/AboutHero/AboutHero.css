@@ -1,0 +1,36 @@
+@import url('../../global.css');
+
+.about-hero{
+    width: 100%;
+    height: 56.8rem;
+    background-image: url('../../assets/images/background-about-cellphone.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width: 568px){
+    .about-hero{
+        background-image: url('../../assets/images/background-about-tablet.jpg');
+        height: 32rem;
+    }
+}
+
+
+@media only screen and (min-width: 744px){
+    .about-hero{
+        height: 60.9rem;
+    }
+}
+
+@media only screen and (min-width: 1133px){
+    .about-hero{
+        background-position-y: 70.3rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .about-hero{
+        background-position-y: center;
+        background-image: url('../../assets/images/background-about-desktop.jpg');
+    }
+}

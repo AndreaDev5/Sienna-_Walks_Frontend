@@ -12,7 +12,6 @@ import AdminDashboard from '../pages/AdminDashboard/AdminDashboard';
 import Whatsapp from '../atoms/WhatsApp/Whatsapp';
 import BurguerButton from '../atoms/BurguerButton/BurguerButton';
 import Sidebar from '../components/Sidebar/Sidebar';
-import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 
 const AppContext = () => {
@@ -70,7 +69,6 @@ const AppContext = () => {
             <Route path="/editar-perfil" element={<EditUSerProflie/>}/>    
             <Route path='/admin' element={<AdminDashboard/>}/>
             </Routes>
-          <Footer/>
         </BrowserRouter>
     </StoreContext.Provider>
   )

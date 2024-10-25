@@ -5,11 +5,19 @@ import daviplata from '../../assets/logos/daviplata-logo-oscuro.svg';
 import facebook from '../../assets/logos/jam_facebook.svg';
 import instagram from '../../assets/logos/iconoir_instagram.svg';
 import linkedin from '../../assets/logos/jam_linkedin.svg';
+import { useLayoutEffect, useRef } from 'react';
 
-function Footer() {
+function Footer({footerWidth}) {
+const footerRef = useRef(null);
+useLayoutEffect(()=>{
+    const footerRefNode = footerRef.current;
+    footerRefNode.style.width = `${ footerWidth / 10 }rem`
+},[])
+
+
 return (
     <section className='footer-container'>
-        <footer className='footer'>
+        <footer className='footer' ref={footerRef}>
             <div className='footer-links-container'>
             <section className='footer-interest-links'>
                 <h3 className='footer-tittle'>LINKS DE INTERÉS</h3>
