@@ -54,6 +54,17 @@ const Collections = () => {
     });
   };
 
+  // Definición de las imágenes usando URL
+  const images = [
+    new URL('../../assets/images/coleccion-1.jpg', import.meta.url).href,
+    new URL('../../assets/images/coleccion-2.jpg', import.meta.url).href,
+    new URL('../../assets/images/coleccion-3.jpg', import.meta.url).href,
+    new URL('../../assets/images/coleccion-4.jpg', import.meta.url).href,
+    new URL('../../assets/images/coleccion-5.png', import.meta.url).href,
+    new URL('../../assets/images/coleccion-6.png', import.meta.url).href,
+    new URL('../../assets/images/coleccion-7.png', import.meta.url).href,
+  ];
+
   return (
     <section className='collections'>
       {/* 🎨 Título de la sección */}
@@ -73,43 +84,43 @@ const Collections = () => {
           <div className='collection-set' ref={containerRef}>
             <CollectionItem
               collectionLink='./colecciones/eclat-eternel'
-              image='url(src/assets/images/coleccion-1.jpg)'
+              image={`url(${images[0]})`} 
               collectionName='Eclat Éternel'
               collectionDescription='Brillo eterno que resalta la exclusividad y refinamiento'
             />
             <CollectionItem
               collectionLink='./colecciones/l`aura-majestueuse'
-              image='url(src/assets/images/coleccion-2.jpg)'
+              image={`url(${images[1]})`}
               collectionName='L`Aura Majestueuse'
               collectionDescription='Una colección con una presencia majestuosa y sofisticada'
             />
             <CollectionItem
               collectionLink='./colecciones/velours-divin'
-              image='url(src/assets/images/coleccion-3.jpg)'
+              image={`url(${images[2]})`} // Aquí usamos la URL generada
               collectionName='Velours Divin'
               collectionDescription='Inspirada en la suavidad y el lujo del terciopelo divino'
             />
             <CollectionItem
               collectionLink='./colecciones/heritage-d`or'
-              image='url(src/assets/images/coleccion-4.jpg)'
+              image={`url(${images[3]})`} // Aquí usamos la URL generada
               collectionName='Héritage d`Or '
               collectionDescription='Un legado dorado que combina tradición y lujo contemporáneo'
             />
             <CollectionItem
               collectionLink='./colecciones/opulence-sauvage'
-              image='url(src/assets/images/coleccion-5.png)'
+              image={`url(${images[4]})`} // Aquí usamos la URL generada
               collectionName='Opulence Sauvage'
               collectionDescription='Una fusión entre la elegancia salvaje y la opulencia moderna'
             />
             <CollectionItem
               collectionLink='./colecciones/noir-elegance'
-              image='url(src/assets/images/coleccion-6.png)'
+              image={`url(${images[5]})`} // Aquí usamos la URL generada
               collectionName='Noir Élégance'
               collectionDescription='Un clásico de la moda en negro, con un enfoque en la sofisticación pura'
             />
             <CollectionItem
               collectionLink='./colecciones/ciel-de-minuit'
-              image='url(src/assets/images/coleccion-7.png)'
+              image={`url(${images[6]})`} // Aquí usamos la URL generada
               collectionName='Ciel de Minuit'
               collectionDescription='Inspirado en el misterio y el lujo del cielo nocturno'
             />
