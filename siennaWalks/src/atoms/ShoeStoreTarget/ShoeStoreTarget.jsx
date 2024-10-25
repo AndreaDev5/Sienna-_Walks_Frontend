@@ -1,13 +1,17 @@
+// 🥾 Importación de librerías y recursos necesarios
+
 import React, { useRef } from 'react';
 import './ShoeStoreTarget.css';
 import imageStore from '../../assets/images/shoeItemProv.png';
 import { Link } from 'react-router-dom';
 
+// 🎯 Componente para mostrar un elemento de la tienda de zapatos
 const ShoeStoreTarget = ({collection,shoesName,shoesPrice,firstColor,secondColor,thirdColor,fourthColor,id}) => {
   
+// 🎨 Referencias a los colores para gestionar estilos o comportamientos específicos
   const firstColorRef = useRef(null);
   const firstColorRefNode = firstColorRef.current;
-  //firstColorRefNode.style.backgroundColor= firstColor;
+
   
   const secondColorRef = useRef(null);
   const secondColorRefNode = firstColorRef.current;
@@ -18,7 +22,7 @@ const ShoeStoreTarget = ({collection,shoesName,shoesPrice,firstColor,secondColor
   const fourthColorRef = useRef(null);
   const fourthColorRefNode = firstColorRef.current;
 
-
+// 🔗 Componente de enlace que envuelve toda la tarjeta del producto
   return (
     <Link className='shoe-store-target' to='/'>
       <img className='shoe-store-image' src={imageStore} alt={'sienna-ref-nombre-de-zapato'}/>

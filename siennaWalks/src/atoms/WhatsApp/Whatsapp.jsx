@@ -1,4 +1,5 @@
-import React from 'react';
+// 📲 Componente que redirige a WhatsApp de Mardy
+
 import WhatsApp from '../../assets/logos/logos_whatsapp-icon.svg';
 import './WhatsApp.css';
 

@@ -1,3 +1,4 @@
+// 🌟 Encabezado de la aplicación con enlaces y botones de navegación
 import './Header.css';  
 import { Link } from 'react-router-dom';
 import SiennaCollectionLinks from '../../atoms/SiennaCollectionLInks/SiennaCollectionsLinks';
@@ -5,7 +6,7 @@ import shoppingCarIcon from '../../assets/logos/ph_shopping-cart-dark.svg';
 import emptyProfile from '../../assets/logos/ph_user-rectangle-thin.svg';
 
 function Header() {
- return (
+return (
     <header className='header'>
         <main className='header-container'>
         <article className='header-right-links'>    

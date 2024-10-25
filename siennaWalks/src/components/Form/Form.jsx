@@ -1,10 +1,11 @@
-import React from 'react';
+// 📝 Formulario de registro
+
 import './Form.css';
 
 export default function Form() {
-  return (
+return (
     <section className='form-container'>
-       <section className='form-container-tittle'> 
+    <section className='form-container-tittle'> 
             <h1>Regístrate</h1> 
             <p>Permítenos saber más de tí, y no te pierdas de nuestras últimas novedades</p>
             <form className='form-sienna'>
@@ -46,9 +47,8 @@ export default function Form() {
                     <input type='password'/>
                 </label>
             <button type='submit' className='form-sienna-submit'>Regístrate</button>
-       </form>
-       </section>
+    </form>
     </section>
-  )
+    </section>
+)
 }
- 

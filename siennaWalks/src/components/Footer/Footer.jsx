@@ -1,3 +1,5 @@
+// Footer 
+
 import './Footer.css';  
 import { Link } from 'react-router-dom';
 import nequi from '../../assets/logos/nequi-logo-oscuro.svg';
@@ -32,9 +34,9 @@ return (
             <section className='footer-social-media'>
                 <h3 className='footer-tittle'>REDES SOCIALES</h3>
                 <article className='sienna-media-grid'>
-                     <Link to={'/'} className='sienna-media-facebook'><img src={facebook}/></Link>
-                     <Link to={'/'} className='sienna-media-instagram'><img src={instagram}/></Link>
-                     <Link to={'/'} className='sienna-media-linkedin'><img src={linkedin}/></Link>  
+                    <Link to={'/'} className='sienna-media-facebook'><img src={facebook}/></Link>
+                    <Link to={'/'} className='sienna-media-instagram'><img src={instagram}/></Link>
+                    <Link to={'/'} className='sienna-media-linkedin'><img src={linkedin}/></Link>  
                 </article>
             </section>
             <section className='footer-ways-payments'>

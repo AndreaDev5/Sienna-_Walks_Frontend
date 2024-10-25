@@ -1,9 +1,12 @@
+// 🍔 Componente de botón de hamburguesa
+
 import './BurguerBotton.css';
 import React from 'react';
 import { StoreContext } from '../../context/StoreContext';
 
 
 const BurguerButton =  () => {
+  // 🎛️ Extrae las referencias y funciones necesarias desde el contexto
     const {buttonBurguerRef,onChangeBurguer } = React.useContext(StoreContext);
   
     return(

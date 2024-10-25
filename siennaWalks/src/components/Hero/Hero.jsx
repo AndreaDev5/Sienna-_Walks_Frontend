@@ -1,4 +1,5 @@
-import React from 'react';
+// 🌟 Sección principal que presenta la marca y una llamada a la acción
+
 import './Hero.css';
 import logo from '../../assets/logos/last-logo-sienna.svg';
 import { Link } from 'react-router-dom';
