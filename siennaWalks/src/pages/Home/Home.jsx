@@ -6,18 +6,22 @@ import Hero from '../../components/Hero/Hero';
 import LastRelease from '../../components/LastRelease/LastRelease';
 import './Home.css';
 import PersonalizeShoes from '../../components/PersonalizeShoes/PersonalizeShoes';
+import Footer from '../../components/Footer/Footer'
+import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
 
 function Home() {
 return (
-    <React.Fragment>   
+    <>   
         <Hero/>
+        <BurguerButton buttonMode={true}/>
         <main className='home-container'>
             <Collections/>
             <LastRelease/>
         </main>
         <PersonalizeShoes/>
         <Form/>
-    </React.Fragment>
+        <Footer/>
+    </>
 );
 }
 

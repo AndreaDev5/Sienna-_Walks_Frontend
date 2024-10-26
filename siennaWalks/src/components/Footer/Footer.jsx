@@ -1,5 +1,3 @@
-// Footer 
-
 import './Footer.css';  
 import { Link } from 'react-router-dom';
 import nequi from '../../assets/logos/nequi-logo-oscuro.svg';
@@ -7,11 +5,23 @@ import daviplata from '../../assets/logos/daviplata-logo-oscuro.svg';
 import facebook from '../../assets/logos/jam_facebook.svg';
 import instagram from '../../assets/logos/iconoir_instagram.svg';
 import linkedin from '../../assets/logos/jam_linkedin.svg';
+import { useLayoutEffect, useRef, useEffect } from 'react';
 
-function Footer() {
+function Footer({footerWidth,footerBackground}) {
+const footerRef = useRef(null);
+
+useLayoutEffect(()=>{
+    const bodyWidth = document.body.clientWidth;
+    const footerRefNode = footerRef.current;
+    if(bodyWidth>=1279){
+        footerRefNode.style.width = `${ footerWidth / 10 }rem`
+    }    
+},[])
+
+
 return (
     <section className='footer-container'>
-        <footer className='footer'>
+        <footer className='footer' ref={footerRef}>
             <div className='footer-links-container'>
             <section className='footer-interest-links'>
                 <h3 className='footer-tittle'>LINKS DE INTERÉS</h3>

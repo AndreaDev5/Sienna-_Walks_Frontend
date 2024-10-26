@@ -1,0 +1,150 @@
+@import url('../../global.css');
+
+.about-story-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about-story .about-story-tittle{
+    font-family: "Caveat", cursive;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: .8rem;
+    font-weight: 300;
+}
+
+.about-story p{
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-top: .8rem;
+}
+
+.about-image-general-container{
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: calc( 100% * 1.25);
+    margin-top: 1.6rem;
+}
+
+.about-image-container{
+    display: flex;
+    width: calc( 100% * 3 );
+}
+
+.about-image-container img{
+    width: 100%;
+    height: 36rem;
+}
+
+
+.about-story-second-tittle{
+    font-family: "Caveat", cursive;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: .8rem;
+    font-weight: 300;
+    width: 23rem;
+}
+
+@media only screen and (min-width: 568px){
+    .about-story .about-story-tittle{
+        font-size: 3.6rem;
+    }
+
+    .about-image-general-container{
+        width: 100%;
+        margin: 0;
+        margin-top: 1.6rem;
+        height: 23.625rem   
+    }
+
+    .about-image-container{
+        width: 100%;
+    }
+
+    .about-image-container img{
+        width: 18.9rem;
+        height: 23.625rem;
+    }
+
+    .about-story-second-tittle{
+        font-size: 3.6rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 744px){
+    .about-image-container{
+        height: 27.3rem;
+    }
+
+    .about-image-general-container{
+        height: 27.3rem;
+        width: calc( 23.7rem * 3 );
+        margin: 0 auto;
+        margin-top: 1.6rem;
+    }
+
+    .about-image-container img{
+        width: 23.7rem;
+        height: 27.3rem;
+    }
+}
+
+@media only screen and (min-width: 1133px){
+    .about-story-container{
+        width: 80.93%;
+    }
+
+    .about-story .about-story-tittle{
+        margin-top: 1.6rem;
+    }
+
+    .about-story p{
+        font-size: 2rem;
+        line-height: 3.2rem;
+    }
+
+    .about-image-general-container{
+        width: 80.93%;
+        height: 35.7rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+    }
+
+    .about-image-container{
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .about-image-container img{
+        width: 29.5rem;
+        height: 35.7rem;
+    }
+
+    .about-story-second-tittle{
+        width: 76.6rem;
+        margin-top: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .about-story-container{
+        width: 93.5rem;
+    }
+
+    .about-image-general-container{
+        width: 93.5rem;
+        height: 37.5rem;
+    }
+
+    .about-image-container img{
+        width: 30rem;
+        height: 37.5rem;
+    }
+}
