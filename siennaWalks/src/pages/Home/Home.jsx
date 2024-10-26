@@ -7,11 +7,13 @@ import LastRelease from '../../components/LastRelease/LastRelease';
 import './Home.css';
 import PersonalizeShoes from '../../components/PersonalizeShoes/PersonalizeShoes';
 import Footer from '../../components/Footer/Footer'
+import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
 
 function Home() {
 return (
     <>   
         <Hero/>
+        <BurguerButton buttonMode={true}/>
         <main className='home-container'>
             <Collections/>
             <LastRelease/>

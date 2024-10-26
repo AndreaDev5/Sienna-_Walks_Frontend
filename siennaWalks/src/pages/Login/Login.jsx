@@ -1,10 +1,14 @@
+import BurguerButton from "../../atoms/BurguerButton/BurguerButton"
+import Footer from "../../components/Footer/Footer"
 
 
 const Login = () => {
   return (
-    <div>
-        <h1>Login</h1>
-    </div>
+    <>
+      <h1>Ingresa</h1>
+      <BurguerButton buttonMode={false}/>
+      <Footer footerBackground={'#F9F9F9'}/>
+    </>
   )
 }
 

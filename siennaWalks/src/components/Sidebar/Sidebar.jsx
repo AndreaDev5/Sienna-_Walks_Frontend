@@ -8,21 +8,23 @@ import SiennaCollectionLinks from '../../atoms/SiennaCollectionLInks/SiennaColle
 
 
 function Sidebar() {
-  const { sidebarBurguerRef, onChangeBurguer } = useContext(StoreContext);
+  const { sidebarBurguerRef, onChangeDarkBurguer, onChangeLightBurguer} = useContext(StoreContext);
 
   return (
     <section className='sidebar' ref={sidebarBurguerRef}>
-      <Link className='sidebar-tittle' to={'/'} onClick={onChangeBurguer}>
+      {/*cambiar a la etiqueta ul  */}
+
+      <Link className='sidebar-tittle' to={'/'} onClick={onChangeDarkBurguer}>
         <h1>Sienna Walks</h1> 
       </Link>
       
-      <article className='sidebar-container'>
-        <Link className='sidebar-about-me' to={'/acerca-de-Sienna'} onClick={onChangeBurguer}>Acerca de</Link>
-        <Link className='sidebar-log-in' to={'/ingresa'} onClick={onChangeBurguer}>Ingresa</Link>
-        <Link className='sidebar-register' to={'/registrate'} onClick={onChangeBurguer}>Registrate</Link>
+      <ul className='sidebar-container'>
+        <Link className='sidebar-about-me' to={'/acerca-de-Sienna'} onClick={onChangeDarkBurguer}>Acerca de</Link>
+        <Link className='sidebar-log-in' to={'/ingresa'} onClick={onChangeLightBurguer}>Ingresa</Link>
+        <Link className='sidebar-register' to={'/registrate'} onClick={onChangeLightBurguer}>Registrate</Link>
         
         <SiennaCollectionLinks/> 
-      </article>
+      </ul>
       
       <article className='sidebar-overflow-buttons'>
         <div className='first-button'></div>

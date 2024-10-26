@@ -13,40 +13,14 @@ import Whatsapp from '../atoms/WhatsApp/Whatsapp';
 import BurguerButton from '../atoms/BurguerButton/BurguerButton';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Header from '../components/Header/Header';
+import { useButtonBurguer } from '../hooks/useButtonBurguer';
 
 const AppContext = () => {
-  const [button,setButton] = React.useState(true);
-  const buttonBurguerRef = React.useRef(null);
-  const sidebarBurguerRef = React.useRef(null);
-  
-    const onChangeBurguer = () =>{
-      const burguerButtonNodes = buttonBurguerRef.current.querySelectorAll('div');
-      const sidebarBurguerRefNodes = sidebarBurguerRef.current;
-      let bodyClientWidth = document.body.clientWidth; 
-      console.log(bodyClientWidth)
-      
-      if(bodyClientWidth<1280){
-        (button===true)?setButton(false):setButton(true)
-      
-        if(button){
-          burguerButtonNodes[0].classList.replace("button-first-line","button-first-line-change");
-          burguerButtonNodes[1].classList.replace("button-second-line","button-second-line-change");
-          burguerButtonNodes[2].classList.replace("button-third-line","button-third-line-change");
-          sidebarBurguerRefNodes.classList.replace("sidebar","sidebar-change");
-        }
-        else{
-          burguerButtonNodes[0].classList.replace("button-first-line-change","button-first-line");
-          burguerButtonNodes[1].classList.replace("button-second-line-change","button-second-line");
-          burguerButtonNodes[2].classList.replace("button-third-line-change","button-third-line");
-          sidebarBurguerRefNodes.classList.replace("sidebar-change","sidebar");
-        }
-      }
-    }
+  const { button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer} = useButtonBurguer();
 
   return (
-    <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeBurguer}}> 
+    <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer}}> 
         <BrowserRouter>
-        <BurguerButton/>
         <Whatsapp/>
         <Sidebar/>
         <Header/>
