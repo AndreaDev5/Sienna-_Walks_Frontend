@@ -12,8 +12,6 @@ function Sidebar() {
 
   return (
     <section className='sidebar' ref={sidebarBurguerRef}>
-      {/*cambiar a la etiqueta ul  */}
-
       <Link className='sidebar-tittle' to={'/'} onClick={onChangeDarkBurguer}>
         <h1>Sienna Walks</h1> 
       </Link>
@@ -22,7 +20,6 @@ function Sidebar() {
         <Link className='sidebar-about-me' to={'/acerca-de-Sienna'} onClick={onChangeDarkBurguer}>Acerca de</Link>
         <Link className='sidebar-log-in' to={'/ingresa'} onClick={onChangeLightBurguer}>Ingresa</Link>
         <Link className='sidebar-register' to={'/registrate'} onClick={onChangeLightBurguer}>Registrate</Link>
-        
         <SiennaCollectionLinks/> 
       </ul>
       

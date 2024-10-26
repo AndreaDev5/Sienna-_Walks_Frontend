@@ -1,4 +1,3 @@
-import React from 'react'
 import { StoreContext } from './StoreContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
@@ -28,9 +27,9 @@ const AppContext = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/colecciones'>
                   <Route path=':eclat-eternel' element={<h1>Eclat Éternel</h1>}/>  
-                  <Route path=':l`aura-majestueuse' element={<h1>L'Aura Majestueuse</h1>}/>
+                  <Route path=':l`aura-majestueuse' element={<h1>LAura Majestueuse</h1>}/>
                   <Route path=':velours-divin' element={<h1>Velours Divin</h1>}/>
-                  <Route path=':heritage-d`or' element={<h1>Héritage d'Or</h1>}/>
+                  <Route path=':heritage-d`or' element={<h1>Héritage dOr</h1>}/>
                   <Route path=':opulence-sauvage' element={<h1>Opulence Sauvage</h1>}/>
                   <Route path=':noir-elegance' element={<h1>Noir Élégance </h1>}/>
                   <Route path=':ciel-de-minuit' element={<h1>Ciel de Minuit</h1>}/>
