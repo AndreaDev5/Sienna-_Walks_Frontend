@@ -7,20 +7,25 @@ import instagram from '../../assets/logos/iconoir_instagram.svg';
 import linkedin from '../../assets/logos/jam_linkedin.svg';
 import { useLayoutEffect, useRef, useEffect } from 'react';
 
-function Footer({footerWidth,footerBackground}) {
+function Footer({footerWidth,footerBackground,footerMarginTop}) {
 const footerRef = useRef(null);
+const footerRefContainer = useRef(null);
 
 useLayoutEffect(()=>{
     const bodyWidth = document.body.clientWidth;
     const footerRefNode = footerRef.current;
     if(bodyWidth>=1279){
         footerRefNode.style.width = `${ footerWidth / 10 }rem`
-    }    
+    }
+    
+    /*color para el contenedor del footer*/
+    const footerRefContainerNode = footerRefContainer.current;
+    footerRefContainerNode.style.background = footerBackground;
+    footerRefContainerNode.style.marginTop = footerMarginTop;
 },[])
 
-
 return (
-    <section className='footer-container'>
+    <section className='footer-container' ref={footerRefContainer}>
         <footer className='footer' ref={footerRef}>
             <div className='footer-links-container'>
             <section className='footer-interest-links'>
