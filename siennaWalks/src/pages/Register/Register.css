@@ -1,0 +1,331 @@
+@import url('../../global.css');
+
+.register-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.register-tittle-init{
+    text-decoration: none;
+    font-size: 1.6em;
+    color: var(--font-black);
+    padding-top: 1.6rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    display: block;
+}
+
+.register-tittle-main{
+    text-align: center;
+    margin-top: .8rem;
+    font-size: 3.2rem;
+    font-family: "Caveat", cursive;
+    font-weight: 300;
+}
+
+.register-global-nav{
+    display: none;
+}
+
+.register-form{
+    width: 100%;
+    font-size: 1.6rem;
+    background: var(--second-white);
+    padding: 1.2rem;
+    border-radius: .4rem;
+    border: 1px solid #A3A3A3;
+    margin-top: 1.6rem;
+}
+
+.register-form .register-form-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form .register-form-surname,
+.register-form .register-form-email,
+.register-form .register-form-adress,
+.register-form .register-form-password{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+}
+
+.register-form .register-form-name input[type="text"],
+.register-form .register-form-surname input[type="text"],
+.register-form .register-form-email input[type="email"],
+.register-form .register-form-adress input[type="text"],
+.register-form .register-cities input,
+.register-form .register-form-password input
+{
+    background: var(--first-white);
+    height: 3rem;
+    margin-top: 1.2rem;
+    width: 100%;
+    border: none;
+    color: var(--black-font);
+    border: 1px solid var(--line-gray)
+}
+
+.register-form .register-cellphone-object{
+    display: grid;
+    grid-template-columns: 15.5% 1fr;
+    gap: .4rem;
+}
+
+.register-form .register-cellphone input[type="text"]{
+    background: var(--first-white);
+    height: 3rem;
+    margin-top: 1.2rem;
+    width: 100%;
+    border: none;
+    color: var(--black-font);
+    text-align: center;
+    border: 1px solid var(--line-gray);
+}
+
+.register-form .register-drag-and-drop-area{
+    width: 100%;
+    border: 1px solid var(--line-gray);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+    padding: .8rem;
+}
+
+.register-form .register-drag-description{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.register-form .register-drag-image{
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    margin-top: 2.8rem;
+}
+
+.register-form .register-upload-file{
+    display: none;
+}
+
+.register-form .register-upload-button{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--light-gray-form);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Quicksand", sans-serif;
+    border: 1px solid var(--line-gray);
+}
+
+.register-form  .register-upload-addition{
+    font-size: 1rem;
+    margin-top: .8rem;
+}
+
+.register-form .register-submit{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--light-gray-form);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Quicksand", sans-serif;
+    border: 1px solid var(--line-gray);
+}
+
+.register-tittle{
+    display: flex;
+    font-size: 2.4rem;
+    font-family: "Caveat", cursive;
+    color: var(--brown-tittle);
+    align-items: center;
+    margin-top: 2.8rem;
+    text-align: center;    
+    justify-content: space-between;
+}
+
+.register-tittle h1{
+    width: 25rem;
+    font-weight: 400;
+}
+
+.register-tittle-line{
+    width: 2.4rem;
+    background: var(--black-font);
+    height: .1rem;
+}
+
+.register-login-link{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--second-white);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--line-gray);
+}
+
+@media only screen and (min-width: 568px){
+    .register-tittle-main{
+        font-size: 3.6rem;
+    }
+
+    .register-form{
+        display: grid;
+        padding: 1.2rem;
+        height: 62.4rem;
+        grid-template: repeat(4,1fr) 22.1rem 1fr/ repeat(2,1fr);
+        gap: 1.6rem;
+        grid-template-areas:"register-form-name register-form-surname"
+                            "register-form-email register-form-adress"
+                            "register-cellphone register-cities"
+                            "register-form-password register-form-password"
+                            "register-drag-and-drop-area register-drag-and-drop-area"
+                            "register-submit register-submit"
+    }
+
+    .register-form .register-form-surname,
+    .register-form .register-form-email,
+    .register-form .register-form-adress,
+    .register-form .register-form-password{
+        margin-top: 0;
+    }
+
+    .register-form .register-form-name{
+        grid-area: register-form-name;
+    }
+
+    .register-form .register-form-surname{
+        grid-area: register-form-surname;
+    }
+
+    .register-form .register-form-email{
+        grid-area: register-form-email;
+    }
+
+    .register-form .register-form-adress{
+        grid-area: register-form-adress;
+    }
+
+    .register-form .register-cellphone{
+        grid-area: register-cellphone;
+    }
+
+    .register-form .register-cities{
+        grid-area: register-cities;
+    }
+
+    .register-form .register-form-password{
+        grid-area: register-form-password;
+    }
+
+    .register-form .register-drag-and-drop-area{
+        grid-area: register-drag-and-drop-area;
+        height: 22.1rem;
+    }
+
+    .register-form .register-drag-image{
+        margin-top: 1.4rem;
+    }
+
+    .register-form .register-submit{
+        grid-area: register-submit;
+        justify-self: center;
+        margin-top: 2rem;
+    }
+
+    .register-form .register-upload-addition{
+        text-align: center;
+    }
+
+    .register-tittle-line{
+        width: 12.4rem;
+    }
+
+    .register-tittle{
+        font-size: 2.8rem;
+    }
+
+    .register-tittle h1{
+        width: 27rem;
+    }
+}
+
+@media only screen and (min-width: 744px){
+    .register-global-nav{
+        display: flex;
+        font-size: 1.6rem;
+    }
+
+    .register-global-nav a{
+        text-decoration: none;
+        color: var(--black-font);
+    }
+
+    .register-form{
+        width: 57.6rem;
+        margin: 0 auto;
+        margin-top: 3.2rem;
+    }
+
+    .register-tittle{
+        width: 57.6rem;
+        margin: 0 auto;
+        margin-top: 3.2rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .register-tittle-init{
+        display: none;
+    }
+
+    .register-tittle-main{
+        font-size: 4.6rem;
+        margin-top: 1.6rem;
+    }
+
+    .register-tittle{
+        font-size: 3.6rem;
+    }
+
+    .register-tittle h1{
+        width: 34.6rem;
+    }
+
+    .register-tittle-line{
+        width: 11rem;
+    }
+}
+
+
+@media only screen and (min-width: 1440px){
+    .register-container{
+        width: calc(100% - 27rem);
+    }
+}
+

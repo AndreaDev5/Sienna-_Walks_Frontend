@@ -80,11 +80,12 @@
     align-items: center;
     margin-top: 2.8rem;
     text-align: center;
-    font-weight: 300;
+    
     justify-content: space-between;
 }
 
 .login-tittle h1{
+    font-weight: 400;
     width: 21rem;
 }
 
@@ -109,6 +110,12 @@
     text-decoration: none;
     font-weight: 500;
     border: 1px solid var(--line-gray);
+}
+
+@media only screen and (min-width: 568px){
+    .login-tittle-line{
+        width: 12.4rem;
+    }
 }
 
 @media only screen and (min-width: 744px){
@@ -146,7 +153,7 @@
 
     .login-tittle-main{
         font-size: 4.6rem;
-        margin-top: 4.4rem;
+        margin-top: 1.6rem;
     }
 }
 

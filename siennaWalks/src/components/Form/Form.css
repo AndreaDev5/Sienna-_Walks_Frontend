@@ -71,7 +71,6 @@
     display: grid;
     grid-template-columns: 15.5% 1fr;
     gap: .4rem;
-    
 }
 
 .form-sienna .form-sienna-submit{
