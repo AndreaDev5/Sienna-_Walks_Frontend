@@ -1,0 +1,56 @@
+@import url('../../global.css');
+
+/* .sidebar-user-container{
+    width: 320px;
+    height: 39.9rem;
+    display: flex;
+    justify-content: center;
+} */
+
+.sidebar-user-component{
+    margin: 0 auto;
+    margin-top: 3.2rem;
+    width: 23.5rem;
+    height: 25.8rem;
+    border-radius: .4rem;
+    border: 1px solid var(--line-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-empty-user{
+    width: 6rem;
+    height: 6rem;
+    margin-top: 1.2rem;
+}
+
+.sidebar-user-tittle{
+    width: 16rem;
+    margin-top: .4rem;
+    font-size: 2.4rem;
+    font-family: "Caveat", cursive;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sidebar-user-links{
+    width: 21rem;
+    height: 9.4rem;
+    border: 1px solid var(--line-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2.4rem;
+}
+
+.sidebar-user-links a:first-child,
+.sidebar-user-links a:nth-child(2){
+    font-size: 1.6rem;
+    text-decoration: none;
+    width: 7.5rem;
+    text-align: left;
+    color: var(--black-font);
+    display: block;
+}
