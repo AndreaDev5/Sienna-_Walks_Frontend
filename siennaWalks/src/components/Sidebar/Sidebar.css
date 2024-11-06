@@ -13,20 +13,39 @@
     position: fixed;
 }
 
-
-.sidebar--car-general-container{
+.sidebar--car-first-container{
     display: flex;
     width: 300%;
-    overflow-x: auto;
-    
+    overflow-x: hidden;
+    transform: translateX(0%);
+    left: 0%;
+    transition-duration: .4s;
+}
+
+/*movimientos del sidebar*/
+.sidebar--car-second-movement{
+    display: flex;
+    width: 300%;
+    overflow-x: hidden;
+    transform: translateX(-33.33%);
+    left: 0%;
+    transition-duration: .4s;
+}
+
+.sidebar--car-third-movement{
+    display: flex;
+    width: 300%;
+    overflow-x: hidden;
+    transform: translateX(-66.66%);
+    left: 0%;
+    transition-duration: .4s;
 }
 
 .sidebar-carousel-container{
     height: 40.3rem;
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
-
 
 .sidebar-container{
     display: flex;
@@ -116,7 +135,20 @@
     height: .8rem;
     width: .8rem;
     border-radius: .4rem;
-    background: var(--line-gray); 
+    background: var(--line-gray);
+    transition-duration: .4s; 
+    transform: scale(1);
+}
+
+.sidebar-overflow-buttons .first-dark-button,
+.sidebar-overflow-buttons .second-dark-button,
+.sidebar-overflow-buttons .third-dark-button{
+    height: .8rem;
+    width: .8rem;
+    border-radius: .4rem;
+    background: var(--black-font);
+    transition-duration: .4s;
+    transform: scale(1.2);
 }
 
 .sidebar-options-buttons{
@@ -162,7 +194,24 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin-top: 3.6rem;
+      height: 17.6rem;
+    }
+
+    .sidebar-carousel-container{
+     height: 23.6rem;   
+     margin-top: 1.6rem;
+    }
+
+    .sidebar--car-first-container{
+        height: 23.6rem;      
+    }
+    .sidebar--car-second-movement,
+    .sidebar--car-third-movement{
+        height: 17.6rem;
+    }
+
+    .sidebar-cart-container{
+        height: 100%;
     }
 
     .sidebar-about-me{
@@ -186,16 +235,18 @@
         margin-top: .8rem;
     }
 
+    .sidebar-user-container{
+        height: 17.4rem;
+    }
 
     .sidebar-options-buttons{
-        top: 26.2rem;
+        top: 27.2rem;
     }
 
     .sidebar-overflow-buttons{
-        top: 23.8rem;
+        top: 24.8rem;
     }
   }
-
 
   @media only screen and (min-width: 744px){  
     .sidebar,.sidebar-change{
@@ -207,11 +258,41 @@
         margin-top: 9.4rem;
     }
 
+    .sidebar-link-all{
+        width: 19rem;
+    }
     .sidebar-container{
         flex-direction: column;
-        width: 15.4rem;
+        width: 23.5rem;
         margin: 0 auto;
-        margin-top: 3rem;
+        justify-content: center;
+        height: auto;
+        align-self: flex-start;
+        padding-left: 4rem;
+    }
+
+    .sidebar--car-first-container{
+        justify-content: space-evenly;
+        margin-top: 3.2rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+        height: 36.4rem;
+        gap: 3.2rem;
+        width: 330%;
+    }
+
+    .sidebar--car-second-movement,
+    .sidebar--car-third-movement{
+        margin-top: 3.2rem;
+        height: 36.4rem;
+
+        margin-top: 3.2rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+        height: 36.4rem;
+        width: 330%;
     }
 
     .sidebar-about-me,
@@ -220,12 +301,17 @@
         margin-top: 2.4rem;
     }
 
-
     .sidebar-options-buttons{
         top: 59.4rem;
     }
 
     .sidebar-overflow-buttons{
         top: 56.4rem;
+    }
+
+    .sidebar-carousel-container{
+        height: 40.3rem;
+        width: 23.4rem;
+        margin: 0 auto;
     }
 }

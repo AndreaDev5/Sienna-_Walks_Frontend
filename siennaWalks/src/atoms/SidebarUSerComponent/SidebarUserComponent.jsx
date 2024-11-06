@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 
 const SidebarUserComponent = () => {
-
 const { onChangeLightBurguer} = React.useContext(StoreContext);   
 
   return (

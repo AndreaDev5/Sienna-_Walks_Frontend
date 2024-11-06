@@ -10,16 +10,20 @@ import UserProfile from '../pages/UserProfile/UserProfile';
 import EditUSerProflie from '../pages/EditUserProfile/EditUSerProflie';
 import AdminDashboard from '../pages/AdminDashboard/AdminDashboard';
 import Whatsapp from '../atoms/WhatsApp/Whatsapp';
-import BurguerButton from '../atoms/BurguerButton/BurguerButton';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Header from '../components/Header/Header';
 import { useButtonBurguer } from '../hooks/useButtonBurguer';
+import { useSidebarScroll } from '../hooks/useSidebarScroll';
 
 const AppContext = () => {
   const { button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer} = useButtonBurguer();
+  const { scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
+    handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount } = useSidebarScroll();
 
   return (
-    <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer}}> 
+    <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
+      scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
+      handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount}}> 
         <BrowserRouter>
         <Whatsapp/>
         <Sidebar/>

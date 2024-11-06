@@ -4,13 +4,13 @@ import shoppingBigCart from '../../assets/logos/ph_shopping-cart-big.svg';
 import './SidebarCartComponent.css';
 import { StoreContext } from '../../context/StoreContext';
 
-const SidebarCartComponent = () => {
+const SidebarCartComponent = ({sidebarCartComponent,sidebarCartTittle,sidebarCartBigIcon}) => {
 const { onChangeDarkBurguer} = useContext(StoreContext);
 
   return (
-    <section className='sidebar-cart-component'>
-      <h1 className='sidebar-cart-tittle'>Tu carrito de compras está vacío</h1>
-      <img className='sidebar-cart-big-icon' src={shoppingBigCart}/>
+    <section className={sidebarCartComponent}>
+      <h1 className={sidebarCartTittle}>Tu carrito de compras está vacío</h1>
+      <img className={sidebarCartBigIcon} src={shoppingBigCart}/>
       <Link to={"/"} className="sidebar-link-all" onClick={onChangeDarkBurguer}>Ver y comprar</Link>
     </section>
   )
