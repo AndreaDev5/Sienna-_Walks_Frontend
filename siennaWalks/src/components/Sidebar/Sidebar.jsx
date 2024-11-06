@@ -16,7 +16,6 @@ function Sidebar() {
   const {scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
     handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount } = useContext(StoreContext);  
 
- 
   return (
     <section className='sidebar' ref={sidebarBurguerRef}>
         <Link className='sidebar-tittle' to={'/'} onClick={onChangeDarkBurguer}>
@@ -35,7 +34,8 @@ function Sidebar() {
             sidebarCartBigIcon={'sidebar-cart-big-icon'}/>
           </div>
           <div className='sidebar-user-container'>
-            <SidebarUserComponent />
+            <SidebarUserComponent sidebarUserComponent={'sidebar-user-component'} sidebarEmptyUser={'sidebar-empty-user'}
+            sidebarUserTittle={'sidebar-user-tittle'} sidebarUserLinks={'sidebar-user-links'}/>
           </div>
         </div>
       </article>

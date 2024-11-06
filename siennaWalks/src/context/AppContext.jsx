@@ -1,5 +1,5 @@
 import React from 'react'
-import { StoreContext } from './StoreContext';
+import { StoreContext, HeaderContext } from './StoreContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Login from '../pages/Login/Login';
@@ -14,20 +14,29 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import Header from '../components/Header/Header';
 import { useButtonBurguer } from '../hooks/useButtonBurguer';
 import { useSidebarScroll } from '../hooks/useSidebarScroll';
+import { useToggleButtons } from '../hooks/useToggleButtons';
 
 const AppContext = () => {
+  /*variables para el boton de hamburguesa*/ 
   const { button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer} = useButtonBurguer();
+
+  /*variables para el scroll vertical del sidebar*/
   const { scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
     handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount } = useSidebarScroll();
+  
+  /*variables para la sección de usuario y carrito de compras en header*/  
+ const { cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart } =useToggleButtons();  
 
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
       scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
-      handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount}}> 
+      handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount}}>
+        <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
         <BrowserRouter>
         <Whatsapp/>
         <Sidebar/>
         <Header/>
+        <main onClick={toggleUSerCart}>
             <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/colecciones'>
@@ -47,7 +56,9 @@ const AppContext = () => {
             <Route path="/editar-perfil" element={<EditUSerProflie/>}/>    
             <Route path='/admin' element={<AdminDashboard/>}/>
             </Routes>
+          </main>    
         </BrowserRouter>
+        </HeaderContext.Provider>
     </StoreContext.Provider>
   )
 }

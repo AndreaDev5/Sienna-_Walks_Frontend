@@ -1,3 +1,6 @@
 import { createContext } from "react";
 
-export const StoreContext = createContext(null);
+const HeaderContext = createContext(null);
+const StoreContext = createContext(null);
+
+export {HeaderContext,StoreContext}
