@@ -32,7 +32,7 @@ export default function LastRelease(){
                 />
         })}
         </article>
-        <Link className='link-all-products'>Ver todos los pares</Link>
+        <Link className='link-all-products' to={'/ver-productos'}>Ver todos los pares</Link>
     </section>
   )
 }

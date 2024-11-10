@@ -1,5 +1,5 @@
 import React from 'react'
-import { StoreContext, HeaderContext } from './StoreContext';
+import { StoreContext, HeaderContext, SidebarAllProductsContext } from './StoreContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Login from '../pages/Login/Login';
@@ -15,6 +15,9 @@ import Header from '../components/Header/Header';
 import { useButtonBurguer } from '../hooks/useButtonBurguer';
 import { useSidebarScroll } from '../hooks/useSidebarScroll';
 import { useToggleButtons } from '../hooks/useToggleButtons';
+import { useSidebarFilterScroll } from '../hooks/useSidebarFilterScroll';
+import AllProducts from '../pages/AllProducts/AllProducts';
+import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
 
 const AppContext = () => {
   /*variables para el boton de hamburguesa*/ 
@@ -27,16 +30,21 @@ const AppContext = () => {
   /*variables para la sección de usuario y carrito de compras en header*/  
  const { cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart } =useToggleButtons();  
 
+ /*variables para el sidebar de todos los productos*/
+ const { sidebarFilter, onChangeSidebarFilter }   = useSidebarFilterScroll();
+
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
       scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
       handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount}}>
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
-        <BrowserRouter>
-        <Whatsapp/>
-        <Sidebar/>
-        <Header/>
-        <main onClick={toggleUSerCart}>
+          <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter}}>
+          <BrowserRouter>
+          <SidebarFilter/>
+          <Whatsapp/>
+          <Sidebar/>
+          <Header/>
+          <main onClick={toggleUSerCart}>
             <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/colecciones'>
@@ -55,9 +63,11 @@ const AppContext = () => {
             <Route path='/perfil' element={<UserProfile/>}/>
             <Route path="/editar-perfil" element={<EditUSerProflie/>}/>    
             <Route path='/admin' element={<AdminDashboard/>}/>
+            <Route path="/ver-productos" element={<AllProducts/>}/>
             </Routes>
           </main>    
         </BrowserRouter>
+        </SidebarAllProductsContext.Provider>
         </HeaderContext.Provider>
     </StoreContext.Provider>
   )

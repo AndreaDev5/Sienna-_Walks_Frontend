@@ -36,7 +36,7 @@ return (
             </section>    
             <section className='footer-explore-links'>    
                 <h3 className='footer-tittle'>EXPLORA</h3>
-                <Link to={'/'}>Ver más</Link>
+                <Link to={'/ver-productos'}>Ver más</Link>
             </section>
             <section className='footer-social-media'>
                 <h3 className='footer-tittle'>REDES SOCIALES</h3>

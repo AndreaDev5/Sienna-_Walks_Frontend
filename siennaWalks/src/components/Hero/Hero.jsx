@@ -10,7 +10,7 @@ const Hero = () => {
     <section className='hero' >
       <img className='hero-logo-sienna' src={logo}/>
       <h1 className='hero-logo-cta'>En cada paso que das llevas contigo un pedazo de tu escencia, elige un calzado que refleje tu estilo y te acompañe en tu aventura</h1>
-      <Link className='hero-whatsapp-contact'>Ver más</Link>
+      <Link className='hero-whatsapp-contact' to={'/ver-productos'}>Ver más</Link>
     </section>
   )
 }
