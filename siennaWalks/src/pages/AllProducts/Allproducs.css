@@ -1,0 +1,37 @@
+@import url('../../global.css');
+
+.all-products-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.all-products-tittle-init{
+    text-decoration: none;
+    font-size: 1.6em;
+    color: var(--font-black);
+    padding-top: 1.6rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    display: block;
+}
+
+.all-products-tittle-main{
+    text-align: center;
+    margin-top: .8rem;
+    font-size: 3.2rem;
+    font-family: "Caveat", cursive;
+    font-weight: 300;
+}
+
+.all-products-filter{
+    width: 18.4rem;
+    height: 3.2rem;
+    border: 1px solid var(--line-gray);
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+}

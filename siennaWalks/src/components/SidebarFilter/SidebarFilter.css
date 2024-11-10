@@ -1,0 +1,153 @@
+@import url('../../global.css');
+
+.sidebar-filter{
+    background: var(--second-white);
+    width: 100%;
+    height: 56.8rem;
+    position: fixed;
+    left: 0%;
+    transform: translateX(-100%);
+    transition-duration: 1.2s;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+}
+
+.sidebar-filter-change{
+    background: var(--second-white);
+    width: 100%;
+    height: 56.8rem;
+    position: fixed;
+    left: 0%;
+    transform: translateX(0%);
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+}
+
+.sidebar-filter-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sidebar-filter-close{
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1.6rem;
+}
+
+.sidebar-filter-tittle{
+    text-align: center;
+    margin-top: .8rem;
+    font-size: 3.2rem;
+    font-family: "Caveat", cursive;
+    font-weight: 300;
+}
+
+/*estilos de los filtros*/
+.sidebar-filter-slider{
+    width: 22.1rem;
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+
+.sidebar-filter-slider .sidebar-filter-collection,
+.sidebar-filter-slider .sidebar-filter-size,
+.sidebar-filter-slider .sidebar-filter-color{
+    width: 22.1rem;
+    height: 3.2rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: .6rem .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    overflow-y: hidden;
+    transition: all 1.2s ease-in;
+}
+
+/*estilos para los filtros extendidos*/
+.sidebar-filter-slider .sidebar-filter-collection-extended{
+    width: 22.1rem;
+    height: 23.5rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    font-family: "Caveat", cursive;
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+
+.sidebar-filter-slider .sidebar-filter-collection-hidden{
+    width: 22.1rem;
+    height: 3.2rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    font-family: "Caveat", cursive;
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+.sidebar-filter-button{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+}
+
+.sidebar-filter-button .up-arrow{
+    transform: rotate(0deg);
+    transition-duration: 1.2s;
+}
+
+.sidebar-filter-button .up-down{
+    transform: rotate(-180deg);
+    transition-duration: 1.2s;
+}
+
+/*estilos para las opciones de colecciones*/
+.sidebar-collections-check-extended{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+    transition: all 1s ease-in;
+    overflow-y: hidden; 
+    margin-top: 0.4rem;
+}
+
+.sidebar-collections-check-hidden{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    margin-top: .6rem;
+    transition: all 1s ease-in;
+    overflow-y: hidden;
+    margin-top: 0.4rem; 
+}
+
+.sidebar-collection-check-option{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+}
+
+
+
+
