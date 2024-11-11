@@ -186,6 +186,7 @@
     .sidebar, .sidebar-change{
         padding: 1.6rem;
         height: 32rem;
+        z-index: 1;
     }
     .sidebar-tittle{
         margin-top: 0px;

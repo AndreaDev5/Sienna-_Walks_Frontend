@@ -13,7 +13,7 @@ const Register = () => {
         <h1 className="register-tittle-main">Regístrate</h1>
         <article className="register-global-nav">
           <Link to="/">INICIO</Link>&nbsp;|&nbsp;<Link to="/registrate">REGÍSTRATE</Link>
-      </article>
+        </article>
       <form className="register-form">
         <label className='register-form-name'>
           <span>Nombre</span>

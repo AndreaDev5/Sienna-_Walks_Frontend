@@ -31,14 +31,16 @@ const AppContext = () => {
  const { cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart } =useToggleButtons();  
 
  /*variables para el sidebar de todos los productos*/
- const { sidebarFilter, onChangeSidebarFilter }   = useSidebarFilterScroll();
+ const { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, onChangeFilterSizes,
+  arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef}   = useSidebarFilterScroll();
 
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
       scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
       handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount}}>
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
-          <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter}}>
+          <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
+            onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef}}>
           <BrowserRouter>
           <SidebarFilter/>
           <Whatsapp/>

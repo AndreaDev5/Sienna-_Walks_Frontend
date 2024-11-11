@@ -5,6 +5,10 @@
     margin: 0 auto;
 }
 
+.all-products-global-nav{
+    display: none;
+}
+
 .all-products-tittle-init{
     text-decoration: none;
     font-size: 1.6em;
@@ -34,4 +38,32 @@
     border-radius: .4rem;
     margin: 0 auto;
     margin-top: 2.4rem;
+}
+
+@media only screen and (min-width: 568px){
+    .all-products-container{
+        width: 94%;
+    }
+
+    .all-products-filter{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 744px){
+    .all-products-global-nav{
+        display: flex;
+        font-size: 1.6rem;
+    }
+
+    .all-products-global-nav a{
+        text-decoration: none;
+        color: var(--black-font);
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .all-products-tittle-init{
+        display: none;
+    }
 }
