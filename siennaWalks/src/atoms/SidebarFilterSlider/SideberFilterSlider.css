@@ -1,0 +1,546 @@
+/*estilos de todos los filtros sin extender*/
+.sidebar-filter-slider{
+    width: 22.1rem;
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+
+/*estilos para los filtros extendidos*/
+.sidebar-filter-slider .sidebar-filter-collection-hidden{
+    width: 22.1rem;
+    height: 3.2rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    font-family: "Caveat", cursive;
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+
+.sidebar-filter-slider .sidebar-filter-collection-extended{
+    width: 22.1rem;
+    height: 23.5rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    font-family: "Caveat", cursive;
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+
+.sidebar-filter-button{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+}
+
+.sidebar-filter-button .up-arrow{
+    transform: rotate(0deg);
+    transition-duration: 1.2s;
+}
+
+.sidebar-filter-button .down-arrow{
+    transform: rotate(-180deg);
+    transition-duration: 1.2s;
+}
+
+/*estilos para las opciones de colecciones*/
+
+.sidebar-collections-check-hidden{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    margin-top: .6rem;
+    transition: all 1s ease-in;
+    overflow-y: hidden;
+    margin-top: 0.4rem; 
+}
+
+.sidebar-collections-check-extended{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+    transition: all 1s ease-in;
+    overflow-y: hidden; 
+    margin-top: 0.4rem;
+}
+
+.sidebar-collection-check-option{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+}
+
+/*estilos para el filtro por tallas*/
+
+.sidebar-filter-slider .sidebar-filter-size-hidden{
+    width: 22.1rem;
+    height: 3.2rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+
+.sidebar-filter-slider .sidebar-filter-size-extended{
+    width: 22.1rem;
+    height: 17.2rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+
+.sidebar-size-button{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sidebar-size-check-extended{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 19.8rem;
+    transition: all 1s ease-in;
+    overflow-y: hidden; 
+    margin-top: 0.4rem;
+}
+
+.sidebar-size-check-hidden{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0rem;
+    transition: all 1s ease-in;
+    overflow-y: hidden; 
+    margin-top: 0.4rem;
+}
+
+.sidebar-size-check-option{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+}
+
+.up-size-arrow{
+    transform: rotate(0deg);
+    transition-duration: 1s;
+}
+
+.down-size-arrow{
+    transform: rotate(-180deg);
+    transition-duration: 1s;
+}
+
+/*estilo para el filtro de colores*/
+.sidebar-filter-slider .sidebar-filter-color-hidden{
+    width: 22.1rem;
+    height: 3.2rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+
+.sidebar-filter-slider .sidebar-filter-color-extended{
+    width: 22.1rem;
+    height: 26rem;
+    border: 1px solid var(--line-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: .6rem .6rem;
+    margin-top: .8rem;
+    background: var(--first-white);
+    overflow-y: hidden;
+    transition: all 1s ease-in;
+}
+
+.sidebar-color-button{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sidebar-color-check-hidden{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    transition: all 1s ease-in;
+    overflow-y: hidden; 
+    margin-top: 0.4rem;
+}
+
+.sidebar-color-check-extended{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 22rem;
+    transition: all 1s ease-in;
+    overflow-y: hidden; 
+    margin-top: 0.4rem;
+}
+
+.sidebar-color-check-option{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+}
+
+.up-color-arrow{
+    transform: rotate(0deg);
+    transition-duration: 1s;
+}
+
+.down-color-arrow{
+    transform: rotate(-180deg);
+    transition-duration: 1s;
+}
+/*estilos para los botones de colores*/
+.sidebar-color-check-hidden .black-button input[type="checkbox"],
+.sidebar-color-check-extended .black-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: black;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-color-check-hidden .black-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .black-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: black;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/white-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-color-check-hidden .white-button input[type="checkbox"],
+.sidebar-color-check-extended .white-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: white;
+    border: 1px solid #565656;
+}
+
+.sidebar-color-check-hidden .white-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .white-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: black;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/black-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-color-check-hidden .red-button input[type="checkbox"],
+.sidebar-color-check-extended .red-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #BA0F0F;
+    border: 1px solid #565656;
+}
+
+.sidebar-color-check-hidden .red-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .red-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #BA0F0F;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/white-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-color-check-hidden .blue-button input[type="checkbox"],
+.sidebar-color-check-extended .blue-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #21245C;
+    border: 1px solid #565656;
+}
+
+.sidebar-color-check-hidden .blue-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .blue-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #21245C;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/white-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-color-check-hidden .brown-button input[type="checkbox"],
+.sidebar-color-check-extended .brown-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #673D25;
+    border: 1px solid #565656;
+}
+
+.sidebar-color-check-hidden .brown-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .brown-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #673D25;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/white-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-color-check-hidden .beige-button input[type="checkbox"],
+.sidebar-color-check-extended .beige-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #C58940;
+    border: 1px solid #565656;
+}
+
+.sidebar-color-check-hidden .beige-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .beige-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #C58940;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/white-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-color-check-hidden .white-cream-button input[type="checkbox"],
+.sidebar-color-check-extended .white-cream-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #E5BA73;
+    border: 1px solid #565656;
+}
+
+.sidebar-color-check-hidden .white-cream-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .white-cream-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #E5BA73;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/white-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-color-check-hidden .wine-red-button input[type="checkbox"],
+.sidebar-color-check-extended .wine-red-button input[type="checkbox"]{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #860D0D;
+    border: 1px solid #565656;
+}
+
+.sidebar-color-check-hidden .wine-red-button input[type="checkbox"]:checked,
+.sidebar-color-check-extended .wine-red-button input[type="checkbox"]:checked{
+    appearance: none;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #860D0D;
+    border: 1px solid #565656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/logos/white-checked-button.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 568px){
+    .sidebar-filter-slider{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .sidebar-filter-slider .sidebar-filter-collection-hidden,
+    .sidebar-filter-slider .sidebar-filter-collection-extended,
+    .sidebar-filter-slider .sidebar-filter-size-hidden,
+    .sidebar-filter-slider .sidebar-filter-size-extended,
+    .sidebar-filter-slider .sidebar-filter-color-hidden,
+    .sidebar-filter-slider .sidebar-filter-color-extended{
+        width: 16.8rem;
+        margin: 0;
+    }
+
+    .sidebar-filter-slider .sidebar-filter-collection-extended,
+    .sidebar-filter-slider .sidebar-filter-size-extended,
+    .sidebar-filter-slider .sidebar-filter-color-extended{
+        height: 18rem;
+    }
+
+    .sidebar-collections-check-extended,
+    .sidebar-color-check-extended{
+        overflow-y: auto;
+    }
+}
+
+@media only screen and (min-width: 744px){
+    .sidebar-filter-slider{
+        max-width: 60.3rem;
+        margin: 1.6rem auto 0rem 0rem;
+    }
+
+    .sidebar-filter-slider .sidebar-filter-collection-hidden,
+    .sidebar-filter-slider .sidebar-filter-collection-extended,
+    .sidebar-filter-slider .sidebar-filter-size-hidden,
+    .sidebar-filter-slider .sidebar-filter-size-extended,
+    .sidebar-filter-slider .sidebar-filter-color-hidden,
+    .sidebar-filter-slider .sidebar-filter-color-extended{
+        width: 19.5rem;
+        margin: 0;
+    }
+
+    .sidebar-filter-slider .sidebar-filter-collection-extended{
+        height: 23.5rem;
+    }
+
+    .sidebar-filter-slider .sidebar-filter-color-extended{
+        height: 26rem;  
+    }
+
+    .sidebar-collections-check-extended{
+        overflow-y: hidden;
+    }
+
+    .sidebar-color-check-extended{
+        overflow-y: hidden;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .sidebar-filter-slider{
+        width: 22.1rem;
+        font-size: 1.6rem;
+        flex-direction: column;
+        margin-top: 1.6rem;
+    }
+
+    .sidebar-filter-slider .sidebar-filter-collection-hidden,
+    .sidebar-filter-slider .sidebar-filter-collection-extended,
+    .sidebar-filter-slider .sidebar-filter-size-hidden,
+    .sidebar-filter-slider .sidebar-filter-size-extended,
+    .sidebar-filter-slider .sidebar-filter-color-hidden,
+    .sidebar-filter-slider .sidebar-filter-color-extended{
+        margin-top: 1.6rem;
+        cursor: pointer;
+        width: 19.5rem;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .sidebar-filter-slider .sidebar-filter-collection-hidden,
+    .sidebar-filter-slider .sidebar-filter-collection-extended,
+    .sidebar-filter-slider .sidebar-filter-size-hidden,
+    .sidebar-filter-slider .sidebar-filter-size-extended,
+    .sidebar-filter-slider .sidebar-filter-color-hidden,
+    .sidebar-filter-slider .sidebar-filter-color-extended{
+        width: 22.1rem;
+    }
+}

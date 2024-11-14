@@ -6,6 +6,7 @@ const initialData = [
         collection: 'Eclat Éternel',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 36,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -18,6 +19,7 @@ const initialData = [
         collection: 'L`Aura Majestueuse',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 400000,
+        size: 36,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -30,6 +32,7 @@ const initialData = [
         collection: 'Velours Divin',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 400000,
+        size: 37,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -42,6 +45,7 @@ const initialData = [
         collection: 'Héritage d`Or',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 550000,
+        size: 38,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -54,6 +58,7 @@ const initialData = [
         collection: 'Eclat Éternel',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 37,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -66,6 +71,7 @@ const initialData = [
         collection: 'Héritage d`Or',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 34,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -78,6 +84,7 @@ const initialData = [
         collection: 'L`Aura Majestueuse',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 36,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -90,6 +97,7 @@ const initialData = [
         collection: 'Opulence Sauvage',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 36,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -102,6 +110,7 @@ const initialData = [
         collection: 'Noir Élégance',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 36,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -114,6 +123,7 @@ const initialData = [
         collection: 'Ciel de Minuit',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 36,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",
@@ -126,6 +136,7 @@ const initialData = [
         collection: 'Opulence Sauvage',
         shoesName: 'Nombre de Zapato',
         shoesPrice: 300000,
+        size: 34,
         shoeStoreColors: {
         firstColor: "#2F2F2F",
         secondColor: "#C58940",

@@ -1,14 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Allproducs.css';
 import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
 import { Link } from 'react-router-dom';
 import imageFilter from '../../assets/logos/image_filter.svg';
 import { SidebarAllProductsContext } from '../../context/StoreContext';
 import SidebarFilterSlider from '../../atoms/SidebarFilterSlider/SidebarFilterSlider';
+import { initialDataAllProducts } from './AllProductsData';
 
 const AllProducts = () => {
   const { onChangeSidebarFilter } = React.useContext(SidebarAllProductsContext);
   const bodyWidth = document.body.clientWidth;
+  const [initialAllProducts, setInitialAllProducts] = useState([]);
+  const [totalPages,setTotalPages] = useState([]);
+
+  useEffect(()=>{
+    setInitialAllProducts(initialDataAllProducts)
+
+    const totalITems = initialAllProducts.length;
+
+    const itemsPerPage = totalITems/16;
+    console.log(itemsPerPage)
+
+    //a partir de los items por pagina, establecer un array que sume el total de páginas
+
+    for(let i=0; i<itemsPerPage ;i++)
+    { 
+
+    }
+  },[initialAllProducts])
+
+
+  
+
 
   return (
     <>
@@ -23,9 +46,12 @@ const AllProducts = () => {
         <article className="all-products-global-nav">
           <Link to="/">INICIO</Link>&nbsp;|&nbsp;<Link to="/ver-productos">BOTAS PARA MUJER</Link>
         </article>
-        <div>
+        <main className='all-products-basic-container'>
           {(bodyWidth>=568) && <SidebarFilterSlider/>}
-        </div>
+          <section className='all-products-set'>
+            
+          </section>
+        </main>
     </section>
     
     </>
