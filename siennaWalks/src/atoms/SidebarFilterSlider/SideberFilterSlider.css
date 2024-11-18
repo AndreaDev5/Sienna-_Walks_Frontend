@@ -453,10 +453,12 @@
 
 @media only screen and (min-width: 568px){
     .sidebar-filter-slider{
-        width: 100%;
+        width: 53.4rem;
         display: flex;
         justify-content: space-between;
         margin-top: 2rem;
+        position: absolute;
+        margin: 0 auto 0 0 ;
     }
 
     .sidebar-filter-slider .sidebar-filter-collection-hidden,
@@ -483,7 +485,7 @@
 
 @media only screen and (min-width: 744px){
     .sidebar-filter-slider{
-        max-width: 60.3rem;
+        width: 60.3rem;
         margin: 1.6rem auto 0rem 0rem;
     }
 
@@ -516,14 +518,21 @@
 
 @media only screen and (min-width: 1280px){
     .sidebar-filter-slider{
-        width: 22.1rem;
+        width: 100%;
         font-size: 1.6rem;
         flex-direction: column;
         margin-top: 1.6rem;
+        position: relative;
     }
 
     .sidebar-filter-slider .sidebar-filter-collection-hidden,
-    .sidebar-filter-slider .sidebar-filter-collection-extended,
+    .sidebar-filter-slider .sidebar-filter-collection-extended{
+        margin-top: 0;
+        cursor: pointer;
+        width: 19.5rem;
+    }
+
+  
     .sidebar-filter-slider .sidebar-filter-size-hidden,
     .sidebar-filter-slider .sidebar-filter-size-extended,
     .sidebar-filter-slider .sidebar-filter-color-hidden,

@@ -24,7 +24,8 @@ export default function LastRelease(){
       </article>
       <article className='release-products-container'>
         {(finalData!==undefined) && finalData.map((dataItem)=>{
-            return <ShoeStoreTarget 
+            return <ShoeStoreTarget
+                classShoeName='shoe-store-target'
                 key={dataItem.id}
                 collection={dataItem.collection}
                 shoesName={dataItem.shoesName}
