@@ -34,6 +34,8 @@ const AppContext = () => {
  const { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, onChangeFilterSizes,
   arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef}   = useSidebarFilterScroll();
 
+
+
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
       scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,

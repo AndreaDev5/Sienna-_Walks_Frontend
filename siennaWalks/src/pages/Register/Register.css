@@ -51,26 +51,54 @@
     margin-top: 1.2rem;
 }
 
+.register-form .register-form-password{
+    position: relative;
+}
+
 .register-form .register-form-name input[type="text"],
 .register-form .register-form-surname input[type="text"],
 .register-form .register-form-email input[type="email"],
 .register-form .register-form-adress input[type="text"],
-.register-form .register-cities input,
-.register-form .register-form-password input
-{
+.register-form .register-cities input{
     background: var(--first-white);
     height: 3rem;
     margin-top: 1.2rem;
     width: 100%;
     border: none;
     color: var(--black-font);
-    border: 1px solid var(--line-gray)
+    border: 1px solid var(--line-gray);
+    padding: 0 1.2rem;
 }
 
-.register-form .register-cellphone-object{
-    display: grid;
-    grid-template-columns: 15.5% 1fr;
-    gap: .4rem;
+
+.register-form .register-form-password input{
+    background: var(--first-white);
+    height: 3rem;
+    margin-top: 1.2rem;
+    width: 100%;
+    border: none;
+    color: var(--black-font);
+    border: 1px solid var(--line-gray);
+    padding: 0 1.2rem;
+}
+
+.register-form-password .register-visibility-hidden,
+.register-form-password .register-visibility-shown{
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    background-size: cover;
+    top: 3.5rem;
+    left: 89.31%;
+}
+
+.register-form-password .register-visibility-hidden{
+    background-image: url('../../assets/logos/password-hidden.svg');
+}
+
+.register-form-password .register-visibility-shown{
+    background-image: url('../../assets/logos/password-shown.svg');
 }
 
 .register-form .register-cellphone input[type="text"]{
@@ -80,8 +108,8 @@
     width: 100%;
     border: none;
     color: var(--black-font);
-    text-align: center;
     border: 1px solid var(--line-gray);
+    padding: 0 1.2rem;
 }
 
 .register-form .register-drag-and-drop-area{
@@ -139,7 +167,7 @@
     color: var(--black-font);
     border-radius: .4rem;
     margin: 0 auto;
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
     display: block;
     text-align: center;
     align-content: center;
@@ -197,7 +225,9 @@
     .register-form{
         display: grid;
         padding: 1.2rem;
-        height: 62.4rem;
+        width: 44rem;
+        margin: 0 auto;
+        height: 61.4rem;
         grid-template: repeat(4,1fr) 22.1rem 1fr/ repeat(2,1fr);
         gap: 1.6rem;
         grid-template-areas:"register-form-name register-form-surname"
@@ -241,11 +271,19 @@
 
     .register-form .register-form-password{
         grid-area: register-form-password;
+        width: 23rem;
+        justify-self: center;
+    }
+
+    .register-form-password .register-visibility-hidden,
+    .register-form-password .register-visibility-shown{
+        left: 87.31%;
     }
 
     .register-form .register-drag-and-drop-area{
         grid-area: register-drag-and-drop-area;
         height: 22.1rem;
+        margin-top: 0;
     }
 
     .register-form .register-drag-image{
@@ -255,7 +293,8 @@
     .register-form .register-submit{
         grid-area: register-submit;
         justify-self: center;
-        margin-top: 2rem;
+        align-self: center;
+        margin-top: 0;
     }
 
     .register-form .register-upload-addition{
@@ -287,7 +326,6 @@
     }
 
     .register-form{
-        width: 57.6rem;
         margin: 0 auto;
         margin-top: 3.2rem;
     }
