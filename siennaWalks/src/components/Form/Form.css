@@ -47,7 +47,7 @@
 .form-sienna .form-surname input[type="text"],
 .form-sienna .form-email input[type="email"],
 .form-sienna .form-address input[type="text"],
-.form-sienna .form-cities input,
+.form-sienna .form-cities select,
 .form-sienna .form-password input{
     background: #747272;
     height: 3rem;

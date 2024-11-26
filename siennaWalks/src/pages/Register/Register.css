@@ -59,7 +59,7 @@
 .register-form .register-form-surname input[type="text"],
 .register-form .register-form-email input[type="email"],
 .register-form .register-form-adress input[type="text"],
-.register-form .register-cities input{
+.register-form .register-cities select{
     background: var(--first-white);
     height: 3rem;
     margin-top: 1.2rem;
@@ -69,6 +69,7 @@
     border: 1px solid var(--line-gray);
     padding: 0 1.2rem;
 }
+
 
 
 .register-form .register-form-password input{

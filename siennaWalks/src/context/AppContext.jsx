@@ -18,6 +18,8 @@ import { useToggleButtons } from '../hooks/useToggleButtons';
 import { useSidebarFilterScroll } from '../hooks/useSidebarFilterScroll';
 import AllProducts from '../pages/AllProducts/AllProducts';
 import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
+import ProtectRoute from '../pages/ProtectedRoute/ProtectRoute';
+import { AuthProvider } from './AuthContext';
 
 const AppContext = () => {
   /*variables para el boton de hamburguesa*/ 
@@ -43,6 +45,7 @@ const AppContext = () => {
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
           <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
             onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef}}>
+          <AuthProvider>
           <BrowserRouter>
           <SidebarFilter/>
           <Whatsapp/>
@@ -64,13 +67,16 @@ const AppContext = () => {
             <Route path='/ingresa' element={<Login/>}/>
             <Route path='/registrate' element={<Register/>}/>
             <Route path='/carrito-de-compras' element={<ShoppingCart/>}/>
+            <Route element={<ProtectRoute/>}>
             <Route path='/perfil' element={<UserProfile/>}/>
             <Route path="/editar-perfil" element={<EditUSerProflie/>}/>    
             <Route path='/admin' element={<AdminDashboard/>}/>
+            </Route>
             <Route path="/ver-productos" element={<AllProducts/>}/>
             </Routes>
           </main>    
         </BrowserRouter>
+        </AuthProvider>
         </SidebarAllProductsContext.Provider>
         </HeaderContext.Provider>
     </StoreContext.Provider>
