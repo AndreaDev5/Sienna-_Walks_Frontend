@@ -40,47 +40,6 @@ const Register = () => {
     if (isRegister) navigate("/ingresa")
   },[isRegister])
 
-
-  /*funciones para crear usuario*/ 
-  /*
-  const createUser = (e) =>{
-    e.preventDefault();
-    const form = e.target;
-
-    const userData = {
-      name: form.name.value,
-      lastname: form.lastname.value,
-      email: form.email.value,
-      password: form.password.value,
-      cellphone: form.cellphone.value,
-      address: form.address.value,
-      city: form.city.value,
-      image: form.image.value
-    }
-
-    console.log(userData)
-
-    //probar la url de cargar datos de usuario
-   const url = 'http://localhost:3000/api/register';
-
-   fetch(url,{
-    method: "POST",
-    body: JSON.stringify(userData),
-    headers:{
-      "Content-Type": "application/json",
-    },
-   })
-   .then((res)=> res.json())
-   .catch((error)=> console.error("Error: ",error ))
-   .then((response)=>console.log("Success", response))
-  }  
-
-  */
-  //Constante para enviar los datos y registrar el usuario
-  /*const onSubmit = handleSubmit(async (values)=>{
-    signup(values);
-});*/
-
 const onSubmit = handleSubmit(async (values) => {
 
   const user = new FormData();

@@ -61,23 +61,30 @@
     margin-top: 1.6rem;
 }
 
-.all-products-pages .all-products-page-number,
-.all-products-pages .all-products-selected-number{
-    width: 3.2rem;
-    height: 3.21rem;
-    border: 1px solid var(--black-font);
+
+.all-products-charger{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--second-white);
+    color: var(--black-font);
     border-radius: .4rem;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 400;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    display: block;
     text-align: center;
     align-content: center;
-    font-size: 2rem;
-    background-color: var(--second-white);
-    cursor: pointer;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--line-gray)
 }
 
-.all-products-pages .all-products-selected-number{
-    background-color: var(--line-gray);
+.all-products-indicator{
+    text-align: center;
+    margin-top: 1.6rem;
+    font-family: "Caveat", cursive;
+    font-weight: 300;
+    font-size: 2.8rem;
 }
 
 @media only screen and (min-width: 568px){

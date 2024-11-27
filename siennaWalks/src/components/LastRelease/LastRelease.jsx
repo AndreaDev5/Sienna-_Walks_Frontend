@@ -6,14 +6,25 @@ import { Link } from 'react-router-dom';
 
 export default function LastRelease(){
   const [provisionalData,setProvisionalData] = useState([]);  
+  const [productList, setProductList ] = useState([]);
+  const [productPage,setProductPage]  = useState(0);
+
+  const getAllProducts = async (index) =>{
+    const productURL = 'http://localhost:3000/api/products/';
+    const request = await fetch(productURL)
+    const productData = await request.json();
+    const { data } = productData;
+
+    const filteredProducts = data.slice(0,index)
+    console.log(filteredProducts)
+    if(data && productData!==undefined){
+      setProductList(data)
+    }    
+  }
 
   useEffect(()=>{
-    const data = { initialData }
-    setProvisionalData(data)
-
-  },[])  
-  
-  let finalData = provisionalData.initialData;    
+    getAllProducts(32);
+  },[])
 
   return (
     <section className='releases'>
@@ -23,13 +34,14 @@ export default function LastRelease(){
         <div className='releases-tittle-line'></div>
       </article>
       <article className='release-products-container'>
-        {(finalData!==undefined) && finalData.map((dataItem)=>{
+        {(productList!==undefined) && productList.map((dataItem)=>{
             return <ShoeStoreTarget
                 classShoeName='shoe-store-target'
                 key={dataItem.id}
-                collection={dataItem.collection}
-                shoesName={dataItem.shoesName}
-                shoesPrice={`$${dataItem.shoesPrice}`}
+                collection={dataItem.category}
+                shoesName={dataItem.name}
+                image={dataItem.image}
+                shoesPrice={`$${dataItem.price}`}
                 />
         })}
         </article>

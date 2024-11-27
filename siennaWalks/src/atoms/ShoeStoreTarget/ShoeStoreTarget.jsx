@@ -6,7 +6,7 @@ import imageStore from '../../assets/images/shoeItemProv.png';
 import { Link } from 'react-router-dom';
 
 // 🎯 Componente para mostrar un elemento de la tienda de zapatos
-const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,firstColor,secondColor,thirdColor,fourthColor,id}) => {
+const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,firstColor,secondColor,thirdColor,fourthColor,id}) => {
   
 // 🎨 Referencias a los colores para gestionar estilos o comportamientos específicos
 
@@ -25,7 +25,7 @@ const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,firstCol
 // 🔗 Componente de enlace que envuelve toda la tarjeta del producto
   return (
     <Link className={classShoeName} to='/'>
-      <img className='shoe-store-image' src={imageStore} alt={'sienna-ref-nombre-de-zapato'}/>
+      <img className='shoe-store-image' src={image} alt={'sienna-ref-nombre-de-zapato'}/>
       <p className='shoe-store-collection'>{collection}</p>
       <p className='shoe-store-name'>{shoesName}</p>
       <p className='shoe-store-price'>{shoesPrice}</p>

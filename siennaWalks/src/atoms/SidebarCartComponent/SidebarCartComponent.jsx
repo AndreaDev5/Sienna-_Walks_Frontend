@@ -4,7 +4,7 @@ import shoppingBigCart from '../../assets/logos/ph_shopping-cart-big.svg';
 import './SidebarCartComponent.css';
 import { StoreContext } from '../../context/StoreContext';
 
-const SidebarCartComponent = ({sidebarCartComponent,sidebarCartTittle,sidebarCartBigIcon}) => {
+const SidebarCartComponent = ({sidebarCartComponent,sidebarCartTittle,sidebarCartBigIcon,shoeImage}) => {
 const { onChangeDarkBurguer} = useContext(StoreContext);
 
   return (
