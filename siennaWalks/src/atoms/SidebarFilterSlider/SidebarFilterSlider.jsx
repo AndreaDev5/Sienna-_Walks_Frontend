@@ -2,12 +2,16 @@ import React from 'react';
 import blackArrow from '../../assets/logos/up--black-arrow.svg';
 import { SidebarAllProductsContext } from '../../context/StoreContext';
 import { useContext, useState, useRef, useEffect, } from 'react';
+import { useFilterProducts } from '../../hooks/useFilterProducts';
 import './SideberFilterSlider.css';
 
 const SidebarFilterSlider = () => {
     const { filterCollectionRef, onChangeFilterCollection, arrowRef,
         filterSizesRef , onChangeFilterSizes, arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef
       } = useContext(SidebarAllProductsContext);   
+    
+    const { productList,toggleFilters,filteredProducts } = useFilterProducts();
+    console.log(`Sidebar ${filteredProducts}`);
 
   return (
     <article className='sidebar-filter-slider'>
@@ -19,31 +23,31 @@ const SidebarFilterSlider = () => {
                 <section className='sidebar-collections-check-hidden'>
                   <label className='sidebar-collection-check-option'>
                     <p>Eclat Éternel</p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" onChange={()=> toggleFilters("category","Eclat Éternel")}/>
                   </label>
                   <label className='sidebar-collection-check-option'>
                     <p>L'aura Majestuse</p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" onChange={()=> toggleFilters("category",`L'Aura Majestueuse`)}/>
                   </label>
                   <label className='sidebar-collection-check-option'>
                     <p>Velours Divin</p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" onChange={()=> toggleFilters("category",`Velours Divin`)}/>
                   </label>
                   <label className='sidebar-collection-check-option'>
                     <p>Heritage d'Or</p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" onChange={()=> toggleFilters("category",`Héritage d'Or`)}/>
                   </label>
                   <label className='sidebar-collection-check-option'>
                     <p>Opulence Sauvage</p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" onChange={()=>toggleFilters("category",`Opulence Sauvage`)}/>
                   </label>
                   <label className='sidebar-collection-check-option'>
                     <p>Noir Élegance</p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" onChange={()=>toggleFilters("category",`Noir Élégance`)}/>
                   </label>
                   <label className='sidebar-collection-check-option'>
                     <p>Ciel de Minuit</p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" onChange={()=>toggleFilters("category",`Ciel de Minuit`)}/>
                   </label>
                 </section>
             </div>

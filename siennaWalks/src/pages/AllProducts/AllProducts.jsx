@@ -8,52 +8,16 @@ import SidebarFilterSlider from '../../atoms/SidebarFilterSlider/SidebarFilterSl
 import ShoeStoreTarget from '../../atoms/ShoeStoreTarget/ShoeStoreTarget';
 import PersonalizeShoes from '../../components/PersonalizeShoes/PersonalizeShoes';
 import Footer from '../../components/Footer/Footer';
+import { useFilterProducts } from '../../hooks/useFilterProducts';
+
 
 const AllProducts = () => {
   const { onChangeSidebarFilter } = React.useContext(SidebarAllProductsContext);
   const bodyWidth = document.body.clientWidth;
-
-  /*variables de consumo de la API*/
-  const [productList, setProductList ] = useState([]);
-  let [productInterval,setProductInterval]  = useState(1);
-  let [listedProducts, setListedProducts ] = useState([]);
-
-
-  const getAllProducts = async () =>{
-    const productURL =  'http://localhost:3000/api/products/';
-    const request =  await fetch(productURL)
-    const productData = await request.json();
-    const { data } = productData;
-    setProductList(data)
-  }
-
-  useEffect(()=>{
-    getAllProducts();
-  },[])
   
+  const { productList,toggleFilters,filteredProducts } = useFilterProducts();
+  console.log(`all products ${filteredProducts}`);
 
-
-
-  const filterProducts = (products,index,tab) =>{
-    
-    //establecer las variables de intervalo
-    const entireInterval = products.length;
-  
-    const secondInterval = index * 16;
-    
-    let selectedProducts = products.slice(0,secondInterval)
-
-    let renederedProducts = selectedProducts.length; 
-    
-    if(renederedProducts<=entireInterval){
-      setListedProducts((items)=>[...items,selectedProducts])
-      const indexedProducts = listedProducts[listedProducts.length - 1];  
-      return indexedProducts;
-    }
-  }
-
-  const visibleProducts = useMemo(()=>filterProducts(productList,productInterval),[productList,productInterval])
- 
   return (
     <>
     <section className='all-products-container'>
@@ -72,7 +36,7 @@ const AllProducts = () => {
             {(bodyWidth>=568) && <SidebarFilterSlider/>}
           </section>
           <section className='all-products-general-container'>
-            {(visibleProducts?.length >0) && visibleProducts.map((product)=>{
+            {(filteredProducts?.length >0) && filteredProducts.map((product)=>{
                 return <ShoeStoreTarget
                 classShoeName='shoe-store-target-all-products'
                 key={product.id}
@@ -83,8 +47,8 @@ const AllProducts = () => {
             })} 
           </section>
         </main>
-        <p className='all-products-indicator'><strong>{visibleProducts?.length}</strong> de <strong>{productList?.length}</strong> productos</p>
-        <button className='all-products-charger' onClick={()=>{setProductInterval(productInterval=productInterval+1)}}>Ver más</button>    
+        <p className='all-products-indicator'><strong>{productList?.length}</strong> de <strong>{productList?.length}</strong> productos</p>
+        <button className='all-products-charger'>Ver más</button>    
     </section>
     <PersonalizeShoes/>
     <Footer/>
