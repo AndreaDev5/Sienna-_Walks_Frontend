@@ -32,12 +32,12 @@ export const useFilterProducts = () =>{
         return matchCategory && matchType;
     })  
     
+    
+    //console.log(filteredProducts);
 
   useEffect(()=>{
     getAllProducts();
   },[])
-  //console.log(filteredProducts);
-  //console.log(newProducts);
 
   return { productList,toggleFilters,filteredProducts }
 }

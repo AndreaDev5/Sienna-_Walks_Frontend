@@ -16,6 +16,7 @@ import { useButtonBurguer } from '../hooks/useButtonBurguer';
 import { useSidebarScroll } from '../hooks/useSidebarScroll';
 import { useToggleButtons } from '../hooks/useToggleButtons';
 import { useSidebarFilterScroll } from '../hooks/useSidebarFilterScroll';
+import { useFilterProducts } from '../hooks/useFilterProducts';
 import AllProducts from '../pages/AllProducts/AllProducts';
 import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
 import ProtectRoute from '../pages/ProtectedRoute/ProtectRoute';
@@ -36,7 +37,10 @@ const AppContext = () => {
  const { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, onChangeFilterSizes,
   arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef}   = useSidebarFilterScroll();
  
-  
+  /*variables para el filtro de productos*/
+  const { productList,toggleFilters,filteredProducts } = useFilterProducts();
+
+  //console.log(filteredProducts);
 
 
   return (
@@ -45,7 +49,7 @@ const AppContext = () => {
       handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount}}>
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
           <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
-            onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef}}>
+            onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef,productList,toggleFilters,filteredProducts }}>
           <AuthProvider>
           <BrowserRouter>
           <SidebarFilter/>

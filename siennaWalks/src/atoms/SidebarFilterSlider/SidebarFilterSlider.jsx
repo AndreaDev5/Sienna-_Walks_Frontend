@@ -2,15 +2,14 @@ import React from 'react';
 import blackArrow from '../../assets/logos/up--black-arrow.svg';
 import { SidebarAllProductsContext } from '../../context/StoreContext';
 import { useContext, useState, useRef, useEffect, } from 'react';
-import { useFilterProducts } from '../../hooks/useFilterProducts';
 import './SideberFilterSlider.css';
 
 const SidebarFilterSlider = () => {
     const { filterCollectionRef, onChangeFilterCollection, arrowRef,
         filterSizesRef , onChangeFilterSizes, arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef
       } = useContext(SidebarAllProductsContext);   
-    
-    const { productList,toggleFilters,filteredProducts } = useFilterProducts();
+      
+      const {productList,toggleFilters,filteredProducts } = useContext(SidebarAllProductsContext);
     console.log(`Sidebar ${filteredProducts}`);
 
   return (

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useContext } from 'react';
 import './Allproducs.css';
 import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
 import { Link } from 'react-router-dom';
@@ -8,16 +8,14 @@ import SidebarFilterSlider from '../../atoms/SidebarFilterSlider/SidebarFilterSl
 import ShoeStoreTarget from '../../atoms/ShoeStoreTarget/ShoeStoreTarget';
 import PersonalizeShoes from '../../components/PersonalizeShoes/PersonalizeShoes';
 import Footer from '../../components/Footer/Footer';
-import { useFilterProducts } from '../../hooks/useFilterProducts';
-
 
 const AllProducts = () => {
   const { onChangeSidebarFilter } = React.useContext(SidebarAllProductsContext);
   const bodyWidth = document.body.clientWidth;
+  //console.log(`all products ${filteredProducts}`);
+  const {productList,toggleFilters,filteredProducts } = useContext(SidebarAllProductsContext);
   
-  const { productList,toggleFilters,filteredProducts } = useFilterProducts();
   console.log(`all products ${filteredProducts}`);
-
   return (
     <>
     <section className='all-products-container'>
