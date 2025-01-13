@@ -103,11 +103,10 @@
     .all-products-general-container{
         display: grid;
         margin-top: 6.4rem;
-        grid-template: repeat(8,1fr)/repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
         justify-items: center;
         width: 100%;
         gap: 1.6rem;
-
     }
 }
 
@@ -125,7 +124,7 @@
 
 @media only screen and (min-width: 1133px){
     .all-products-general-container{
-        grid-template: repeat(4,1fr)/repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
 }
 

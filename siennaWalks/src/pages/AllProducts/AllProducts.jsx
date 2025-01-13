@@ -45,7 +45,7 @@ const AllProducts = () => {
             })} 
           </section>
         </main>
-        <p className='all-products-indicator'><strong>{productList?.length}</strong> de <strong>{productList?.length}</strong> productos</p>
+        <p className='all-products-indicator'><strong>{filteredProducts?.length}</strong> de <strong>{productList?.length}</strong> productos</p>
         <button className='all-products-charger'>Ver más</button>    
     </section>
     <PersonalizeShoes/>

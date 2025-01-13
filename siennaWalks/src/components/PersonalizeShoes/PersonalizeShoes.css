@@ -27,23 +27,6 @@
     color: var(--first-white);
 }
 
-.personalize-shoes-container .personalize-shoes-whatsapp{
-    width: 22.2rem;
-    height: 3.2rem;
-    background: var(--second-white);
-    color: var(--black-font);
-    border-radius: .4rem;
-    margin: 0 auto;
-    margin-top: 2.4rem;
-    display: block;
-    text-align: center;
-    align-content: center;
-    font-size: 1.6rem;
-    text-decoration: none;
-    font-weight: 500;
-    border: 1px solid var(--line-gray);
-}
-
 @media only screen and (min-width: 568px){
     .personalize-shoes{
         width: 100%;
