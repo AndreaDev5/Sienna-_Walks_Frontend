@@ -1,6 +1,5 @@
 import React from 'react';
 import Collections from '../../components/Collections/Collections';
-
 import Form from '../../components/Form/Form';
 import Hero from '../../components/Hero/Hero';
 import LastRelease from '../../components/LastRelease/LastRelease';

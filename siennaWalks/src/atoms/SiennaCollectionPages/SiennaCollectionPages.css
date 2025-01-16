@@ -1,0 +1,59 @@
+.sienna-pages-links{
+    display: flex;
+    flex-direction: column;
+    width: 15.4rem;
+    height: 3.2rem;
+    border: 1px solid var(--black-font);
+    padding: .6rem;  
+    border-radius: .4rem;
+    overflow-y: hidden;
+    background: var(--first-white);
+    transition: all 1.2s ease;
+    position: absolute;
+    top: 1.6rem;
+}
+
+.sienna-collections-pages-extended{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 15.4rem;
+    height: 23.5rem;
+    border: 1px solid var(--black-font);
+    padding: .6rem;  
+    border-radius: .4rem;
+    overflow-y: hidden;
+    transition: all 1.2s ease;
+    position: absolute;
+    background: var(--first-white);
+    top: 1.6rem;
+}
+
+@media only screen and (min-width: 568px){
+    .sienna-pages-links,
+    .sienna-collections-pages-extended{
+        left: 16.2rem;
+    } 
+}
+
+
+@media only screen and (min-width: 744px){
+    .sienna-pages-links,
+    .sienna-collections-pages-extended{
+        left: 16.8rem;
+    } 
+}
+
+@media only screen and (min-width: 1133px){
+    .sienna-pages-links,
+    .sienna-collections-pages-extended{
+        left: 19rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .sienna-pages-links,
+    .sienna-collections-pages-extended{
+        display: none;
+    }
+}

@@ -183,7 +183,7 @@
 
 .sidebar-filter-slider .sidebar-filter-color-extended{
     width: 22.1rem;
-    height: 26rem;
+    height: 21rem;
     border: 1px solid var(--line-gray);
     border-radius: .4rem;
     display: flex;
@@ -504,7 +504,7 @@
     }
 
     .sidebar-filter-slider .sidebar-filter-color-extended{
-        height: 26rem;  
+        height: 21rem;  
     }
 
     .sidebar-collections-check-extended{

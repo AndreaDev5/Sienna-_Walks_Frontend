@@ -21,6 +21,7 @@ import AllProducts from '../pages/AllProducts/AllProducts';
 import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
 import ProtectRoute from '../pages/ProtectedRoute/ProtectRoute';
 import { AuthProvider } from './AuthContext';
+import Collection from '../pages/Collections/Collection';
 
 const AppContext = () => {
   /*variables para el boton de hamburguesa*/ 
@@ -60,13 +61,13 @@ const AppContext = () => {
             <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/colecciones'>
-                  <Route path=':eclat-eternel' element={<h1>Eclat Éternel</h1>}/>  
-                  <Route path=':l`aura-majestueuse' element={<h1>L'Aura Majestueuse</h1>}/>
-                  <Route path=':velours-divin' element={<h1>Velours Divin</h1>}/>
-                  <Route path=':heritage-d`or' element={<h1>Héritage d'Or</h1>}/>
-                  <Route path=':opulence-sauvage' element={<h1>Opulence Sauvage</h1>}/>
-                  <Route path=':noir-elegance' element={<h1>Noir Élégance </h1>}/>
-                  <Route path=':ciel-de-minuit' element={<h1>Ciel de Minuit</h1>}/>
+                  <Route path=':eclat-eternel' element={<Collection collectionTittle='Eclat Éternel'/>}/>  
+                  <Route path=':l`aura-majestueuse' element={<Collection collectionTittle='L`aura Majestueuse'/>}/>
+                  <Route path=':velours-divin' element={<Collection collectionTittle='Velours divin'/>}/>
+                  <Route path=':heritage-d`or' element={<Collection collectionTittle='Heritage D`or'/>}/>
+                  <Route path=':opulence-sauvage' element={<Collection collectionTittle='Opulence Sauvage'/>}/>
+                  <Route path=':noir-elegance' element={<Collection collectionTittle='Noir elegance'/>}/>
+                  <Route path=':ciel-de-minuit' element={<Collection collectionTittle='Ciel de Minuit'/>}/>
             </Route>
             <Route path='/acerca-de-Sienna' element={<AboutStore/>}/>    
             <Route path='/ingresa' element={<Login/>}/>

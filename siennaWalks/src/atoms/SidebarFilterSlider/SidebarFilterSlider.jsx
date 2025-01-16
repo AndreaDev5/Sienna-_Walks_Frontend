@@ -96,16 +96,8 @@ const SidebarFilterSlider = () => {
                     <p>Rojo</p>
                     <input type="checkbox"/>
                   </label>
-                  <label className='sidebar-color-check-option blue-button'>
-                    <p>Azul</p>
-                    <input type="checkbox"/>
-                  </label>
-                  <label className='sidebar-color-check-option brown-button'>
-                    <p>Café</p>
-                    <input type="checkbox"/>
-                  </label>
                   <label className='sidebar-color-check-option beige-button'>
-                    <p>Beige</p>
+                    <p>Marrón</p>
                     <input type="checkbox"/>
                   </label>
                   <label className='sidebar-color-check-option white-cream-button'>
@@ -113,7 +105,7 @@ const SidebarFilterSlider = () => {
                     <input type="checkbox"/>
                   </label>
                   <label className='sidebar-color-check-option wine-red-button'>
-                    <p>Vino Tinto</p>
+                    <p>Beige</p>
                     <input type="checkbox"/>
                   </label>
                 </section>
