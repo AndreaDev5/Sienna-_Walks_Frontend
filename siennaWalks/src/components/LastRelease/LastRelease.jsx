@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './LastRelease.css'
 import ShoeStoreTarget from '../../atoms/ShoeStoreTarget/ShoeStoreTarget';
-import { initialData } from './initialData';
 import { Link } from 'react-router-dom';
 
-export default function LastRelease(){
-  const [provisionalData,setProvisionalData] = useState([]);  
+export default function LastRelease(){ 
   const [productList, setProductList ] = useState([]);
   const [productPage,setProductPage]  = useState(0);
 
@@ -16,15 +14,16 @@ export default function LastRelease(){
     const { data } = productData;
 
     const filteredProducts = data.slice(0,index)
-    console.log(filteredProducts)
+
     if(data && productData!==undefined){
-      setProductList(data)
+      setProductList(filteredProducts)
     }    
   }
 
   useEffect(()=>{
-    getAllProducts(32);
+    getAllProducts(9);
   },[])
+
 
   return (
     <section className='releases'>
@@ -37,7 +36,8 @@ export default function LastRelease(){
         {(productList!==undefined) && productList.map((dataItem)=>{
             return <ShoeStoreTarget
                 classShoeName='shoe-store-target'
-                key={dataItem.id}
+                key={dataItem._id}
+                productLink={`/producto/${dataItem._id}`}
                 collection={dataItem.category}
                 shoesName={dataItem.name}
                 image={dataItem.image}

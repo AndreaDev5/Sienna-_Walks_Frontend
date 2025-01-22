@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Collections from '../../components/Collections/Collections';
 import Form from '../../components/Form/Form';
 import Hero from '../../components/Hero/Hero';
@@ -9,6 +9,10 @@ import Footer from '../../components/Footer/Footer'
 import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
 
 function Home() {
+  useEffect(()=>{
+    window.scrollTo(0, 0); 
+  },[])
+
 return (
     <>   
         <Hero/>

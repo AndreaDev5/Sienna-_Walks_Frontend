@@ -86,6 +86,10 @@ const onSubmit = handleSubmit(async (values) => {
     console.log(fileImg)
    }
    
+  useEffect(()=>{
+    window.scrollTo(0, 0); 
+  },[])
+
   return (
     <>
       <section className="register-container" onDragOver={handleDragOver}>

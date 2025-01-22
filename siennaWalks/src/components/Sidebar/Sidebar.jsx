@@ -13,7 +13,7 @@ function Sidebar() {
   const { sidebarBurguerRef, onChangeDarkBurguer, onChangeLightBurguer} = useContext(StoreContext);
 
   /*hook para el botón de scroll horizontal ⬅➡*/
-  const {scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
+  const {classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
     handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount } = useContext(StoreContext);  
 
   return (

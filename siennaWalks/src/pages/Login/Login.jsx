@@ -35,6 +35,10 @@ const Login = () => {
   }
   }, [isAuthenticated, token, navigate]);
 
+  useEffect(()=>{
+    window.scrollTo(0, 0); 
+  },[])
+
   return (
     <>
     <section className="login-container">

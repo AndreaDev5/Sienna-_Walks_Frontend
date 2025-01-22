@@ -2,11 +2,11 @@
 
 import React, { useRef } from 'react';
 import './ShoeStoreTarget.css';
-import imageStore from '../../assets/images/shoeItemProv.png';
+
 import { Link } from 'react-router-dom';
 
 // 🎯 Componente para mostrar un elemento de la tienda de zapatos
-const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,firstColor,secondColor,thirdColor,fourthColor,id}) => {
+const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,productLink}) => {
   
 // 🎨 Referencias a los colores para gestionar estilos o comportamientos específicos
 
@@ -23,8 +23,10 @@ const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,fi
   const fourthColorRefNode = firstColorRef.current;
 
 // 🔗 Componente de enlace que envuelve toda la tarjeta del producto
+  
+  
   return (
-    <Link className={classShoeName} to='/'>
+    <Link className={classShoeName} to={productLink}>
       <img className='shoe-store-image' src={image} alt={'sienna-ref-nombre-de-zapato'}/>
       <p className='shoe-store-collection'>{collection}</p>
       <p className='shoe-store-name'>{shoesName}</p>

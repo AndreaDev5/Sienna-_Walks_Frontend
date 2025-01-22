@@ -22,6 +22,7 @@ import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
 import ProtectRoute from '../pages/ProtectedRoute/ProtectRoute';
 import { AuthProvider } from './AuthContext';
 import Collection from '../pages/Collections/Collection';
+import ProductDetail from '../pages/ProductDetail/ProductDetail';
 
 const AppContext = () => {
   /*variables para el boton de hamburguesa*/ 
@@ -40,9 +41,6 @@ const AppContext = () => {
  
   /*variables para el filtro de productos*/
   const { productList,toggleFilters,filteredProducts } = useFilterProducts();
-
-  //console.log(filteredProducts);
-
 
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
@@ -79,6 +77,7 @@ const AppContext = () => {
             <Route path='/admin' element={<AdminDashboard/>}/>
             </Route>
             <Route path="/ver-productos" element={<AllProducts/>}/>
+            <Route path="/producto/:id" element={<ProductDetail/>}/>
             </Routes>
           </main>    
         </BrowserRouter>

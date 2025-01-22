@@ -10,7 +10,6 @@ const SidebarFilterSlider = () => {
       } = useContext(SidebarAllProductsContext);   
       
       const {productList,toggleFilters,filteredProducts } = useContext(SidebarAllProductsContext);
-    console.log(`Sidebar ${filteredProducts}`);
 
   return (
     <article className='sidebar-filter-slider'>

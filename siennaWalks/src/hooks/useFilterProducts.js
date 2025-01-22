@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 
 export const useFilterProducts = () =>{
 
-    /*variables de consumo de la API*/
+  /*variables de consumo de la API*/
   const [productList, setProductList ] = useState([]);
-  //const [newProducts, setNewProducts ] = useState([]);
   
   const getAllProducts = async () =>{
     const productURL =  'http://localhost:3000/api/products/';
@@ -32,9 +31,6 @@ export const useFilterProducts = () =>{
         return matchCategory && matchType;
     })  
     
-    
-    //console.log(filteredProducts);
-
   useEffect(()=>{
     getAllProducts();
   },[])
