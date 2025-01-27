@@ -75,6 +75,9 @@
 @media only screen and (min-width: 1133px){
     .other-products-list{
         grid-template-columns: repeat(4,1fr);
+        max-width: 116.7rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
     }
 
     .other-products-tittle{

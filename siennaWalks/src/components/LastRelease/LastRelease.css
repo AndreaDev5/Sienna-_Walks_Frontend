@@ -60,7 +60,7 @@
 
     .release-products-container{
         display: grid;
-        grid-template: repeat(6,1fr)/repeat(2,1fr);
+        grid-template: repeat(5,1fr)/repeat(2,1fr);
         gap: 1.2rem;
     }
 }
@@ -87,16 +87,16 @@
 
 @media only screen and (min-width: 1133px){
     .release-products-container{
-        grid-template: repeat(3,1fr)/repeat(4,1fr);
+        grid-template: repeat(3,1fr)/repeat(3,1fr);
         margin: 0 auto;
         margin-top: 1.6rem;
         gap: 1.6rem;
-        width: 100%;
+        width: 86.8rem;
     }
 }
 
 @media only screen and (min-width: 1280px){
     .release-products-container{
-        width: 118.8rem;
+        width: 87.2rem;
     }
 }

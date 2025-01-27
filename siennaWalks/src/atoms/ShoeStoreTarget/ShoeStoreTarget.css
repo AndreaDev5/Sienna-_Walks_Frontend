@@ -3,8 +3,9 @@
 .shoe-store-target,
 .shoe-store-target-all-products{
     display: grid;
-    grid-template-rows: 28.5rem repeat(4, 2.4rem);
-    width: 100%;
+    grid-template-rows: 31.3rem repeat(4, 2.4rem);
+    width: 28.8rem;
+    margin: 0 auto;
     height: 41rem;
     background-color: #F5F5F5;
     border-radius: .4rem;
@@ -12,6 +13,7 @@
     padding: 1.2rem;
     margin-top: 1.4rem;
     text-decoration: none;
+    color: var(--black-font);
 }
 
 .shoe-store-target .shoe-store-colors,
@@ -40,6 +42,7 @@
 .shoe-store-target .shoe-store-price
 .shoe-store-target-all-products .shoe-store-price{
     color: #747272;
+
 }
 
 
@@ -92,7 +95,7 @@
     }
 
     .shoe-store-target-all-products{
-        width: 100%;
+        width: 25.5rem;
         height: 35.5rem;
         grid-template-rows: 22.7rem 2.6rem 3.2rem 1fr;
     }
