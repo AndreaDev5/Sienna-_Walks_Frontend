@@ -1,0 +1,88 @@
+@import url('../../global.css');
+
+.product-global-nav{
+    display: none;
+}
+
+/*additional products*/
+.other-products-tittle{
+    display: flex;
+    font-size: 3.2rem;
+    font-family: "Caveat", cursive;
+    /*color: var(--brown-tittle);*/
+    align-items: center;
+    margin-top: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+    justify-content: space-around;
+    margin-top: 2.4rem;
+}
+
+.other-products-tittle-line{
+    width: 6%;
+    background: var(--black-font);
+    height: .1rem;
+}
+
+.other-products-tittle h1{
+    width: 243px;
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media only screen and (min-width: 568px){
+    .other-products-list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 744px){
+    .product-global-nav{
+        display: flex;
+        font-size: 1.6rem;
+        grid-area: product-global-nav;
+        align-self: center;
+    }
+
+    .product-global-nav a{
+        text-decoration: none;
+        color: var(--black-font);
+    }
+
+    .other-products-tittle{
+        margin-top: 1.6rem;
+    }
+
+    .other-products-tittle h1{
+        font-size: 3.6rem;
+        width: 29.5rem;
+    }
+
+    .other-products-tittle-line{
+        width: 23%;
+    }
+
+    .other-products-list{
+        justify-items: center;
+        margin-top: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1133px){
+    .other-products-list{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .other-products-tittle{
+        max-width: 69.7rem;
+        margin: 0 auto;
+    }
+
+    .other-products-tittle h1{
+        font-size: 3.6rem;
+    }
+}

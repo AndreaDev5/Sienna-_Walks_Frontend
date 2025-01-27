@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './ProductDetail.css';
+import './OtherProductDetail.css';
 import { Link, useParams } from 'react-router-dom';
 import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
 import ProductDetailInfo from '../../components/ProductDetailInfo/ProductDetailInfo';

@@ -12,10 +12,9 @@ import Footer from '../../components/Footer/Footer';
 const AllProducts = () => {
   const { onChangeSidebarFilter } = React.useContext(SidebarAllProductsContext);
   const bodyWidth = document.body.clientWidth;
-  //console.log(`all products ${filteredProducts}`);
-  const {productList,toggleFilters,filteredProducts } = useContext(SidebarAllProductsContext);
   
-  console.log(`all products ${filteredProducts}`);
+  const {productList,filteredProducts } = useContext(SidebarAllProductsContext);
+  
   return (
     <>
     <section className='all-products-container'>
@@ -37,7 +36,8 @@ const AllProducts = () => {
             {(filteredProducts?.length >0) && filteredProducts.map((product)=>{
                 return <ShoeStoreTarget
                 classShoeName='shoe-store-target-all-products'
-                key={product.id}
+                productLink={`/producto/${product._id}`}
+                key={product._id}
                 collection={product.category}
                 shoesName={product.name}
                 image={product.image}

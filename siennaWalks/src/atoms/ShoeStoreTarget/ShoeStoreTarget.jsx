@@ -26,7 +26,9 @@ const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,pr
   
   
   return (
-    <Link className={classShoeName} to={productLink}>
+    <Link className={classShoeName} to={productLink} onClick={()=>{
+      window.scrollTo(0,0);
+    }}>
       <img className='shoe-store-image' src={image} alt={'sienna-ref-nombre-de-zapato'}/>
       <p className='shoe-store-collection'>{collection}</p>
       <p className='shoe-store-name'>{shoesName}</p>

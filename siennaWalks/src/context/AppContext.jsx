@@ -23,6 +23,7 @@ import ProtectRoute from '../pages/ProtectedRoute/ProtectRoute';
 import { AuthProvider } from './AuthContext';
 import Collection from '../pages/Collections/Collection';
 import ProductDetail from '../pages/ProductDetail/ProductDetail';
+import OtherProductDetail from '../pages/OtherProductDetail/OtherProductDetail';
 
 const AppContext = () => {
   /*variables para el boton de hamburguesa*/ 
@@ -78,6 +79,7 @@ const AppContext = () => {
             </Route>
             <Route path="/ver-productos" element={<AllProducts/>}/>
             <Route path="/producto/:id" element={<ProductDetail/>}/>
+            <Route path="/otros-productos/:id" element={<OtherProductDetail/>}/>
             </Routes>
           </main>    
         </BrowserRouter>
