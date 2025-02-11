@@ -135,11 +135,10 @@
 
     .all-products-basic-container{
         flex-direction: row;
-        justify-content: space-between;
     }
 
     .all-products-general-container{
-        width: 80%;
+        width: 78%;
         margin-top: 1.6rem;
     }
 }

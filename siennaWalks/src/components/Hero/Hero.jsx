@@ -4,7 +4,6 @@ import './Hero.css';
 import logo from '../../assets/logos/last-logo-sienna.svg';
 import { Link } from 'react-router-dom';
 
-
 const Hero = () => {
   return (
     <section className='hero' >

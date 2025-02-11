@@ -35,10 +35,8 @@ const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,pr
       <p className='shoe-store-price'>{shoesPrice}</p>
       <article className='shoe-store-colors'>
         <div className='shoe-first-color' ref={firstColorRef}></div>
-        <div className='shoe-second-color' ref={secondColorRef}></div>
-        <div className='shoe-third-color' ref={thirdColorRef}></div>
-        <div className='shoe-fourth-color' ref={fourthColorRef}></div>
       </article>
+      <Link className='shoe-look-product' to={productLink}>Ver producto</Link>
     </Link>
   )
 }

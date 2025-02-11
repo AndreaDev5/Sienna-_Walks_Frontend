@@ -9,7 +9,7 @@ const SidebarFilterSlider = () => {
         filterSizesRef , onChangeFilterSizes, arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef
       } = useContext(SidebarAllProductsContext);   
       
-      const {productList,toggleFilters,filteredProducts } = useContext(SidebarAllProductsContext);
+      const { toggleFilters } = useContext(SidebarAllProductsContext);
 
   return (
     <article className='sidebar-filter-slider'>

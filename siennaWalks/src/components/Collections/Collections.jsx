@@ -1,69 +1,12 @@
-// 📦 Importación de librerías, componentes y recursos
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import './Collections.css';
-import { Link } from 'react-router-dom';
 import leftArrow from '../../assets/logos/chevron-left.svg';
 import rightArrow from '../../assets/logos/chevron-right.svg';
-
-// 🖼️ Componente para cada colección individual
-const CollectionItem = ({ image, collectionName, collectionDescription, collectionLink }) => {
-  
-  // 🔍 Referencia para el elemento de la colección
-  const collectionItem = useRef(null);
-
-  // 🖌️ Asignar la imagen de fondo al cargar el componente
-  useLayoutEffect(() => {
-    const collectionItemNode = collectionItem.current;
-    collectionItemNode.style.backgroundImage = image;
-  }, [image]);
-
-  return (
-    // 🔗 Enlace de la colección
-    <Link className='collection-item' to={collectionLink} ref={collectionItem}>
-      <section className='collection-item-description'>
-        <h2>{collectionName}</h2>
-        <p>{collectionDescription}</p>
-      </section>
-    </Link>
-  );
-};
+import CollectionItem from '../../atoms/CollectionItem/CollectionItem';
+import { useCollectionsEdit } from '../../hooks/useCollectionsEdit';
 
 // 🔄 Componente principal para manejar el carrusel de colecciones
 const Collections = () => {
-  const containerRef = useRef(null);
-
-  // ⬅️ Mover el carrusel hacia la derecha
-  const onChangeRight = () => {
-    const firstNode = containerRef.current.firstChild;
-    const totalScroll = firstNode.clientWidth * 3;
-    const containerRefNode = containerRef.current;
-    containerRefNode.scrollBy({
-      left: totalScroll,
-      behavior: "smooth" 
-    });
-  };
-
-  // ➡️ Mover el carrusel hacia la izquierda
-  const onChangeLeft = () => {
-    const firstNode = containerRef.current.firstChild;
-    const totalScroll = firstNode.clientWidth * 3; 
-    const containerRefNode = containerRef.current;
-    containerRefNode.scrollBy({
-      left: -totalScroll,
-      behavior: "smooth" 
-    });
-  };
-
-  
-  const images = [
-    new URL('../../assets/images/coleccion-1.jpg', import.meta.url).href,
-    new URL('../../assets/images/coleccion-2.jpg', import.meta.url).href,
-    new URL('../../assets/images/coleccion-3.jpg', import.meta.url).href,
-    new URL('../../assets/images/coleccion-4.jpg', import.meta.url).href,
-    new URL('../../assets/images/coleccion-5.png', import.meta.url).href,
-    new URL('../../assets/images/coleccion-6.png', import.meta.url).href,
-    new URL('../../assets/images/coleccion-7.png', import.meta.url).href,
-  ];
+  const { containerRef,onChangeRight,onChangeLeft,images } = useCollectionsEdit()
 
   return (
     <section className='collections'>

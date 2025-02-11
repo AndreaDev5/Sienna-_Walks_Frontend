@@ -24,7 +24,6 @@ export default function LastRelease(){
     getAllProducts(9);
   },[])
 
-
   return (
     <section className='releases'>
       <article className='releases-tittle'>

@@ -7,7 +7,6 @@ import './SiennaCollectionPages.css';
 const SiennaCollectionPages = () => {
     const [links,setLinks] = useState(true);
     
-    const { onChangeLightBurguer } = useContext(StoreContext)
     const onChangeLinks = () =>{
     const clientWidthHome = document.body.clientWidth;
       (links===true)?setLinks(false):setLinks(true);

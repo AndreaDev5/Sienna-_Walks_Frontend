@@ -3,10 +3,10 @@
 .shoe-store-target,
 .shoe-store-target-all-products{
     display: grid;
-    grid-template-rows: 31.3rem repeat(4, 2.4rem);
+    grid-template-rows: 25.3rem repeat(4, 2.4rem);
     width: 28.8rem;
     margin: 0 auto;
-    height: 41rem;
+    height: 41.8rem;
     background-color: #F5F5F5;
     border-radius: .4rem;
     font-size: 1.6rem;
@@ -21,8 +21,16 @@
     display: flex;
 }
 
+.shoe-store-colors .shoe-first-color{
+    background: var(--black-font);
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+
 .shoe-store-target .shoe-store-image,
 .shoe-store-target-all-products .shoe-store-image{
+    height: 24rem;
     width: 24rem;
     justify-self: center;
 }
@@ -39,18 +47,53 @@
     font-size: 1.6rem;
 }
 
-.shoe-store-target .shoe-store-price
+.shoe-store-target .shoe-store-price,
 .shoe-store-target-all-products .shoe-store-price{
     color: #747272;
-
 }
 
+.shoe-store-target .shoe-look-product,
+.shoe-store-target-all-products .shoe-look-product{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--second-white);
+    border: 1px solid var(--line-gray);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.shoe-store-target .shoe-look-product:hover,
+.shoe-store-target-all-products .shoe-look-product:hover{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--black-font);
+    color: var(--second-white);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    display: block;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+}
 
 @media only screen and (min-width: 568px){
     .shoe-store-target,
     .shoe-store-target-all-products{
         width: 26rem;
-        height: 41.2rem;
+        height: 42rem;
         margin: 0;
     }
     
@@ -78,7 +121,7 @@
     .shoe-store-target,
     .shoe-store-target-all-products{
         width: 26.3rem;
-        height: 41rem;
+        height: 42rem;
         margin: 0;
     }
 
@@ -96,8 +139,8 @@
 
     .shoe-store-target-all-products{
         width: 25.5rem;
-        height: 35.5rem;
-        grid-template-rows: 22.7rem 2.6rem 3.2rem 1fr;
+        height: 42rem;
+        grid-template-rows: 22.7rem 2.6rem 4.3rem 1fr;
     }
 
     .shoe-store-target-all-products .shoe-store-image{

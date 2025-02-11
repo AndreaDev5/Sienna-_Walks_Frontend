@@ -126,6 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    appearance: none;
 }
 
 .product-size-selector{
