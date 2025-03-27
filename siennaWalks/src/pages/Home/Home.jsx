@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Collections from '../../components/Collections/Collections';
-import Form from '../../components/Form/Form';
 import Hero from '../../components/Hero/Hero';
 import LastRelease from '../../components/LastRelease/LastRelease';
 import './Home.css';
@@ -22,7 +21,6 @@ return (
             <LastRelease/>
         </main>
         <PersonalizeShoes/>
-        <Form/>
         <Footer/>
     </>
 );

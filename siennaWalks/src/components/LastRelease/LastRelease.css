@@ -63,6 +63,11 @@
         grid-template: repeat(5,1fr)/repeat(2,1fr);
         gap: 1.2rem;
     }
+
+    .release-products-container .shoe-store-target:nth-child(9){
+        justify-self: center;
+        grid-column: 1 / -1; 
+    }
 }
 
 @media only screen and (min-width: 744px){
@@ -92,6 +97,10 @@
         margin-top: 1.6rem;
         gap: 1.6rem;
         width: 86.8rem;
+    }
+
+    .release-products-container .shoe-store-target:nth-child(9){
+        grid-column: 3;
     }
 }
 

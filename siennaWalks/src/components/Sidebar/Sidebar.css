@@ -94,6 +94,11 @@
     scroll-snap-align: start;
 }
 
+.sidebar-inner-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
 
 .sidebar-cart-container{
@@ -124,14 +129,14 @@
 }
 
 .sidebar-overflow-buttons{
-    display: flex;
-    width: 7.8rem;
-    height: .8rem;
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+   width: 4.2rem;
+   height: .8rem;
+   display: flex;
+   justify-content: space-between;
    position: absolute;
    top: 48.8rem;
-   left: calc( 50% - 3.9rem)
+   left: calc( 50% - 2.1rem)
 }
 
 .sidebar-overflow-buttons .first-button,
@@ -156,19 +161,16 @@
     transform: scale(1.2);
 }
 
-.sidebar-options-buttons{
-    width: 9.3rem;
+.sidebar-shoppping-cart{
+    position: relative;
+    z-index: 0;
+    width: 3.2rem;
     height: 3.2rem;
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 51.8rem;
-    left: calc( 50% - 4.65rem );
-}
-
-.sidebar-shoppping-cart{
-    position: relative;
-    z-index: 0;
+    left: calc( 50% - 1.6rem );
 }
 
 .shopping-cart-marker{
@@ -199,8 +201,15 @@
     .sidebar-container {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       height: 17.6rem;
+    }
+
+    .sidebar-inner-container{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 36rem;
+        margin: 0 auto;
     }
 
     .sidebar-carousel-container{
@@ -252,6 +261,11 @@
     .sidebar-overflow-buttons{
         top: 24.8rem;
     }
+
+    .sidebar-shoppping-cart{
+        top: 26.8rem;
+        position: absolute;
+    }
   }
 
   @media only screen and (min-width: 744px){  
@@ -262,6 +276,13 @@
 
     .sidebar-tittle{
         margin-top: 9.4rem;
+    }
+
+
+    .sidebar-inner-container{
+        flex-direction: column;
+        width: 15.5rem;
+        margin: 0;
     }
 
     .sidebar-link-all{
@@ -319,5 +340,9 @@
         height: 40.3rem;
         width: 23.4rem;
         margin: 0 auto;
+    }
+
+    .sidebar-shoppping-cart{
+        top: 51.8rem;
     }
 }

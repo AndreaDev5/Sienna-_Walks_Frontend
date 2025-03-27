@@ -73,48 +73,6 @@
     font-family: "Playfair Display", serif;
 }
 
-.footer .footer-credits p:first-child{
-    font-size: 1.4rem;
-    text-align: center;
-    margin-top: 2.4rem;
-}
-
-.footer .footer-sienna-developers{
-    font-size: 1.4rem;
-    font-weight: bold;
-    display: grid;
-    grid-template-columns: 13.3rem 1fr;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas:"first-link second-link"
-                        "third-link third-link";
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 2.4rem;
-    width: 27.8rem;
-}
-
-.footer .footer-sienna-developers a{
-    color: var(--black-font);
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-    display: block;
-    width: 100%;
-}
-
-.footer .footer-sienna-developers a:first-child{
-    grid-area: first-link;
-}
-
-.footer .footer-sienna-developers a:nth-child(2){
-    grid-area: second-link;
-}
-
-.footer .footer-sienna-developers a:nth-child(3){
-    grid-area: third-link;
-    justify-self: center;
-}
-
 .footer .footer-location{
     text-align: center;
     margin-top: 2.4rem;
@@ -124,11 +82,15 @@
 @media only screen and (min-width: 568px){
     .footer .footer-links-container{
         display: grid;
-        grid-template: 9rem 9.2rem 8.5rem/repeat(2,1fr);
+        grid-template: 11.2rem 14.2rem /repeat(2,1fr);
         grid-template-areas:"footer-interest-links footer-social-media"
-                            "footer-interest-links footer-ways-payments"
-                            "footer-explore-links footer-ways-payments";
+                            "footer-ways-payments  footer-ways-payments";
         
+    }   
+
+    .footer-interest-links a,
+    .footer-explore-links a{
+        margin-top: 1.6rem;
     }
 
     .footer .footer-interest-links{
@@ -145,33 +107,10 @@
 
     .footer .footer-ways-payments{
         grid-area: footer-ways-payments;
+        justify-self: center;
     }
 
-    .footer .footer-sienna-developers{
-        width: 44.5rem;
-        margin-top:1.4rem;
-        height: 2rem;
-        grid-template-columns: 13.6rem 12.5rem 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "first-link second-link third-link"
-    }
-
-    .footer .footer-sienna-developers a:first-child{
-        width: 13.6rem;
-    }
-
-    .footer .footer-sienna-developers a:nth-child(2){
-        width: 14.5rem;
-    }
-
-    .footer .footer-sienna-developers a:nth-child(3){
-        width: 16.4rem;
-    }
-
-    .footer .footer-credits p:first-child{
-        margin-top: 1.4rem;
-    }
-
+   
     .footer .footer-location{
         margin-top: 1.4rem;
     }

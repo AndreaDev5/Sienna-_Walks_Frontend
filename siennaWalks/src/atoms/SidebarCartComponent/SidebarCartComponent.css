@@ -12,6 +12,7 @@
     border: 1px solid var(--line-gray);
     margin-top: 3.2rem;
 }
+
 .sidebar-cart-initial-component{
     width: 23.5rem;
     height: 26.8rem;
@@ -94,4 +95,10 @@
         margin-top: 3.2rem;
     }
 }
-    
+
+
+@media only screen and (min-width: 1280px){
+    .sidebar-cart-initial-component{
+        right: 152px;
+    }
+}

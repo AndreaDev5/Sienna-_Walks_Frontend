@@ -2,13 +2,7 @@ import React from 'react'
 import { StoreContext, HeaderContext, SidebarAllProductsContext } from './StoreContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
-import Login from '../pages/Login/Login';
 import AboutStore from '../pages/AboutStore/AboutStore';
-import Register from '../pages/Register/Register';
-import ShoppingCart from '../pages/ShoppingCart/ShoppingCart';
-import UserProfile from '../pages/UserProfile/UserProfile';
-import EditUSerProflie from '../pages/EditUserProfile/EditUSerProflie';
-import AdminDashboard from '../pages/AdminDashboard/AdminDashboard';
 import Whatsapp from '../atoms/WhatsApp/Whatsapp';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Header from '../components/Header/Header';
@@ -19,8 +13,6 @@ import { useSidebarFilterScroll } from '../hooks/useSidebarFilterScroll';
 import { useFilterProducts } from '../hooks/useFilterProducts';
 import AllProducts from '../pages/AllProducts/AllProducts';
 import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
-import ProtectRoute from '../pages/ProtectedRoute/ProtectRoute';
-import { AuthProvider } from './AuthContext';
 import Collection from '../pages/Collections/Collection';
 import ProductDetail from '../pages/ProductDetail/ProductDetail';
 import OtherProductDetail from '../pages/OtherProductDetail/OtherProductDetail';
@@ -50,7 +42,6 @@ const AppContext = () => {
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
           <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
             onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef,productList,toggleFilters,filteredProducts }}>
-          <AuthProvider>
           <BrowserRouter>
           <SidebarFilter/>
           <Whatsapp/>
@@ -69,21 +60,12 @@ const AppContext = () => {
                   <Route path=':ciel-de-minuit' element={<Collection collectionTittle='Ciel de Minuit'/>}/>
             </Route>
             <Route path='/acerca-de-Sienna' element={<AboutStore/>}/>    
-            <Route path='/ingresa' element={<Login/>}/>
-            <Route path='/registrate' element={<Register/>}/>
-            <Route path='/carrito-de-compras' element={<ShoppingCart/>}/>
-            <Route element={<ProtectRoute/>}>
-            <Route path='/perfil' element={<UserProfile/>}/>
-            <Route path="/editar-perfil" element={<EditUSerProflie/>}/>    
-            <Route path='/admin' element={<AdminDashboard/>}/>
-            </Route>
             <Route path="/ver-productos" element={<AllProducts/>}/>
             <Route path="/producto/:id" element={<ProductDetail/>}/>
             <Route path="/otros-productos/:id" element={<OtherProductDetail/>}/>
             </Routes>
           </main>    
         </BrowserRouter>
-        </AuthProvider>
         </SidebarAllProductsContext.Provider>
         </HeaderContext.Provider>
     </StoreContext.Provider>

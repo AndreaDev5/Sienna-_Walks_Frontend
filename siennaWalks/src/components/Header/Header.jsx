@@ -22,17 +22,10 @@ return (
         </article>
         <article className='header-left-links' >
             <ul className='header-options-links'>
-                <Link to={'/acerca-de-Sienna'} onClick={toggleUSerCart}>Acerca de</Link>
-                <Link to={'/ingresa'} onClick={toggleUSerCart}>Ingresa</Link>
-                <Link to={'/registrate'} onClick={toggleUSerCart}>Regístrate</Link>
-            </ul>
-            <ul className='header-options-buttons'>
+                <Link to={'/acerca-de-Sienna'} onClick={toggleUSerCart}>Acerca de Sienna</Link>
                 <figure className='header-shoppping-cart' onClick={toggleCartComponent}>
                     <p className='header-cart-marker'>0</p>  
                     <img src={shoppingCarIcon}/>
-                </figure>
-                <figure className='header-bar-profile' onClick={toggleUserComponent}>
-                    <img src={emptyProfile}/>
                 </figure>
             </ul>
         </article>

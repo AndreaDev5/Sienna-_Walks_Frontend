@@ -7,10 +7,9 @@ const useSidebarScroll = () =>{
   let [diffX, setDiffX] = useState(0);
   let [classContainer, setClassContainer] = useState('sidebar--car-first-container')
 
-/*variables para los botones grises 🔘 */
+/*variables de referencia para los botones grises 🔘 */
   const firstButtonRef = useRef(null);
   const secondButtonRef = useRef(null);
-  const thidrButtonRef = useRef(null);
 
  /*funcion de inicio para detectar la posicion donde toco la pantalla de 📲📲*/   
   const handleTouchStart = (e) =>{
@@ -30,7 +29,7 @@ y la orientación del arrstre del dedo 📲*/
     if(diffX<0 && scrollCount>1){
       setScrollCount(scrollCount-1)
     }
-    else if(diffX>0 && scrollCount<3){
+    else if(diffX>0 && scrollCount<2){
       setScrollCount(scrollCount+1)
     }
   }
@@ -38,31 +37,23 @@ y la orientación del arrstre del dedo 📲*/
   useEffect(()=>{
     const firstButtonRefNode = firstButtonRef.current;
     const secondButtonRefNode = secondButtonRef.current;
-    const thidrButtonRefNode = thidrButtonRef.current;
   
    switch (scrollCount) {
     case 1:
       setClassContainer('sidebar--car-first-container');
       firstButtonRefNode.classList.replace('first-button','first-dark-button')
       secondButtonRefNode.classList.replace('second-dark-button','second-button')
-      thidrButtonRefNode.classList.replace('third-dark-button','third-button')
+      
     break;
     case 2:
       setClassContainer('sidebar--car-second-movement')
       firstButtonRefNode.classList.replace('first-dark-button','first-button')
       secondButtonRefNode.classList.replace('second-button','second-dark-button')
-      thidrButtonRefNode.classList.replace('third-dark-button','third-button')
-    break;
-    case 3:
-      setClassContainer('sidebar--car-third-movement')
-      firstButtonRefNode.classList.replace('first-dark-button','first-button')
-      secondButtonRefNode.classList.replace('second-dark-button','second-button')
-      thidrButtonRefNode.classList.replace('third-button','third-dark-button')
     break;
    }
   },[scrollCount])
 
-  return { scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
+  return { scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,
     handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount }
 }
 
