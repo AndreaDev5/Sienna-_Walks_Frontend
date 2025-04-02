@@ -40,7 +40,7 @@ y la orientación del arrstre del dedo 📲*/
   
    switch (scrollCount) {
     case 1:
-      setClassContainer('sidebar--car-first-container');
+      setClassContainer('sidebar--car-container');
       firstButtonRefNode.classList.replace('first-button','first-dark-button')
       secondButtonRefNode.classList.replace('second-dark-button','second-button')
       

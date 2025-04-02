@@ -3,9 +3,7 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import SiennaCollectionLinks from '../../atoms/SiennaCollectionLInks/SiennaCollectionsLinks';
 import shoppingCarIcon from '../../assets/logos/ph_shopping-cart-dark.svg';
-import emptyProfile from '../../assets/logos/ph_user-rectangle-thin.svg';
 import SidebarCartComponent from '../../atoms/SidebarCartComponent/SidebarCartComponent';
-import SidebarUserComponent from '../../atoms/SidebarUSerComponent/SidebarUserComponent';
 import { HeaderContext } from '../../context/StoreContext';
 import { useContext } from 'react';
 
@@ -32,7 +30,6 @@ return (
         </main>
     </header>
     {cartComponent?<SidebarCartComponent sidebarCartComponent={'sidebar-cart-initial-component'} sidebarCartTittle={'sidebar-cart--initial-tittle'} sidebarCartBigIcon={'sidebar-cart-initial-big-icon'}/> :''}
-    {userComponent?<SidebarUserComponent sidebarUserComponent={'sidebar-user-initial-component'} sidebarEmptyUser={'sidebar-initial-empty-user'} sidebarUserTittle={'sidebar-user-initial-tittle'} sidebarUserLinks={'sidebar-user-initial-links'}/>:''}
     </>
     );
 }

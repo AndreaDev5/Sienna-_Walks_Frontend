@@ -5,7 +5,6 @@ import { StoreContext } from "../../context/StoreContext";
 import shoppingCart from '../../assets/logos/ph_shopping-cart-dark.svg';  
 import SiennaCollectionLinks from '../../atoms/SiennaCollectionLInks/SiennaCollectionsLinks'; 
 import SidebarCartCompoent from '../../atoms/SidebarCartComponent/SidebarCartComponent';
-import SidebarUserComponent from '../../atoms/SidebarUSerComponent/SidebarUserComponent';
 
 function Sidebar() {
   /*hook para el botón de hamburguesa 🍔*/
@@ -31,10 +30,6 @@ function Sidebar() {
           <div className='sidebar-cart-container'>
             <SidebarCartCompoent sidebarCartComponent={'sidebar-cart-component'} sidebarCartTittle={'sidebar-cart-tittle'} 
             sidebarCartBigIcon={'sidebar-cart-big-icon'}/>
-          </div>
-          <div className='sidebar-user-container'>
-            <SidebarUserComponent sidebarUserComponent={'sidebar-user-component'} sidebarEmptyUser={'sidebar-empty-user'}
-            sidebarUserTittle={'sidebar-user-tittle'} sidebarUserLinks={'sidebar-user-links'}/>
           </div>
         </div>
       </article>

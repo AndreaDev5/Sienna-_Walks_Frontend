@@ -7,12 +7,12 @@ const useProductDetailInfo = () =>{
    /*funcion para sumar  y restar productos*/
    const addProducts = (e) =>{
        e.preventDefault();
-       if(quantityProducts>=0 && quantityProducts<=99) setQuantityProducts(quantityProducts=>quantityProducts+1); 
+       if(quantityProducts>=0 && quantityProducts<=3) setQuantityProducts(quantityProducts=>quantityProducts+1); 
    }
 
    const substractProducts = (e) =>{
        e.preventDefault();
-       if(quantityProducts>=1 && quantityProducts<=99) setQuantityProducts(quantityProducts=>quantityProducts-1);
+       if(quantityProducts>=1 && quantityProducts<=4) setQuantityProducts(quantityProducts=>quantityProducts-1);
    }
 
    /*nodos para  la selección de las tallas*/

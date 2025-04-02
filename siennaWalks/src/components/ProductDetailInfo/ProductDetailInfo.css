@@ -13,6 +13,11 @@
     font-family: "Caveat", cursive;
 }
 
+.product-info-delay .product-info-tittle input[type="radio"]{
+    appearance: none;
+}
+
+
 .product-info-delay .product-info-image{
     width: 20rem;
     margin-top: 1.6rem;   
@@ -25,11 +30,19 @@
     font-weight: 500;
 }
 
+.product-info-delay .product-info-price input[type="radio"]{
+    appearance: none;
+}
+
 .product-info-delay .product-info-collection{
     font-family: "Caveat", cursive;
     text-align: center;
     font-size: 2.4rem;
     margin-top: .8rem;
+}
+
+.product-info-delay .product-info-collection input[type="radio"]{
+    appearance: none;
 }
 
 .product-info-delay .product-info-colors{
@@ -161,6 +174,11 @@
     margin-top: .4rem;
 }
 
+.product-info-delay .product-action-options{
+    display: flex;
+    flex-direction: column;
+}
+
 .product-info-delay .product-info-send{
     width: 22.2rem;
     height: 3.2rem;
@@ -179,10 +197,30 @@
     font-family: "Quicksand", sans-serif;
 }
 
+.product-info-delay .product-info-buy{
+    width: 22.2rem;
+    height: 3.2rem;
+    background: var(--second-white);
+    color: var(--black-font);
+    border-radius: .4rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--line-gray);
+    font-family: "Quicksand", sans-serif;
+}
+
 @media only screen and (min-width: 568px){
     .product-info-delay{
-        width: 75%;
+        width: 45.6rem;
         margin: 0 auto;
+        margin-top: 1.6rem;
     }
 
     .product-info-delay .product-info-price{
@@ -223,6 +261,20 @@
     .product-size-numbers{
         width: 20rem;
     }
+
+    .product-info-delay .product-action-options{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 1.6rem;
+    }
+
+
+    .product-info-delay .product-info-send,
+    .product-info-delay .product-info-buy{
+        margin-top: 0;
+        margin: 0;
+    }
 }
 
 @media only screen and (min-width: 744px){
@@ -230,7 +282,8 @@
         width: 100%;
         margin: 0;
         display: grid;
-        grid-template: 5.4rem 5.4rem 5.4rem 3rem 4.6rem 6rem 5.2rem 6rem/repeat(2,1fr);
+        column-gap: 2.4rem;
+        grid-template: 5.4rem 5.4rem 5.4rem 3rem 4.6rem 6rem 5.2rem 11rem/repeat(2,1fr);
         grid-template-areas:"product-global-nav product-global-nav" 
                             "product-info-image product-info-tittle"
                             "product-info-image product-info-price"
@@ -238,7 +291,20 @@
                             "product-info-image product-info-collection"
                             "product-info-image product-info-selector"
                             "product-info-image product-size-selector"
-                            "product-info-image product-info-send";
+                            "product-info-image product-info-options";
+    }
+
+
+    .product-info-delay .product-action-options{
+        flex-direction: column;
+        grid-area: product-info-options;
+        margin-top: 0;
+    }
+
+    .product-info-delay .product-info-send,
+    .product-info-delay .product-info-buy{
+        margin-top: 1.6rem;
+        align-self: flex-start;
     }
 
     .product-info-delay .product-info-image{
@@ -286,13 +352,6 @@
     .product-size-selector{
         grid-area: product-size-selector;
     }
-
-    .product-info-delay .product-info-send{
-        grid-area: product-info-send;
-        margin: 0;
-        justify-self: flex-start;
-        align-self: center;
-    }
 }   
 
 
@@ -301,7 +360,7 @@
         width: 100%;
         margin: 0;
         display: grid;
-        grid-template: 5.4rem 5.4rem 5.4rem 3rem 4.6rem 6rem 5.2rem 6rem 11rem/repeat(2,1fr);
+        grid-template: 5.4rem 5.4rem 5.4rem 3rem 4.6rem 6rem 5.2rem 11rem /repeat(2,1fr);
         grid-template-areas:"product-global-nav product-global-nav" 
                             "product-info-image product-info-tittle"
                             "product-info-image product-info-price"
@@ -309,26 +368,12 @@
                             "product-info-image product-info-collection"
                             "product-info-image product-info-selector"
                             "product-info-image product-size-selector"
-                            "product-info-image product-info-send";
+                            "product-info-image product-info-options";
     }
 
     .product-info-delay .product-info-image{
         justify-self: flex-end;
         margin-right: 1.6rem;
         width: 34.1rem;
-    }
-
-    .product-info-delay .product-info-tittle,
-    .product-info-delay .product-info-price,
-    .product-info-delay .product-info-colors,
-    .product-info-delay .product-info-collection,
-    .product-info-delay .product-info-selector,
-    .product-size-selector,
-    .product-info-delay .product-info-send{
-        margin-left: 1.6rem;
-    }
-
-    .product-info-delay .product-info-send{
-        justify-self: flex-start;
     }
 }

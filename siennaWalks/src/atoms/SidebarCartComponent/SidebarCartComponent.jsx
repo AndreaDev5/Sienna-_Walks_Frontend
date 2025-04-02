@@ -11,7 +11,7 @@ const { onChangeDarkBurguer} = useContext(StoreContext);
     <section className={sidebarCartComponent}>
       <h1 className={sidebarCartTittle}>Tu carrito de compras está vacío</h1>
       <img className={sidebarCartBigIcon} src={shoppingBigCart}/>
-      <Link to={"/"} className="sidebar-link-all" onClick={onChangeDarkBurguer}>Ver más</Link>
+      <Link to={"/ver-productos"} className="sidebar-link-all" onClick={onChangeDarkBurguer}>Ver más</Link>
     </section>
   )
 }

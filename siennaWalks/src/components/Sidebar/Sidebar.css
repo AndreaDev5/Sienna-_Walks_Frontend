@@ -53,9 +53,9 @@
     color: var(--black-font);
 }
 
-.sidebar--car-first-container{
+.sidebar--car-container{
     display: flex;
-    width: 300%;
+    width: 200%;
     overflow-x: hidden;
     transform: translateX(0%);
     left: 0%;
@@ -65,18 +65,9 @@
 /*movimientos del sidebar*/
 .sidebar--car-second-movement{
     display: flex;
-    width: 300%;
+    width: 200%;
     overflow-x: hidden;
-    transform: translateX(-33.33%);
-    left: 0%;
-    transition-duration: .4s;
-}
-
-.sidebar--car-third-movement{
-    display: flex;
-    width: 300%;
-    overflow-x: hidden;
-    transform: translateX(-66.66%);
+    transform: translateX(-50%);
     left: 0%;
     transition-duration: .4s;
 }

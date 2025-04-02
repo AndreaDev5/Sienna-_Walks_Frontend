@@ -9,7 +9,6 @@
     display: flex;
     font-size: 3.2rem;
     font-family: "Caveat", cursive;
-    /*color: var(--brown-tittle);*/
     align-items: center;
     margin-top: 1.2rem;
     text-align: center;
@@ -83,6 +82,7 @@
     .other-products-tittle{
         max-width: 69.7rem;
         margin: 0 auto;
+        margin-top: 4rem;
     }
 
     .other-products-tittle h1{
