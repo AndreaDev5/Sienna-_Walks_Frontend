@@ -2,9 +2,9 @@ import  { useContext } from 'react';
 import './Sidebar.css'; 
 import { Link } from 'react-router-dom'; 
 import { StoreContext } from "../../context/StoreContext"; 
-import shoppingCart from '../../assets/logos/ph_shopping-cart-dark.svg';  
 import SiennaCollectionLinks from '../../atoms/SiennaCollectionLInks/SiennaCollectionsLinks'; 
-import SidebarCartCompoent from '../../atoms/SidebarCartComponent/SidebarCartComponent';
+import SidebarCartCompoent from '../SidebarCartComponent/SidebarCartComponent';
+import ShoppingCart from '../../atoms/HeaderShoppingCart/ShoppingCart';
 
 function Sidebar() {
   /*hook para el botón de hamburguesa 🍔*/
@@ -37,10 +37,7 @@ function Sidebar() {
         <div className='first-button' ref={firstButtonRef}></div>
         <div className='second-button' ref={secondButtonRef}></div>
       </article>
-        <figure className='sidebar-shoppping-cart' onClick={()=>{setScrollCount(2)}}>
-          <p className='shopping-cart-marker'>0</p>  
-          <img src={shoppingCart} alt="Carrito de compras"/> 
-        </figure>
+      <ShoppingCart shoppingCartContainer='sidebar-shoppping-cart' shoppingCartMarker='shopping-cart-marker' shoppingCartEvent={()=>{setScrollCount(2)}}/>
     </section>
   );
 }

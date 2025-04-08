@@ -160,7 +160,7 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 51.8rem;
+    top: 50.8rem;
     left: calc( 50% - 1.6rem );
 }
 
@@ -190,10 +190,10 @@
     }
 
     .sidebar-container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      height: 17.6rem;
+        display: flex;
+        flex-direction: column;
+        width: 32rem;
+        scroll-snap-align: start;
     }
 
     .sidebar-inner-container{
@@ -205,19 +205,16 @@
 
     .sidebar-carousel-container{
      height: 23.6rem;   
-     margin-top: 1.6rem;
+     margin-top: 1rem;
     }
 
-    .sidebar--car-first-container{
-        height: 23.6rem;      
-    }
-    .sidebar--car-second-movement,
-    .sidebar--car-third-movement{
+    .sidebar--car-second-movement{
         height: 17.6rem;
     }
 
     .sidebar-cart-container{
-        height: 100%;
+        width: 28.8rem;
+        margin: 0 auto;
     }
 
     .sidebar-about-me{
@@ -279,38 +276,42 @@
     .sidebar-link-all{
         width: 19rem;
     }
+
     .sidebar-container{
         flex-direction: column;
-        width: 23.5rem;
+        width: 28.8rem;
         margin: 0 auto;
-        justify-content: center;
         height: auto;
         align-self: flex-start;
-        padding-left: 4rem;
+        align-items: center;
     }
 
-    .sidebar--car-first-container{
+    .sidebar--car-container{
+        flex-direction: column;
         justify-content: space-evenly;
         margin-top: 3.2rem;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         justify-items: center;
-        height: 36.4rem;
-        gap: 3.2rem;
-        width: 330%;
-    }
-
-    .sidebar--car-second-movement,
-    .sidebar--car-third-movement{
+        margin: 0 auto;
         margin-top: 3.2rem;
-        height: 36.4rem;
-
+        width: 200%;
+        height: 31.5rem;
+    }
+    
+    .sidebar--car-second-movement{
         margin-top: 3.2rem;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         justify-items: center;
-        height: 36.4rem;
-        width: 330%;
+        margin: 0 auto;
+        margin-top: 3.2rem;
+        width: 200%;
+        height: 31.5rem;
+    }
+
+    .sidebar-cart-container{
+        height: 31.5rem;
     }
 
     .sidebar-about-me,
@@ -328,8 +329,9 @@
     }
 
     .sidebar-carousel-container{
-        height: 40.3rem;
-        width: 23.4rem;
+        height: 36.3rem;
+        width: 32rem;
+        overflow-x: hidden;
         margin: 0 auto;
     }
 

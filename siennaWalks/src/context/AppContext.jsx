@@ -1,5 +1,5 @@
 import React from 'react'
-import { StoreContext, HeaderContext, SidebarAllProductsContext } from './StoreContext';
+import { StoreContext, HeaderContext, SidebarAllProductsContext,ShoppgingCartContext } from './StoreContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import AboutStore from '../pages/AboutStore/AboutStore';
@@ -11,6 +11,7 @@ import { useSidebarScroll } from '../hooks/useSidebarScroll';
 import { useToggleButtons } from '../hooks/useToggleButtons';
 import { useSidebarFilterScroll } from '../hooks/useSidebarFilterScroll';
 import { useFilterProducts } from '../hooks/useFilterProducts';
+import { useGetPurchase } from '../hooks/useGetPurchase';
 import AllProducts from '../pages/AllProducts/AllProducts';
 import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
 import Collection from '../pages/Collections/Collection';
@@ -35,6 +36,9 @@ const AppContext = () => {
   /*variables para el filtro de productos*/
   const { productList,toggleFilters,filteredProducts } = useFilterProducts();
 
+  /*variables para el carrito de compras*/
+  const { formReference, purchase , getPurchase } =  useGetPurchase();
+
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
       scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
@@ -42,6 +46,7 @@ const AppContext = () => {
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
           <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
             onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef,productList,toggleFilters,filteredProducts }}>
+          <ShoppgingCartContext.Provider value={{formReference, purchase , getPurchase}}>    
           <BrowserRouter>
           <SidebarFilter/>
           <Whatsapp/>
@@ -66,8 +71,9 @@ const AppContext = () => {
             </Routes>
           </main>    
         </BrowserRouter>
+        </ShoppgingCartContext.Provider>
         </SidebarAllProductsContext.Provider>
-        </HeaderContext.Provider>
+      </HeaderContext.Provider>
     </StoreContext.Provider>
   )
 }

@@ -2,13 +2,13 @@
 import './Header.css';  
 import { Link } from 'react-router-dom';
 import SiennaCollectionLinks from '../../atoms/SiennaCollectionLInks/SiennaCollectionsLinks';
-import shoppingCarIcon from '../../assets/logos/ph_shopping-cart-dark.svg';
-import SidebarCartComponent from '../../atoms/SidebarCartComponent/SidebarCartComponent';
+import SidebarCartComponent from '../SidebarCartComponent/SidebarCartComponent';
 import { HeaderContext } from '../../context/StoreContext';
 import { useContext } from 'react';
+import ShoppingCart from '../../atoms/HeaderShoppingCart/ShoppingCart';
 
 function Header() {
-const {cartComponent,userComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart} = useContext(HeaderContext)
+const {cartComponent,toggleCartComponent,toggleUSerCart} = useContext(HeaderContext)
 
 return (
     <>
@@ -21,10 +21,7 @@ return (
         <article className='header-left-links' >
             <ul className='header-options-links'>
                 <Link to={'/acerca-de-Sienna'} onClick={toggleUSerCart}>Acerca de Sienna</Link>
-                <figure className='header-shoppping-cart' onClick={toggleCartComponent}>
-                    <p className='header-cart-marker'>0</p>  
-                    <img src={shoppingCarIcon}/>
-                </figure>
+                <ShoppingCart shoppingCartContainer='header-shoppping-cart' shoppingCartMarker='header-cart-marker' shoppingCartEvent={toggleCartComponent}/>
             </ul>
         </article>
         </main>

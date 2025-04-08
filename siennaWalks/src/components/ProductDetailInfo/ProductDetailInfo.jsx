@@ -4,41 +4,18 @@ import plusProduct from '../../assets/logos/product-plus-gray.svg';
 import purchaseIcon from '../../assets/logos/purchase-icon.svg';
 import shoppingCart from '../../assets/logos/ph_shopping-cart-light.svg';
 import { useProductDetailInfo } from '../../hooks/useProductDetailInfo';
+import { ShoppgingCartContext } from '../../context/StoreContext'; 
 import { Link } from 'react-router-dom';
-import { useReducer, useRef } from 'react';
-import { PurchaseReducer } from '../../reducers/PurchaseReducer';
+import { useContext } from 'react';
+
 
 
 const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
+    /*variables para obtener información del producto 🛒*/
     const { addProducts, substractProducts, sizesRef, getSize, quantityProducts } = useProductDetailInfo();
-    const formReference = useRef(null); 
 
-    const [purchase,dispatch] = useReducer(PurchaseReducer,[]);
-
-    const getPurchase = (e) =>{
-        e.preventDefault();
-
-        const formReferenceNode = formReference.current;
-        
-        let productData = {
-            name: formReferenceNode.name.value,
-            price: formReferenceNode.price.value,
-            category: formReferenceNode.category.value,
-            color: formReferenceNode.color.value,
-            unities: formReferenceNode.unities.value,
-            size: formReferenceNode.size.value,
-            purchase: formReferenceNode.price.value * formReferenceNode.unities.value
-        }
-
-        const accion = {
-            type:'purchase',
-            payload: productData
-        } 
-
-        dispatch(accion);
-    }
-
-    console.log(purchase);
+    /*variables para crear el arreglo del carrito de compras*/
+    const { formReference , getPurchase } = useContext(ShoppgingCartContext);
     
     return(
         <form className='product-info-delay' ref={formReference}>
@@ -47,9 +24,12 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
             <input type="radio" checked  name="name" value={name}/>
            </label>
            <article className="product-global-nav">
-                 <Link to="/">INICIO</Link>&nbsp;|&nbsp;<Link>{category}:{name}</Link>
-            </article> 
-            <img className='product-info-image' src={urlImage}/>
+                <Link to="/">INICIO</Link>&nbsp;|&nbsp;<Link>{category}:{name}</Link>
+            </article>
+            <label className='product-info-image-container'>
+                <img className='product-info-image' src={urlImage}/>    
+                <input type="radio" checked name="image" value={urlImage}/>
+            </label> 
             <label className='product-info-price'>
             ${price}
             <input type="radio" checked name="price" value={price}/> 
