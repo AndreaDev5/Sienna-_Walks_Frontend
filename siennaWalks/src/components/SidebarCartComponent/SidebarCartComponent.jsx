@@ -11,6 +11,8 @@ const SidebarCartComponent = ({sidebarCartComponent,sidebarCartTittle,sidebarCar
 const { onChangeDarkBurguer} = useContext(StoreContext);
 const { purchase } = useContext(ShoppgingCartContext);
 
+
+
 /*agrega en un array el total de la compra*/
 let totals = purchase.map((item)=>{
     return item.purchase

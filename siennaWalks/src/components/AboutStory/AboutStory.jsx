@@ -27,8 +27,7 @@ const AboutStory = () => {
       </section>
       <div className='about-story-container'>
       <h1 className='about-story-second-tittle'>Lo que nos distingue en Sienna Walk es nuestro enfoque de personalización y atención al detalle</h1>  
-      <p>Cada diseño es creado con amor y dedicación, utilizando materiales de calidad como cuero tex, y detalles como taches,
-         correas, cordones y cremalleras. Pero más allá de los productos, mi verdadero objetivo es construir una comunidad donde 
+      <p>Cada diseño es creado con amor y dedicación, utilizando materiales de calidad, más allá de los productos, mi verdadero objetivo es construir una comunidad donde 
          cada cliente se sienta visto y valorado.
       </p>
       <p>En Sienna Walk, creo firmemente que la moda es una forma de empoderamiento. Quiero que cada uno de ustedes se sienta 
