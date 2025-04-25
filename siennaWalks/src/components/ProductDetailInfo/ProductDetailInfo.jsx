@@ -8,15 +8,13 @@ import { ShoppgingCartContext } from '../../context/StoreContext';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 
-
-
 const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
     /*variables para obtener información del producto 🛒*/
     const { addProducts, substractProducts, sizesRef, getSize, quantityProducts } = useProductDetailInfo();
 
     /*variables para crear el arreglo del carrito de compras*/
-    const { formReference , getPurchase } = useContext(ShoppgingCartContext);
-    
+    const { formReference , getPurchase} = useContext(ShoppgingCartContext);
+
     return(
         <form className='product-info-delay' ref={formReference}>
            <label className='product-info-tittle'>
@@ -54,7 +52,7 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
                 <article className='product-size-numbers' ref={sizesRef} >
                     <label className='product-size-button' onClick={()=>{getSize(0)}}>
                         <p>35</p>
-                        <input type="radio" name="size" value="35"/> 
+                        <input type="radio" name="size"  value="35"/> 
                     </label>
                     <label className='product-size-button' onClick={()=>{getSize(1)}}>
                         <p>36</p>

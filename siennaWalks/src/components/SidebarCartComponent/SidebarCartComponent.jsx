@@ -2,27 +2,32 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import shoppingBigCart from '../../assets/logos/ph_shopping-cart-big.svg';
 import './SidebarCartComponent.css';
-import { StoreContext, ShoppgingCartContext } from '../../context/StoreContext';
+import { StoreContext, ShoppgingCartContext, HeaderContext } from '../../context/StoreContext';
 import SidebarCartTarget from '../../atoms/SidebarCartTarget/SidebarCartTarget';
 import shoppingCart from '../../assets/logos/ph_shopping-cart-light.svg';
 import whatsAppIcon from '../../assets/logos/black-icon-whatsapp.svg';
 
 const SidebarCartComponent = ({sidebarCartComponent,sidebarCartTittle,sidebarCartBigIcon}) => {
-const { onChangeDarkBurguer} = useContext(StoreContext);
-const { purchase } = useContext(ShoppgingCartContext);
+const { onChangeDarkBurguer,onChangeLightBurguer} = useContext(StoreContext);
+const { toggleCartComponent } = useContext(HeaderContext);
+const { purchase, onChangeModal,totalPurchase } = useContext(ShoppgingCartContext);
 
+/*funciones para ver el carrito de compras*/
+const shoppingCartModal = (e) =>{
+  //añaidr el evento de mover el modal
+  e.preventDefault();
 
+  const body = document.body.clientWidth;
 
-/*agrega en un array el total de la compra*/
-let totals = purchase.map((item)=>{
-    return item.purchase
-})
-
-let initTotal = 0;
-
-/*usar el método reducer para sumar los totalse*/
-let totalPurchase = totals.reduce((accumulator,currentValue)=> accumulator + currentValue,initTotal);
-
+  if(body<=1133){
+    onChangeLightBurguer();  
+    onChangeModal();
+  }
+  else{
+    onChangeModal();
+    toggleCartComponent();
+  }
+}
 
   if(purchase.length <1){
     return (
@@ -45,6 +50,8 @@ let totalPurchase = totals.reduce((accumulator,currentValue)=> accumulator + cur
               size={product.size}
               unities={product.unities}
               purchase={product.purchase}
+              id={product.id}
+              key={product.id}
           />
         })} 
         </div>
@@ -52,8 +59,8 @@ let totalPurchase = totals.reduce((accumulator,currentValue)=> accumulator + cur
           <p>Total:</p>
           <p className='sidebar-totals-price'>$ {totalPurchase}</p>
         </article>
-        <article className='sidebar-purchase-buttons'>
-          <button className='sidebar-watch-cart'>
+        <article className='sidebar-purchase-buttons' onClick={shoppingCartModal}>
+          <button className='sidebar-watch-cart' >
             <p>Ver carrito</p>
             <img src={shoppingCart}/>
           </button>

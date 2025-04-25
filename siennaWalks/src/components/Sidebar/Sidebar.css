@@ -192,8 +192,13 @@
     .sidebar-container {
         display: flex;
         flex-direction: column;
-        width: 32rem;
+        width: 50%;
+        height: 23.6rem;
         scroll-snap-align: start;
+    }
+
+    .sidebar--car-container{
+        height: 23.6rem;
     }
 
     .sidebar-inner-container{
@@ -209,12 +214,13 @@
     }
 
     .sidebar--car-second-movement{
-        height: 17.6rem;
+        height: 23.6rem;
     }
 
     .sidebar-cart-container{
         width: 28.8rem;
         margin: 0 auto;
+        height: 17.6rem;
     }
 
     .sidebar-about-me{

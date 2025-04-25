@@ -1,12 +1,16 @@
 import React from 'react';
 import './SidebarCartTarget.css';
 import discardPurchase from '../../assets/logos/x-bold.svg';
+import { useContext } from 'react';
+import { ShoppgingCartContext } from '../../context/StoreContext';
 
-const SidebarCartTarget = ({name,image,size,unities,purchase}) => {
+const SidebarCartTarget = ({name,image,size,unities,purchase,id}) => {
+  const { deletePurchase } = useContext(ShoppgingCartContext);
+
   return (
     <article className='sidebar-cart-target'>
     <h1 className='sidebar-purchase-tittle'>{name}</h1>
-    <img className='sidebar-discard-purchase' src={discardPurchase} alt="descartar compra"/>  
+    <img className='sidebar-discard-purchase' src={discardPurchase} alt="descartar compra" onClick={()=>{deletePurchase(id)}}/>  
     <img className='sidebar-purchase-image' src={image}/>
     <section className='sidebar-purchase-size'>
       <p>Talla: </p>

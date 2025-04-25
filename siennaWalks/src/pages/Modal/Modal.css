@@ -1,0 +1,12 @@
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(47,47,47, .75);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+}
+
+.modal-closed{
+    display: none;
+}
