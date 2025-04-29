@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react"
+import { useContext, useState } from "react"
 import { ShoppgingCartContext } from "../../context/StoreContext";
 import './ShoppingCartComponent.css';
 import ShoppingCartTarget from "../../atoms/ShoppingCartTarget/ShoppingCartTarget";
@@ -6,30 +6,16 @@ import closeModal from '../../assets/logos/x-bold.svg';
 import blackIconWhatsApp from '../../assets/logos/black-icon-whatsapp.svg';
 
 function ShoppingCartComponent() {
-  const { purchase, onChangeModal,totalPurchase } = useContext(ShoppgingCartContext);
+  const { purchase, onChangeModal,totalPurchase,shoppingCartComponent,onChangeShoppingPurchase,onChangeCartComponent } = useContext(ShoppgingCartContext);
 
-  /*cambiar el contenido del texto del botón comprar 🖤🤍*/  
-  const [adressPurchase,setAdressPurhcase] = useState('Finalizar compra');
-
-  useEffect(()=>{
-    const bodyWidth = document.body.clientWidth;
-
-    if(bodyWidth<320){
-      setAdressPurhcase('Finalizar compra');
-    }
-  
-    if(bodyWidth>=568 && bodyWidth<744){
-      setAdressPurhcase('Comprar')
-    }
-
-    if(bodyWidth>=744){
-      setAdressPurhcase('Finalizar compra')
-    }
-  },[])
-  
+  /*funcion para cerrar el carrito de compras e ir a la factura 🛒➡💰*/
+  const onBackShoppingCart = () =>{
+    onChangeCartComponent()
+    onChangeShoppingPurchase()
+  } 
 
     return (
-      <section className="shopping-cart-component">
+      <section className={shoppingCartComponent}>
         <header className="shopping-cart-header">
           <h1 className="shopping-cart-tittle">Carrito de compras</h1>
           <img className="shopping-close-modal" src={closeModal} onClick={onChangeModal}/>  
@@ -54,13 +40,12 @@ function ShoppingCartComponent() {
             <h3>Total</h3>
             <h3>${totalPurchase}</h3>
           </article>
-          <button className="shopping-cart-adress-purchase">
-            <p>{adressPurchase}</p>
+          <button className="shopping-cart-adress-purchase" onClick={onBackShoppingCart}>
+            <p>Comprar</p>
             <img  src={blackIconWhatsApp}/>
           </button>      
         </div>
       </section>
-      
     )  
 }
 

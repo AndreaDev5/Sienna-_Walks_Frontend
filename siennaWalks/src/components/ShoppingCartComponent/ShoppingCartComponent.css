@@ -9,6 +9,10 @@
     border: 1px solid var(--line-font)
  }
 
+ .shopping-cart-closed{
+   display: none;
+ }
+
  .shopping-cart-tittle{
     text-align: center;
     font-size: 2.4rem;
@@ -24,6 +28,8 @@
  .shopping-close-modal{
    position: absolute;
    right: 0;
+   height: 2.4rem;
+   width: 2.4rem;
  }
 
  .shopping-cart-items{

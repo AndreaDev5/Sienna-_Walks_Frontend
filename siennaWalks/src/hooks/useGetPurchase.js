@@ -40,14 +40,6 @@ const useGetPurchase= () => {
             dispatch(accion);
         }
     
-    /*funciones para quitar y poner el modal del carrito de compras 🛒🖤🤍*/    
-    const [modal,setModal] = useState('modal-closed');
-
-     /*funcion para cambiar el modal*/
-    const onChangeModal = () =>{
-        modal==='modal-closed'?setModal('modal'):setModal('modal-closed');
-    }
-    
     /*agrega en un array el total de la compra*/
     let totals = purchase.map((item)=>{
         return item.purchase
@@ -55,10 +47,33 @@ const useGetPurchase= () => {
 
     let initTotal = 0;
 
-/*usar el método reduce para sumar los totalse*/
-let totalPurchase = totals.reduce((accumulator,currentValue)=> accumulator + currentValue,initTotal);
+    /*usar el método reduce para sumar los totalse*/
+    let totalPurchase = totals.reduce((accumulator,currentValue)=> accumulator + currentValue,initTotal);    
 
-    return { formReference, purchase , getPurchase, deletePurchase, modal, setModal, onChangeModal, totalPurchase }
+    /*funciones para quitar y poner el modal del carrito de compras 🛒🖤🤍*/    
+    const [modal,setModal] = useState('modal-closed');
+
+     /*funcion para cambiar el modal */
+    const onChangeModal = () =>{
+        modal==='modal-closed'?setModal('modal'):setModal('modal-closed');
+    }
+    
+     /*funciones para cerrar el carrito de compras 🛒 y abrir el cuadro de compra💰 */
+        //Eliminar el component de de tienda
+    const [shoppingCartComponent, setShoppingCartComponent] = useState('shopping-cart-component');
+    
+    const onChangeCartComponent = () =>{
+        shoppingCartComponent==='shopping-cart-component'?setShoppingCartComponent('shopping-cart-closed'):setShoppingCartComponent('shopping-cart-component');
+    }
+
+    /*boton para cerrar la interfaz de la compra 🛒🖤🤍*/
+    const [shoppingPurchase,setShoppingPurchase] = useState('shopping-purchase-closed');
+
+    const onChangeShoppingPurchase = (e) =>{
+        shoppingPurchase==='shopping-purchase-closed'?setShoppingPurchase('shopping-purchase'):setShoppingPurchase('shopping-purchase-closed');
+    }
+
+    return { formReference, purchase , getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent,onChangeCartComponent , onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase }
 }
 
 export { useGetPurchase }
