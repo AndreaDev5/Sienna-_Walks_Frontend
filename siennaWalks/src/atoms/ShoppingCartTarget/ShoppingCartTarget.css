@@ -57,15 +57,15 @@
  }
  
  .shopping-cart-size-numbers .shopping-cart-size-button{
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
     position: relative;
     border-radius: 50%;
  }
  
  .shopping-cart-size-numbers .shopping-cart-size-button-change{
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
     position: relative;
     background: var(--light-gray-form);
     border-radius: 50%;
@@ -73,18 +73,19 @@
  
  .shopping-cart-size-numbers input[type="radio"]{
     appearance: none;
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.4rem;
+    height: 2.4rem;  
     border-radius: 50%;
     border: 1px solid var(--line-gray);
  }
  
- .shopping-cart-size-numbers p{
+ .shopping-cart-size-button p,
+ .shopping-cart-size-button-change p{
     position: absolute;
     width: 1.8rem;
     height: 1.8rem;
-    top: calc( 50% - .6rem );
-    left: calc( 50% - .6rem );
+    top: calc( 50% - 8px );
+    left: calc( 50% - 6px );
     font-size: 1.2rem;
  }
  
@@ -222,15 +223,13 @@
       width: 14.2rem;
    }
 
-   .shopping-cart-size-numbers .shopping-cart-size-button,
-   .shopping-cart-size-numbers .shopping-cart-size-button-checked{
+   .shopping-cart-size-numbers .shopping-cart-size-button{
       height: 2.4rem;
       width: 2.4rem;
+      background: var(--first-white);
    }
 
-   .shopping-cart-size-numbers .shopping-cart-size-button-checked{
-      background: var(--light-gray-form);
-   }
+
 
    .shopping-cart-size-numbers input[type="radio"]{
       height: 2.4rem;

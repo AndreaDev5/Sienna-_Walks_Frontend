@@ -12,6 +12,7 @@ import { useToggleButtons } from '../hooks/useToggleButtons';
 import { useSidebarFilterScroll } from '../hooks/useSidebarFilterScroll';
 import { useFilterProducts } from '../hooks/useFilterProducts';
 import { useGetPurchase } from '../hooks/useGetPurchase';
+import { useProductDetailInfo } from '../hooks/useProductDetailInfo';
 import AllProducts from '../pages/AllProducts/AllProducts';
 import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
 import Collection from '../pages/Collections/Collection';
@@ -28,18 +29,21 @@ const AppContext = () => {
     handleTouchStart,handleTouchMove,handleTouchEnd,setScrollCount } = useSidebarScroll();
   
   /*variables para la sección de usuario y carrito de compras en header*/  
- const { cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart } =useToggleButtons();  
+  const { cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart } =useToggleButtons();  
 
- /*variables para el sidebar de todos los productos*/
- const { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, onChangeFilterSizes,
+  /*variables para el sidebar de todos los productos*/
+  const { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, onChangeFilterSizes,
   arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef}   = useSidebarFilterScroll();
  
-  /*variables para el filtro de productos*/
+  /*variables para el filtro de productos 🛒*/
   const { productList,toggleFilters,filteredProducts } = useFilterProducts();
 
-  /*variables para el carrito de compras*/
-  const {formReference, purchase , getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase} =  useGetPurchase();
+  /*variables para el carrito de compras 🛒*/
+  const { formReference, purchase , getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase} =  useGetPurchase();
 
+  /*varaibles para modificar la compra 🛒*/
+  //const { addProducts, substractProducts, sizesRef, getSize, quantityProducts } = useProductDetailInfo();
+  
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
       scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,

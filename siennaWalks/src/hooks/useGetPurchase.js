@@ -5,7 +5,8 @@ const useGetPurchase= () => {
     /*funciones para añadir y quitar productos del carrito de compras 🛒*/
     const formReference = useRef(null);
     const [purchase,dispatch] = useReducer(PurchaseReducer,[]);
-    
+         
+
         const getPurchase = (e) =>{
             e.preventDefault();
     

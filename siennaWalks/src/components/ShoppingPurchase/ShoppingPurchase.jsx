@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { ShoppgingCartContext } from '../../context/StoreContext';
 import blackIconWhatsApp from '../../assets/logos/black-icon-whatsapp.svg';
 import closeModal from '../../assets/logos/x-bold.svg';
-import backShoppingCart from '../../assets/logos/tabler_arrow-left.svg'
+import backShoppingCart from '../../assets/logos/tabler_arrow-left.svg';
 
 /*card para un solo producto de tu factura 🤍🖤🛒*/
 const PurchaseInvoiceItem = ({name,image,unities,color,size,purchase}) =>{
@@ -89,7 +89,7 @@ const ShoppingPurchase = () => {
         </form>
         <article className="shopping-purchase-invoice">
             <h1>Resumen de tu compra</h1>
-            <section className='shopping-purchase-invoice-container'>
+            <section className='shopping-purchase-invoice-cqontainer'>
             <div className='shopping-purchase-products'>    
             {purchase.map((product)=>{
             return <PurchaseInvoiceItem

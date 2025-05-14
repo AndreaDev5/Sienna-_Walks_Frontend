@@ -70,7 +70,6 @@ const useProductDetailInfo = () =>{
        getSize()
    },[sizeValue])
 
-
    return { addProducts, substractProducts, sizesRef, getSize, quantityProducts }
 }
 
