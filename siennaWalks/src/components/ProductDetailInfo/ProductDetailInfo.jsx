@@ -19,25 +19,25 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
         <form className='product-info-delay' ref={formReference}>
            <label className='product-info-tittle'>
             {name}
-            <input type="radio" checked  name="name" value={name}/>
+            <input type="radio" readOnly={true} name="name" value={name}/>
            </label>
            <article className="product-global-nav">
                 <Link to="/">INICIO</Link>&nbsp;|&nbsp;<Link>{category}:{name}</Link>
             </article>
             <label className='product-info-image-container'>
                 <img className='product-info-image' src={urlImage}/>    
-                <input type="radio" checked name="image" value={urlImage}/>
+                <input type="radio"  name="image" value={urlImage}/>
             </label> 
             <label className='product-info-price'>
             ${price}
-            <input type="radio" checked name="price" value={price}/> 
+            <input type="radio"  name="price" value={price}/> 
             </label>
             <label className='product-info-collection'>
             {category}
-            <input type="radio" checked name="category" value={category}/>
+            <input type="radio"  name="category" value={category}/>
             </label>
             <label className='product-info-colors'>
-                <input type="radio"  name="color" checked={true} value={color}/>
+                <input type="radio"  name="color"  value={color}/>
                 <p>{color}</p>
             </label>
             <section className='product-info-selector'>
@@ -50,7 +50,7 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
             </section>
             <section className='product-size-selector'>
                 <article className='product-size-numbers' ref={sizesRef} >
-                    <label className='product-size-button' onClick={()=>{getSize(0)}}>
+                    <label className='product-size-button' onClick={()=>{getSize(0)}} defaultChecked={true}>
                         <p>35</p>
                         <input type="radio" name="size"  value="35"/> 
                     </label>

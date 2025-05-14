@@ -83,6 +83,7 @@ useEffect(()=>{
   /*efecto por default para los colores*/
   useEffect(()=>{
       const filterColorNode = filterColorRef.current;
+      console.log(filterColorNode);
       const filterColorLinksNode = filterColorNode.childNodes[1];
       const arrowColorNode = arrowColorRef.current;
       

@@ -1,8 +1,8 @@
 // 🥾 Importación de librerías y recursos necesarios
 
-import React, { useRef } from 'react';
+import  { useRef } from 'react';
 import './ShoeStoreTarget.css';
-
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 // 🎯 Componente para mostrar un elemento de la tienda de zapatos
@@ -22,13 +22,18 @@ const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,pr
   const fourthColorRef = useRef(null);
   const fourthColorRefNode = firstColorRef.current;
 
-// 🔗 Componente de enlace que envuelve toda la tarjeta del producto
-  
-  
-  return (
-    <Link className={classShoeName} to={productLink} onClick={()=>{
+  //enlace directo a un documento
+  const navigate = useNavigate();
+
+  const handleClick = () =>{
       window.scrollTo(0,0);
-    }}>
+      navigate(productLink)
+  }
+  // 🔗 Componente de enlace que envuelve toda la tarjeta del producto
+  
+
+  return (
+    <div className={classShoeName} onClick={handleClick}>
       <img className='shoe-store-image' src={image} alt={'sienna-ref-nombre-de-zapato'}/>
       <p className='shoe-store-collection'>{collection}</p>
       <p className='shoe-store-name'>{shoesName}</p>
@@ -37,7 +42,7 @@ const ShoeStoreTarget = ({classShoeName,collection,shoesName,shoesPrice,image,pr
         <div className='shoe-first-color' ref={firstColorRef}></div>
       </article>
       <Link className='shoe-look-product' to={productLink}>Ver producto</Link>
-    </Link>
+    </div>
   )
 }
 
