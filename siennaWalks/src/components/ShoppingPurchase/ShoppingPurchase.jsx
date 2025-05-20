@@ -5,7 +5,7 @@ import blackIconWhatsApp from '../../assets/logos/black-icon-whatsapp.svg';
 import closeModal from '../../assets/logos/x-bold.svg';
 import backShoppingCart from '../../assets/logos/tabler_arrow-left.svg';
 
-/*card para un solo producto de tu factura 🤍🖤🛒*/
+/*card para un solo producto de tu factura 🛒*/
 const PurchaseInvoiceItem = ({name,image,unities,color,size,purchase}) =>{
     return(
         <section className='shopping-purchase-invoice-item'>
@@ -32,13 +32,13 @@ const PurchaseInvoiceItem = ({name,image,unities,color,size,purchase}) =>{
 }
 
 const ShoppingPurchase = () => {
-   const { purchase, totalPurchase,onChangeModal,shoppingPurchase,onChangeShoppingPurchase,onChangeCartComponent } =  useContext(ShoppgingCartContext);
-   const onBackShoppingCart = () =>{
+const { purchase, totalPurchase,onChangeModal,shoppingPurchase,onChangeShoppingPurchase,onChangeCartComponent } =  useContext(ShoppgingCartContext);
+const onBackShoppingCart = () =>{
     onChangeCartComponent()
     onChangeShoppingPurchase()
-  }  
+}  
 
-  return (
+return (
     <section className={shoppingPurchase}>
         <header className='shopping-purchase-header'>
             <button className='shopping-back-cart' onClick={onBackShoppingCart}>

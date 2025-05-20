@@ -34,7 +34,7 @@ const AppContext = () => {
   /*variables para el sidebar de todos los productos*/
   const { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, onChangeFilterSizes,
   arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef}   = useSidebarFilterScroll();
- 
+
   /*variables para el filtro de productos 🛒*/
   const { productList,toggleFilters,filteredProducts } = useFilterProducts();
 

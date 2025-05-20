@@ -22,7 +22,7 @@ const toggleUSerCart = () =>{
     }
 }
     
-  return {cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}  
+return {cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}  
 }
 
 export { useToggleButtons }

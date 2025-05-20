@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer'
 import BurguerButton from '../../atoms/BurguerButton/BurguerButton'
 
 const AboutStore = () => {
-   useEffect(()=>{
+  useEffect(()=>{
       window.scrollTo(0, 0); 
     },[])
   return (

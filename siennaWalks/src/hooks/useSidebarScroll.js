@@ -11,7 +11,7 @@ const useSidebarScroll = () =>{
   const firstButtonRef = useRef(null);
   const secondButtonRef = useRef(null);
 
- /*funcion de inicio para detectar la posicion donde toco la pantalla de 📲📲*/   
+  /*funcion de inicio para detectar la posicion donde toco la pantalla de 📲📲*/   
   const handleTouchStart = (e) =>{
     startX.current = e.touches[0].clientX;
   } 
@@ -38,7 +38,7 @@ y la orientación del arrstre del dedo 📲*/
     const firstButtonRefNode = firstButtonRef.current;
     const secondButtonRefNode = secondButtonRef.current;
   
-   switch (scrollCount) {
+    switch (scrollCount) {
     case 1:
       setClassContainer('sidebar--car-container');
       firstButtonRefNode.classList.replace('first-button','first-dark-button')
@@ -50,7 +50,7 @@ y la orientación del arrstre del dedo 📲*/
       firstButtonRefNode.classList.replace('first-dark-button','first-button')
       secondButtonRefNode.classList.replace('second-button','second-dark-button')
     break;
-   }
+    }
   },[scrollCount])
 
   return { scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,

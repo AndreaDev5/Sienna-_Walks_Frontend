@@ -23,12 +23,12 @@ const AboutStory = () => {
             <img src={firstImage}/>
             <img src={secondImage}/>
             <img src={thirdImage}/>
-         </article>
+        </article>
       </section>
       <div className='about-story-container'>
       <h1 className='about-story-second-tittle'>Lo que nos distingue en Sienna Walk es nuestro enfoque de personalización y atención al detalle</h1>  
       <p>Cada diseño es creado con amor y dedicación, utilizando materiales de calidad, más allá de los productos, mi verdadero objetivo es construir una comunidad donde 
-         cada cliente se sienta visto y valorado.
+      cada cliente se sienta visto y valorado.
       </p>
       <p>En Sienna Walk, creo firmemente que la moda es una forma de empoderamiento. Quiero que cada uno de ustedes se sienta 
         inspirado y seguro al usar nuestros productos. Mi misión es ser parte de su viaje, ofreciendo calzado que no solo se vea bien, 

@@ -5,7 +5,7 @@ import designShoes from '../../assets/logos/design-tools-about-1.svg';
 import customerServiceAbout from '../../assets/logos/customer-service-about-1.svg'
 
 const AboutValues = () => {
-  return (
+return (
     <>
     <section className='about-values'>
     <h1 className='about-values-main-tittle'>Nuestra Promesa</h1>
@@ -38,7 +38,7 @@ const AboutValues = () => {
         <p>Juntos, caminemos hacia un futuro donde cada paso sea una expresión auténtica de quién eres.</p>
     </section>
     </>
-  )
+)
 }
 
 export default AboutValues

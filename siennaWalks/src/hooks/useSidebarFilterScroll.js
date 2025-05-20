@@ -8,13 +8,13 @@ const useSidebarFilterScroll = () =>{
         setSidebarFilter(!sidebarFilter);
         console.log(sidebarFilter);
     }
-   /** funciones para los filtros de las colecciones, tallas y colores*/
-   /*variables para los filtros de colecciones*/ 
-   const [filterCollectionItem, setFilterCollectionItems] = useState(false);
-   const filterCollectionRef = useRef(null);
-   const arrowRef = useRef(null);
+    /** funciones para los filtros de las colecciones, tallas y colores*/
+    /*variables para los filtros de colecciones*/ 
+    const [filterCollectionItem, setFilterCollectionItems] = useState(false);
+    const filterCollectionRef = useRef(null);
+    const arrowRef = useRef(null);
 
-   /*variables para los filtros de tallas*/ 
+    /*variables para los filtros de tallas*/ 
     const [filterSizesItem,setFilterSizesItems] = useState(false);
     const filterSizesRef = useRef(null);
     const arrowSizesRef = useRef(null);
@@ -23,14 +23,14 @@ const useSidebarFilterScroll = () =>{
     const [filterColorItem,setFilterColorItems] = useState(false);
     const filterColorRef = useRef(null);
     const arrowColorRef = useRef(null);
-   
-   const onChangeFilterCollection = () =>{
+
+    const onChangeFilterCollection = () =>{
         setFilterCollectionItems(!filterCollectionItem);
         setFilterSizesItems(false)
         setFilterColorItems(false)
     }
 
-   /*funciones de toggle para los botones de filtro*/
+      /*funciones de toggle para los botones de filtro*/
     const onChangeFilterSizes = () =>{
     setFilterSizesItems(!filterSizesItem);
     setFilterCollectionItems(false);
@@ -48,6 +48,7 @@ const onChangeColorSizes = () =>{
 useEffect(()=>{
     const filterCollectionNode = filterCollectionRef.current;
     const filterLinksNode = filterCollectionNode.childNodes[1];
+    console.log(filterLinksNode);
     const arrowRefNode = arrowRef.current;
     
     if(filterCollectionItem===true){
@@ -97,7 +98,7 @@ useEffect(()=>{
       }
   })
 
-   return { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, 
+    return { sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef, 
     onChangeFilterSizes, arrowSizesRef, filterColorRef, onChangeColorSizes, arrowColorRef } 
 }
 

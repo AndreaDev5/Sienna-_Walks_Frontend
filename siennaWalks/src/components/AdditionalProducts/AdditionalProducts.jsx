@@ -1,10 +1,10 @@
 import ShoeStoreTarget from '../../atoms/ShoeStoreTarget/ShoeStoreTarget';
 import './AdditionalProducts.css';
 import { useAdditionalProducts } from '../../hooks/useAdditionalProducts';
- 
+
 const AdditionalProducts = () =>{
         const { productList } = useAdditionalProducts();
-           
+    
         return(
         <>
         <article className='other-products-tittle'>

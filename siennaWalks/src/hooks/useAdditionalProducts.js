@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 const useAdditionalProducts = () =>{
-     /*hacer un llamado a la API de productos*/ 
-    /*variables de consumo de la API*/
+  /*hacer un llamado a la API de productos*/ 
+  /*variables de consumo de la API*/
     const [productList, setProductList ] = useState([]);
       
     const getAllProducts = async () =>{

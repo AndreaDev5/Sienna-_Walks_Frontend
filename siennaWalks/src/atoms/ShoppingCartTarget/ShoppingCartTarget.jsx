@@ -13,7 +13,7 @@ const sizeCollectionRef = useRef(null);
   //1. Seleccionar a todos los inputs 
   const { current } = sizeCollectionRef;
 
- const handleChangeSize = (num) =>{ 
+const handleChangeSize = (num) =>{ 
     setCartSize(num)
   const selectInputSize = () =>{
     if(current){

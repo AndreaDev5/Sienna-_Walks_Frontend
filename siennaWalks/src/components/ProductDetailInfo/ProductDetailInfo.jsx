@@ -17,11 +17,11 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
 
     return(
         <form className='product-info-delay' ref={formReference}>
-           <label className='product-info-tittle'>
+        <label className='product-info-tittle'>
             {name}
             <input type="radio" readOnly={true} name="name" value={name}/>
-           </label>
-           <article className="product-global-nav">
+        </label>
+        <article className="product-global-nav">
                 <Link to="/">INICIO</Link>&nbsp;|&nbsp;<Link>{category}:{name}</Link>
             </article>
             <label className='product-info-image-container'>

@@ -6,13 +6,13 @@ import SidebarFilterSlider from '../../atoms/SidebarFilterSlider/SidebarFilterSl
 
 export default function SidebarFilter() {
 const { sidebarFilter, onChangeSidebarFilter } = useContext(SidebarAllProductsContext);
- 
+
   return (
     <section className={sidebarFilter?'sidebar-filter':'sidebar-filter-change'}>
       <div className='sidebar-filter-container'>      
-         <img className='sidebar-filter-close' src={closeButton} onClick={onChangeSidebarFilter}/>
-         <h1 className='sidebar-filter-tittle'>Filtros</h1>
-         <SidebarFilterSlider/>
+        <img className='sidebar-filter-close' src={closeButton} onClick={onChangeSidebarFilter}/>
+        <h1 className='sidebar-filter-tittle'>Filtros</h1>
+        <SidebarFilterSlider/>
       </div>
     </section>
   )
