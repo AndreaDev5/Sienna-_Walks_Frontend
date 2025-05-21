@@ -7,7 +7,18 @@ import plusProduct from '../../assets/logos/product-plus-gray.svg';
 
 const ShoppingCartTarget = ({name,urlImage,color,unities,totals,id}) => {
 const { deletePurchase } = useContext(ShoppgingCartContext);
+const [quantityProducts,setQuantityProducts] = useState(Number(unities));
+const [cartSize,setCartSize] = useState(0);
 
+const addNewProducts = (e) =>{
+  e.preventDefault()
+  if(quantityProducts>=0 && quantityProducts<=3) setQuantityProducts(quantityProducts=>quantityProducts+1);
+}
+
+const substractNewPorducts = (e) =>{
+  e.preventDefault()
+  if(quantityProducts>=1 && quantityProducts<=4) setQuantityProducts(quantityProducts=>quantityProducts-1);
+}
 //cambiar a gris el botón que esté seleccionado
 const sizeCollectionRef = useRef(null);
   //1. Seleccionar a todos los inputs 
@@ -33,7 +44,7 @@ const sizeCollectionRef = useRef(null);
   filteredInput.forEach((input)=>input.classList.replace('shopping-cart-size-button-change','shopping-cart-size-button'))
 } 
 
-//
+
 
   return (
     <form className="shopping-cart-target">
@@ -67,9 +78,9 @@ const sizeCollectionRef = useRef(null);
             </section>
             <section className='shopping-cart-info-selector'>
               <article className='shopping-cart-info-counter'>
-                <button className='shopping-cart-info-minus'><img src={minusProduct}/></button>
-                <input className='shopping-cart-info-number' type='number' name="unities" value={unities} min="1" max="20"/>
-                <button className='shopping-cart-info-plus' ><img src={plusProduct} /></button>
+                <button className='shopping-cart-info-minus' onClick={substractNewPorducts}><img src={minusProduct}/></button>
+                <input className='shopping-cart-info-number' type='number' name="unities" value={quantityProducts} min="1" max="20"/>
+                <button className='shopping-cart-info-plus' onClick={addNewProducts}><img src={plusProduct} /></button>
               </article>
               <p className='shopping-cart-info-unities'>Unidades</p>
             </section>
