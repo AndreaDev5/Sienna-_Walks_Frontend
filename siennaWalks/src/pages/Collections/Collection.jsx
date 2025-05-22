@@ -1,6 +1,7 @@
 import React from 'react';
 import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
-import SiennaCollectionPages from '../../atoms/SiennaCollectionPages/SiennaCOllectionPages';
+import SiennaCollectionPages from '../../atoms/SiennaCollectionPages/SiennaCollectionPages';
+
 import './Collection.css';
 
 function Collection({collectionTittle}) {
