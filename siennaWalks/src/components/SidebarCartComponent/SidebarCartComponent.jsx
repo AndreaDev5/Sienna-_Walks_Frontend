@@ -10,8 +10,9 @@ import whatsAppIcon from '../../assets/logos/black-icon-whatsapp.svg';
 const SidebarCartComponent = ({sidebarCartComponent,sidebarCartTittle,sidebarCartBigIcon}) => {
 const { onChangeDarkBurguer,onChangeLightBurguer} = useContext(StoreContext);
 const { toggleCartComponent } = useContext(HeaderContext);
-const { purchase, onChangeModal,totalPurchase } = useContext(ShoppgingCartContext);
+const {  onChangeModal } = useContext(ShoppgingCartContext);
 
+const purchase = 1;
 /*funciones para ver el carrito de compras*/
 const shoppingCartModal = (e) =>{
   //añaidr el evento de mover el modal
@@ -29,7 +30,7 @@ const shoppingCartModal = (e) =>{
   }
 }
 
-  if(purchase.length <1){
+  if(purchase ===1){
     return (
       <section className={sidebarCartComponent}>
         <h1 className={sidebarCartTittle}>Tu carrito de compras está vacío</h1>
@@ -38,12 +39,12 @@ const shoppingCartModal = (e) =>{
       </section>
     )
   }
-
+{/*
   if(purchase.length >=1){
     return(
       <section className={sidebarCartComponent}>
         <div className='sidebar-cart-targets-container'>
-        {purchase.map((product)=>{
+         {purchase.map((product)=>{
           return <SidebarCartTarget
               name={product.name}
               image={product.image}
@@ -53,7 +54,7 @@ const shoppingCartModal = (e) =>{
               id={product.id}
               key={product.id}
           />
-        })} 
+        })}  
         </div>
         <article className='sidebar-totals'>
           <p>Total:</p>
@@ -70,8 +71,9 @@ const shoppingCartModal = (e) =>{
           </button>
         </article>
       </section>
+      
     )
-  }
+  }*/}
 }
 
 export default SidebarCartComponent

@@ -3,150 +3,17 @@ import minusProduct from '../../assets/logos/product-minus-gray.svg';
 import plusProduct from '../../assets/logos/product-plus-gray.svg';
 import purchaseIcon from '../../assets/logos/purchase-icon.svg';
 import shoppingCart from '../../assets/logos/ph_shopping-cart-light.svg';
-import { useProductDetailInfo } from '../../hooks/useProductDetailInfo';
-import { ShoppgingCartContext } from '../../context/StoreContext'; 
 import { Link } from 'react-router-dom';
-import { useReducer,useState,useEffect,useRef } from 'react';
+import { useState,useEffect,useRef,useContext } from 'react';
+import  { ShoppgingCartContext } from '../../context/StoreContext.jsx'
 
-
-function firstPurchaseReducer(state,action){
-    switch (action.type) {
-        case 'substract-product':
-            return {
-             ...state,
-             unities: state.unities - 1,
-            }    
-        case 'add-product':
-            return {
-             ...state,
-             unities: state.unities + 1,
-            }
-        case 'change-size':
-            return{
-            ...state,
-            size: action.NextSize     
-        }
-
-        case 'get-purchase':
-            return {
-            ...state,
-            name: action.NextName,
-            urlImage: action.NextUrlImage,
-            price: action.NextPrice,
-            category: action.NextCategory,
-            color: action.NextColor,
-            id: action.NextId,
-            total: state.price * state.unities,
-            
-      /*       purchase: [...state.purchase,{
-                name: state.name,
-                urlImage: state.urlImage, 
-                price: state.price,
-                category: state.category,
-                color: state.color,
-                id: state.id,
-                unities: state.unities,
-                size: state.size,
-                total: state.price * state.unities,
-            }]     */
-        }
-        
-        case 'add-purchase':
-            return{
-                ...state,
-                purchase: [...state.purchase,{
-                name: state.name,
-                urlImage: state.urlImage, 
-                price: state.price,
-                category: state.category,
-                color: state.color,
-                id: state.id,
-                unities: state.unities,
-                size: state.size,
-                total: state.price * state.unities,
-            }]
-            }
-    }
-}
-
-const ProductDetailInfo = ({name,urlImage,price,category,color,id}) =>{  
+const ProductDetailInfo = ({name,urlImage,price,category,color,id}) =>{            
+    const { product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue } = useContext(ShoppgingCartContext);
+   
     
-    const [state,dispatch] = useReducer(firstPurchaseReducer,{
-        name: name,
-        urlImage: urlImage, 
-        price: price,
-        category: category,
-        color: color,
-        id: id,
-        unities: 1,
-        size: 35,
-        total: 0,
-        purchase:[]    
-    });    
-    
-   /*funciones de useReducer orientadas a modifcar la cantidad de unidades compradas🤍🖤🚀*/     
-    const substractProduct = (e) =>{
-        e.preventDefault();
-        const quantityProducts = state.unities;
-        if(quantityProducts>=1 && quantityProducts<=4){
-            dispatch({ 
-                type: 'substract-product',
-            })
-        }
-    }
-    
-    const addProduct = (e) =>{
-        e.preventDefault();
-        const quantityProducts = state.unities;
-        if(quantityProducts>=0 && quantityProducts<=3){
-            dispatch({ 
-                type: 'add-product',
-            })
-        }
-    }
-         
-    const getInitialPurchase = () =>{
-        const initialPurchase = {
-            name: name,
-            urlImage: urlImage,
-            price: price,
-            category: category,
-            color: color,
-            id: id,
-        }
-
-        dispatch({
-            type:'get-purchase',
-            NextName: initialPurchase.name,
-            NextUrlImage: initialPurchase.urlImage,
-            NextPrice: initialPurchase.price,
-            NextCategory: initialPurchase.category,
-            NextColor: initialPurchase.color,
-            NextId: initialPurchase.id,
-            NextTotal: state.price * state.unities
-        });
-                
-    }   
-
-    const onAddFirstPurchase = (e) =>{
-        e.preventDefault();
-        getInitialPurchase();        
-        dispatch({
-            type:'add-purchase'
-        })
-    }
-
-    const getSizeValue = (e) =>{
-        let inputValue = Number(e.target.value);
-        dispatch({
-            type: 'change-size',
-            NextSize: inputValue
-        })
-    }
-
     /*funciones para cambiar la talla 👢🤍🖤*/
     const sizesRef = useRef(null);
-    let [sizeValue,setSizeValue] = useState(state.size); 
+    let [sizeValue,setSizeValue] = useState(product.size); 
     
     const onChangeColorInput = (num) =>{
         setSizeValue(num)
@@ -227,7 +94,7 @@ const ProductDetailInfo = ({name,urlImage,price,category,color,id}) =>{
             <section className='product-info-selector'>
                 <article className='product-info-counter'>
                     <button className='product-info-minus' onClick={substractProduct}><img src={minusProduct}/></button>
-                    <input className='product-info-number' type='number' name="unities" value={state.unities} min="1" max="4"/>
+                    <input className='product-info-number' type='number' name="unities" value={product.unities} min="1" max="4"/>
                     <button className='product-info-plus' onClick={addProduct}><img src={plusProduct} /></button>
                 </article>
                 <p className='product-info-unities'>Unidades</p>

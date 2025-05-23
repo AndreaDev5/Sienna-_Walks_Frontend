@@ -1,29 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import './ProductDetail.css';
 import { Link, useParams } from 'react-router-dom';
 import BurguerButton from '../../atoms/BurguerButton/BurguerButton';
 import ProductDetailInfo from '../../components/ProductDetailInfo/ProductDetailInfo';
 import Footer from '../../components/Footer/Footer';
 import AdditionalProducts from '../../components/AdditionalProducts/AdditionalProducts';
+import { ShoppgingCartContext } from '../../context/StoreContext';
 
 const ProductDetail = () => {
    /*funcion para cargar la información de un solo producto*/
    let { id } = useParams();
-   const [productInfo, setProductInfo] = useState([])
+   //const [productInfo, setProductInfo] = useState([])
+   const { productInfo,getOneProduct } =useContext(ShoppgingCartContext)
    
-   const getOneProduct = async () =>{
-     /*obtner la url del servidor a partir del id de la url del producto*/
-     const urlProduct = `http://localhost:3000/api/products/${id}`;
- 
-     /*hacer la petición a la API rest del producto*/ 
-     const request =  await fetch(urlProduct)
-     const productData = await request.json();
-     const { data } = productData;
-     setProductInfo(data)
-   }
-
-   useEffect(()=>{
-    getOneProduct();
+  useEffect(()=>{
+    getOneProduct(id);
   },[id])
 
   return (

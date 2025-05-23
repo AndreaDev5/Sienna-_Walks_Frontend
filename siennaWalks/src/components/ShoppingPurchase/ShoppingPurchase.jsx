@@ -91,7 +91,7 @@ const ShoppingPurchase = () => {
             <h1>Resumen de tu compra</h1>
             <section className='shopping-purchase-invoice-cqontainer'>
             <div className='shopping-purchase-products'>    
-            {purchase.map((product)=>{
+         {/*    {purchase.map((product)=>{
             return <PurchaseInvoiceItem
                     name={product.name}
                     unities={product.unities}
@@ -100,7 +100,7 @@ const ShoppingPurchase = () => {
                     size={product.size}
                     purchase={product.purchase}  
                 />
-            })}        
+            })}   */}      
             </div>
             <div className='shopping-purchase-invoice-totals'>
                 <p>Subtotal</p>

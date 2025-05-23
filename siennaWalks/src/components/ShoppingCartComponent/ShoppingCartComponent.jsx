@@ -21,7 +21,7 @@ function ShoppingCartComponent() {
           <img className="shopping-close-modal" src={closeModal} onClick={onChangeModal}/>  
         </header>
         <div className="shopping-cart-items">
-          {purchase.map((product)=>{
+       {/*    {purchase.map((product)=>{
             return <ShoppingCartTarget
                       name={product.name}
                       urlImage={product.image}
@@ -32,7 +32,7 @@ function ShoppingCartComponent() {
                       id={product.id}
                       key={product.id}
                   />
-          })}
+          })} */}
         </div>
         <div className="shopping-cart-options-purchase">
           <article className="shopping-cart-total-purchase">

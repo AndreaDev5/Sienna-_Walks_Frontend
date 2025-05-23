@@ -10,7 +10,7 @@ export default function ShoppingCart({shoppingCartContainer,shoppingCartMarker,s
   
   return (
     <figure className={shoppingCartContainer} onClick={shoppingCartEvent}>  
-        <p className={shoppingCartMarker}>{purchase.length}</p>
+        <p className={shoppingCartMarker}>{0}</p>
         <img src={shoppingCarIcon}/>
     </figure>
   )

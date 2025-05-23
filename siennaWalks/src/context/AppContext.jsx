@@ -12,13 +12,13 @@ import { useToggleButtons } from '../hooks/useToggleButtons';
 import { useSidebarFilterScroll } from '../hooks/useSidebarFilterScroll';
 import { useFilterProducts } from '../hooks/useFilterProducts';
 import { useGetPurchase } from '../hooks/useGetPurchase';
-import { useProductDetailInfo } from '../hooks/useProductDetailInfo';
 import AllProducts from '../pages/AllProducts/AllProducts';
 import SidebarFilter from '../components/SidebarFilter/SidebarFilter';
 import Collection from '../pages/Collections/Collection';
 import ProductDetail from '../pages/ProductDetail/ProductDetail';
 import OtherProductDetail from '../pages/OtherProductDetail/OtherProductDetail';
 import Modal from '../pages/Modal/Modal';
+import { useGetTotalPurchase } from '../hooks/useGetTotalPurchase';
 
 const AppContext = () => {
   /*variables para el boton de hamburguesa*/ 
@@ -39,7 +39,9 @@ const AppContext = () => {
   const { productList,toggleFilters,filteredProducts } = useFilterProducts();
 
   /*variables para el carrito de compras 🛒*/
-  const { formReference, purchase , getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase} =  useGetPurchase();
+  const { modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase} =  useGetPurchase();
+
+  const { product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue,productInfo,getOneProduct } = useGetTotalPurchase();
 
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
@@ -48,7 +50,8 @@ const AppContext = () => {
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
           <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
             onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef,productList,toggleFilters,filteredProducts }}>
-          <ShoppgingCartContext.Provider value={{formReference, purchase, getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase}}>    
+          <ShoppgingCartContext.Provider value={{  modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase,
+            product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue,productInfo,getOneProduct}}>    
           <Modal/>  
           <BrowserRouter>
           <SidebarFilter/>

@@ -8,9 +8,6 @@ import ShoppingPurchase from '../../components/ShoppingPurchase/ShoppingPurchase
 export default function Modal() {
   const { modal,setModal,purchase } = useContext(ShoppgingCartContext);
 
-    if(purchase.length === 0){
-      setModal('modal-closed')
-    }
 
     return (
       <main className={modal}>
