@@ -31,7 +31,7 @@ const ProductDetail = () => {
      <section className='product-description-container'>
         <Link className="product-tittle-init" to="/"><h1>Sienna Walks</h1></Link>   
         <BurguerButton buttonMode={false}/>
-        <ProductDetailInfo  name={productInfo.name} urlImage={productInfo.image} price={productInfo.price} category={productInfo.category} color={productInfo.color}/>
+        <ProductDetailInfo  name={productInfo.name} urlImage={productInfo.image} price={productInfo.price} category={productInfo.category} color={productInfo.color} id={productInfo._id}/>
         <AdditionalProducts name={productInfo.name} urlImage={productInfo.image} price={productInfo.price} category={productInfo.category} color={productInfo.color}/>    
      </section>
      <Footer footerBackground={'#f9f9f9'} footerMarginTop={"1.6rem"}/>

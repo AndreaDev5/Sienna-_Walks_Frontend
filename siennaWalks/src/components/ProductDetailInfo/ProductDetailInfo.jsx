@@ -6,17 +6,8 @@ import shoppingCart from '../../assets/logos/ph_shopping-cart-light.svg';
 import { useProductDetailInfo } from '../../hooks/useProductDetailInfo';
 import { ShoppgingCartContext } from '../../context/StoreContext'; 
 import { Link } from 'react-router-dom';
-import { useReducer,useState,useEffect,useRef, useLayoutEffect } from 'react';
+import { useReducer,useState,useEffect,useRef } from 'react';
 
-
-function createInitialPurchase(){
-    const newPurchase = []
-
-    return {
-        id:'',
-        purchase: newPurchase,
-    }
-}
 
 function firstPurchaseReducer(state,action){
     switch (action.type) {
@@ -44,12 +35,41 @@ function firstPurchaseReducer(state,action){
             price: action.NextPrice,
             category: action.NextCategory,
             color: action.NextColor,
-            total: state.price * state.unities
+            id: action.NextId,
+            total: state.price * state.unities,
+            
+      /*       purchase: [...state.purchase,{
+                name: state.name,
+                urlImage: state.urlImage, 
+                price: state.price,
+                category: state.category,
+                color: state.color,
+                id: state.id,
+                unities: state.unities,
+                size: state.size,
+                total: state.price * state.unities,
+            }]     */
+        }
+        
+        case 'add-purchase':
+            return{
+                ...state,
+                purchase: [...state.purchase,{
+                name: state.name,
+                urlImage: state.urlImage, 
+                price: state.price,
+                category: state.category,
+                color: state.color,
+                id: state.id,
+                unities: state.unities,
+                size: state.size,
+                total: state.price * state.unities,
+            }]
             }
     }
 }
 
-const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{  
+const ProductDetailInfo = ({name,urlImage,price,category,color,id}) =>{  
     
     const [state,dispatch] = useReducer(firstPurchaseReducer,{
         name: name,
@@ -57,9 +77,11 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
         price: price,
         category: category,
         color: color,
+        id: id,
         unities: 1,
         size: 35,
-        total: 0,    
+        total: 0,
+        purchase:[]    
     });    
     
    /*funciones de useReducer orientadas a modifcar la cantidad de unidades compradas🤍🖤🚀*/     
@@ -83,14 +105,14 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
         }
     }
          
-    const getInitialPurchase = (e) =>{
-        e.preventDefault();
-        let initialPurchase = {
+    const getInitialPurchase = () =>{
+        const initialPurchase = {
             name: name,
             urlImage: urlImage,
             price: price,
             category: category,
             color: color,
+            id: id,
         }
 
         dispatch({
@@ -100,11 +122,19 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
             NextPrice: initialPurchase.price,
             NextCategory: initialPurchase.category,
             NextColor: initialPurchase.color,
+            NextId: initialPurchase.id,
             NextTotal: state.price * state.unities
         });
-        console.log(state);
+                
     }   
-    
+
+    const onAddFirstPurchase = (e) =>{
+        e.preventDefault();
+        getInitialPurchase();        
+        dispatch({
+            type:'add-purchase'
+        })
+    }
 
     const getSizeValue = (e) =>{
         let inputValue = Number(e.target.value);
@@ -164,7 +194,7 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
            break;
        }
     }
-    
+
     useEffect(()=>{
         onChangeColorInput();
     },[sizeValue])
@@ -228,7 +258,7 @@ const ProductDetailInfo = ({name,urlImage,price,category,color}) =>{
                 <p className='product-size-p'>Talla</p>
             </section>
             <section className='product-action-options'>
-                <button className='product-info-send' onClick={getInitialPurchase}>
+                <button className='product-info-send' onClick={onAddFirstPurchase}>
                     <p>Añadir al carrito</p>
                     <img src={shoppingCart}/>
                 </button>
