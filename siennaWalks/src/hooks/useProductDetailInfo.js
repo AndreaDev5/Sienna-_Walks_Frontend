@@ -1,20 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const useProductDetailInfo = () =>{
-    let [quantityProducts,setQuantityProducts] = useState(1);
-    let [sizeValue,setSizeValue] = useState(0)   
-
-   /*funcion para sumar  y restar productos*/
-   const addProducts = (e) =>{
-       e.preventDefault();
-       if(quantityProducts>=0 && quantityProducts<=3) setQuantityProducts(quantityProducts=>quantityProducts+1); 
-   }
-
-   const substractProducts = (e) =>{
-       e.preventDefault();
-       if(quantityProducts>=1 && quantityProducts<=4) setQuantityProducts(quantityProducts=>quantityProducts-1);
-   }
-
+   let [sizeValue,setSizeValue] = useState(0);  
    /*nodos para  la selección de las tallas*/
    const sizesRef = useRef(null);
 
@@ -70,7 +57,7 @@ const useProductDetailInfo = () =>{
        getSize()
    },[sizeValue])
 
-   return { addProducts, substractProducts, sizesRef, getSize, quantityProducts }
+   return { sizesRef, getSize }
 }
 
 export  { useProductDetailInfo }

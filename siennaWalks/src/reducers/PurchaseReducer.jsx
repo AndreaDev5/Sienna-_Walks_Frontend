@@ -4,6 +4,7 @@ export const PurchaseReducer = (state=[], action)=>{
             return [...state,action.payload]        
         case "delete": 
             return state.filter(product=> product.id!==action.payload);    
+            
         default:
         return state;    
     }     

@@ -41,9 +41,6 @@ const AppContext = () => {
   /*variables para el carrito de compras 🛒*/
   const { formReference, purchase , getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase} =  useGetPurchase();
 
-  /*varaibles para modificar la compra 🛒*/
-  //const { addProducts, substractProducts, sizesRef, getSize, quantityProducts } = useProductDetailInfo();
-  
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
       scrollCount,startX,diffX,classContainer,firstButtonRef,secondButtonRef,thidrButtonRef,
@@ -51,7 +48,7 @@ const AppContext = () => {
         <HeaderContext.Provider value={{cartComponent,setCartComponent,userComponent,setUserComponent,toggleCartComponent,toggleUserComponent,toggleUSerCart}}>
           <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
             onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef,productList,toggleFilters,filteredProducts }}>
-          <ShoppgingCartContext.Provider value={{formReference, purchase , getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase}}>    
+          <ShoppgingCartContext.Provider value={{formReference, purchase, getPurchase, deletePurchase, modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase}}>    
           <Modal/>  
           <BrowserRouter>
           <SidebarFilter/>

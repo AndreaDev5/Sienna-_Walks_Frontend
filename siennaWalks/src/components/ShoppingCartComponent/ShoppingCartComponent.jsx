@@ -28,6 +28,7 @@ function ShoppingCartComponent() {
                       color={product.color}
                       unities={product.unities}
                       totals={product.purchase}
+                      size={product.size}
                       id={product.id}
                       key={product.id}
                   />

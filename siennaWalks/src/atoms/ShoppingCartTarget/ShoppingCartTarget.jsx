@@ -4,11 +4,12 @@ import './ShoppingCartTarget.css';
 import discardPurchase from '../../assets/logos/x-bold.svg';
 import minusProduct from '../../assets/logos/product-minus-gray.svg';
 import plusProduct from '../../assets/logos/product-plus-gray.svg';
+import { useEffect } from "react";
 
-const ShoppingCartTarget = ({name,urlImage,color,unities,totals,id}) => {
+const ShoppingCartTarget = ({name,urlImage,color,unities,totals,size,id}) => {
 const { deletePurchase } = useContext(ShoppgingCartContext);
-const [quantityProducts,setQuantityProducts] = useState(Number(unities));
-const [cartSize,setCartSize] = useState(0);
+const [quantityProducts,setQuantityProducts] = useState(Number(unities)); 
+let [ cartInputMarker,setCartInputMarker ] = useState(0);
 
 const addNewProducts = (e) =>{
   e.preventDefault()
@@ -19,32 +20,58 @@ const substractNewPorducts = (e) =>{
   e.preventDefault()
   if(quantityProducts>=1 && quantityProducts<=4) setQuantityProducts(quantityProducts=>quantityProducts-1);
 }
-//cambiar a gris el botón que esté seleccionado
-const sizeCollectionRef = useRef(null);
-  //1. Seleccionar a todos los inputs 
-  const { current } = sizeCollectionRef;
+
+const sizeCollectionRef = useRef(null); 
 
  const handleChangeSize = (num) =>{ 
-    setCartSize(num)
-  const selectInputSize = () =>{
-    if(current){
-      let  inputNodes = current.querySelectorAll('label'); 
-      let inputList = [...inputNodes];
+    setCartInputMarker(num)
+    const { current } = sizeCollectionRef;
 
-      return inputList
-    }
-  }
-  
-  const selectedInputSizes = selectInputSize();
-  
-  const selectedInput = selectedInputSizes[num];
-  selectedInput.classList.replace('shopping-cart-size-button','shopping-cart-size-button-change')
-
-  const filteredInput = selectedInputSizes.filter((item)=>item!==selectedInputSizes[num]);
-  filteredInput.forEach((input)=>input.classList.replace('shopping-cart-size-button-change','shopping-cart-size-button'))
+    const listNewSizeNumber = current.childNodes;
+    
+    
+    switch (cartInputMarker) {
+      case 0:
+        listNewSizeNumber[0].classList.replace('shopping-cart-size-button','shopping-cart-size-button-change');
+        listNewSizeNumber[1].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[2].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[3].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[4].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+      break;
+      case 1:
+        listNewSizeNumber[0].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[1].classList.replace('shopping-cart-size-button','shopping-cart-size-button-change');
+        listNewSizeNumber[2].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[3].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[4].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+      break;
+      case 2:
+        listNewSizeNumber[0].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[1].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[2].classList.replace('shopping-cart-size-button','shopping-cart-size-button-change');
+        listNewSizeNumber[3].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[4].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+      break;
+      case 3:
+        listNewSizeNumber[0].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[1].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[2].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[3].classList.replace('shopping-cart-size-button','shopping-cart-size-button-change');
+        listNewSizeNumber[4].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+      break;
+      case 4:
+        listNewSizeNumber[0].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[1].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[2].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[3].classList.replace('shopping-cart-size-button-change','shopping-cart-size-button');
+        listNewSizeNumber[4].classList.replace('shopping-cart-size-button','shopping-cart-size-button-change');
+      break;
+    } 
 } 
 
-
+useEffect(()=>{
+  handleChangeSize();
+},[])
 
   return (
     <form className="shopping-cart-target">
