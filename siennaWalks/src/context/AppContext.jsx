@@ -41,7 +41,7 @@ const AppContext = () => {
   /*variables para el carrito de compras 🛒*/
   const { modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase} =  useGetPurchase();
 
-  const { product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue,productInfo,getOneProduct } = useGetTotalPurchase();
+  const { product,substractProduct,addProduct,onAddFirstPurchase,onDeleteFirstPurchase,getSizeValue,productInfo,getOneProduct,addProductShoppingCart } = useGetTotalPurchase();
 
   return (
     <StoreContext.Provider value={{button,buttonBurguerRef,sidebarBurguerRef,onChangeDarkBurguer,onChangeLightBurguer,
@@ -51,7 +51,7 @@ const AppContext = () => {
           <SidebarAllProductsContext.Provider value={{sidebarFilter, onChangeSidebarFilter, filterCollectionRef, onChangeFilterCollection, arrowRef, filterSizesRef,
             onChangeFilterSizes,arrowSizesRef,filterColorRef, onChangeColorSizes, arrowColorRef,productList,toggleFilters,filteredProducts }}>
           <ShoppgingCartContext.Provider value={{  modal, setModal, onChangeModal, shoppingCartComponent, onChangeCartComponent, totalPurchase ,shoppingPurchase, onChangeShoppingPurchase,
-            product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue,productInfo,getOneProduct}}>    
+            product,substractProduct,addProduct,onAddFirstPurchase,onDeleteFirstPurchase,getSizeValue,productInfo,getOneProduct,addProductShoppingCart}}>    
           <Modal/>  
           <BrowserRouter>
           <SidebarFilter/>

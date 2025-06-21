@@ -5,12 +5,12 @@ import { ShoppgingCartContext } from '../../context/StoreContext';
 
 
 export default function ShoppingCart({shoppingCartContainer,shoppingCartMarker,shoppingCartEvent}) {
-  const { purchase } = useContext(ShoppgingCartContext);
-
+  const { product } = useContext(ShoppgingCartContext);
+  const totalPurchase = product.purchase;
   
   return (
     <figure className={shoppingCartContainer} onClick={shoppingCartEvent}>  
-        <p className={shoppingCartMarker}>{0}</p>
+        <p className={shoppingCartMarker}>{totalPurchase.length}</p>
         <img src={shoppingCarIcon}/>
     </figure>
   )

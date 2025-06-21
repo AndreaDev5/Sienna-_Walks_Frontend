@@ -10,11 +10,23 @@ import whatsAppIcon from '../../assets/logos/black-icon-whatsapp.svg';
 const SidebarCartComponent = ({sidebarCartComponent,sidebarCartTittle,sidebarCartBigIcon}) => {
 const { onChangeDarkBurguer,onChangeLightBurguer} = useContext(StoreContext);
 const { toggleCartComponent } = useContext(HeaderContext);
-const {  onChangeModal } = useContext(ShoppgingCartContext);
+const {  onChangeModal,product } = useContext(ShoppgingCartContext);
 
-const purchase = 1;
-/*funciones para ver el carrito de compras*/
-const shoppingCartModal = (e) =>{
+const productList = product.purchase;
+const totalPurchase = productList.length;
+
+   /*agrega en un array el total de la compra*/
+  let totals = productList.map((item)=>{
+        return item.total
+    })
+
+  let initTotal = 0;
+  /*usar el método reduce para sumar los totalse*/
+  let totalPrices = totals.reduce((accumulator,currentValue)=> accumulator + currentValue,initTotal);   
+
+
+  /*funciones para ver el carrito de compras*/
+  const shoppingCartModal = (e) =>{
   //añaidr el evento de mover el modal
   e.preventDefault();
 
@@ -30,7 +42,7 @@ const shoppingCartModal = (e) =>{
   }
 }
 
-  if(purchase ===1){
+  if(totalPurchase <1){
     return (
       <section className={sidebarCartComponent}>
         <h1 className={sidebarCartTittle}>Tu carrito de compras está vacío</h1>
@@ -39,29 +51,29 @@ const shoppingCartModal = (e) =>{
       </section>
     )
   }
-{/*
-  if(purchase.length >=1){
+
+  if(totalPurchase >=1){
     return(
-      <section className={sidebarCartComponent}>
+     <section className={sidebarCartComponent}>
         <div className='sidebar-cart-targets-container'>
-         {purchase.map((product)=>{
+      {productList.map((product)=>{
           return <SidebarCartTarget
               name={product.name}
-              image={product.image}
+              image={product.urlImage}
               size={product.size}
               unities={product.unities}
               purchase={product.purchase}
+              total={product.total}
               id={product.id}
-              key={product.id}
           />
         })}  
         </div>
         <article className='sidebar-totals'>
           <p>Total:</p>
-          <p className='sidebar-totals-price'>$ {totalPurchase}</p>
+          <p className='sidebar-totals-price'>$ {totalPrices}</p>
         </article>
-        <article className='sidebar-purchase-buttons' onClick={shoppingCartModal}>
-          <button className='sidebar-watch-cart' >
+        <article className='sidebar-purchase-buttons'>
+          <button className='sidebar-watch-cart' onClick={shoppingCartModal}>
             <p>Ver carrito</p>
             <img src={shoppingCart}/>
           </button>
@@ -71,9 +83,8 @@ const shoppingCartModal = (e) =>{
           </button>
         </article>
       </section>
-      
     )
-  }*/}
+  }
 }
 
 export default SidebarCartComponent

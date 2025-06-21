@@ -6,8 +6,10 @@ import closeModal from '../../assets/logos/x-bold.svg';
 import blackIconWhatsApp from '../../assets/logos/black-icon-whatsapp.svg';
 
 function ShoppingCartComponent() {
-  const { purchase, onChangeModal,totalPurchase,shoppingCartComponent,onChangeShoppingPurchase,onChangeCartComponent } = useContext(ShoppgingCartContext);
-
+  const { product, onChangeModal,totalPurchase,shoppingCartComponent,onChangeShoppingPurchase,onChangeCartComponent } = useContext(ShoppgingCartContext);
+  
+  const shoppingPurchase = product.purchase;
+  
   /*funcion para cerrar el carrito de compras e ir a la factura 🛒➡💰*/
   const onBackShoppingCart = () =>{
     onChangeCartComponent()
@@ -21,7 +23,7 @@ function ShoppingCartComponent() {
           <img className="shopping-close-modal" src={closeModal} onClick={onChangeModal}/>  
         </header>
         <div className="shopping-cart-items">
-       {/*    {purchase.map((product)=>{
+       {shoppingPurchase.map((product)=>{
             return <ShoppingCartTarget
                       name={product.name}
                       urlImage={product.image}
@@ -32,7 +34,7 @@ function ShoppingCartComponent() {
                       id={product.id}
                       key={product.id}
                   />
-          })} */}
+          })}
         </div>
         <div className="shopping-cart-options-purchase">
           <article className="shopping-cart-total-purchase">

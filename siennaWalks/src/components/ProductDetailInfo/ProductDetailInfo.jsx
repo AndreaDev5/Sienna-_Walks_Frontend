@@ -7,9 +7,8 @@ import { Link } from 'react-router-dom';
 import { useState,useEffect,useRef,useContext } from 'react';
 import  { ShoppgingCartContext } from '../../context/StoreContext.jsx'
 
-const ProductDetailInfo = ({name,urlImage,price,category,color,id}) =>{            
-    const { product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue } = useContext(ShoppgingCartContext);
-   
+const ProductDetailInfo = ({name,urlImage,price,category,color,id}) =>{                
+    const { product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue,onChangeModal } = useContext(ShoppgingCartContext);
     
     /*funciones para cambiar la talla 👢🤍🖤*/
     const sizesRef = useRef(null);

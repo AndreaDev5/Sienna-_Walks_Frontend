@@ -1,9 +1,10 @@
 import { FirstPurchaseReducer } from "../reducers/FirstPurchaseReducer";
 import { useReducer,useState, useEffect } from 'react';
 
-const useGetTotalPurchase = (idProduct) =>{
-     const [productInfo, setProductInfo] = useState([])      
-    
+const useGetTotalPurchase = () =>{
+    const [productInfo, setProductInfo] = useState([])      
+       
+
     const getOneProduct = async (idProduct) =>{
      /*obtner la url del servidor a partir del id de la url del producto*/
      const urlProduct = `http://localhost:3000/api/products/${idProduct}`;
@@ -15,15 +16,14 @@ const useGetTotalPurchase = (idProduct) =>{
      setProductInfo(data)
    }
 
-
     /*funcion para cargar la información de un solo producto*/     
       const [product,dispatch] = useReducer(FirstPurchaseReducer,{
         name: productInfo.name,
-        urlImage: productInfo.urlImage, 
+        urlImage: productInfo.image, 
         price: productInfo.price,
         category: productInfo.category,
         color: productInfo.color,
-        id: productInfo.id,
+        id: 0,
         unities: 1,
         size: 35,
         total: 0,
@@ -52,15 +52,14 @@ const useGetTotalPurchase = (idProduct) =>{
         }
              
         const getInitialPurchase = () =>{
-    
             dispatch({
                 type:'get-purchase',
                 NextName: productInfo.name,
-                NextUrlImage: productInfo.urlImage,
+                NextUrlImage: productInfo.image,
                 NextPrice: productInfo.price,
                 NextCategory: productInfo.category,
                 NextColor: productInfo.color,
-                NextId: productInfo.id,
+                NextId: new Date().getTime(),
                 NextTotal: product.price * product.unities
             });        
         }   
@@ -71,9 +70,16 @@ const useGetTotalPurchase = (idProduct) =>{
             dispatch({
                 type:'add-purchase'
             })
-            console.log(product)
+            console.log(product.purchase)
         }
-    
+        
+        const onDeleteFirstPurchase = (newId) =>{
+           dispatch({
+                type:'delete-purchase',
+                id: newId
+           })     
+        }
+
         const getSizeValue = (e) =>{
             let inputValue = Number(e.target.value);
             dispatch({
@@ -82,8 +88,19 @@ const useGetTotalPurchase = (idProduct) =>{
             })
         }
 
+        /*funciones de useReducer orientadas a modifcar unidades en el carrito de compras🤍🖤🚀*/
+        const addProductShoppingCart = (newId) =>{
+            const filteredProduct = product.purchase.find((item)=>item.id ===newId);
+            let filteredProductsUnities = filteredProduct.unities + 1;
+            //console.log(filteredProductsUnities)
+            dispatch({
+                    type:'add-products-shopping',
+                    id: newId
+                })
+        }
 
-    return { product,substractProduct,addProduct,onAddFirstPurchase,getSizeValue,productInfo,getOneProduct }
+    return { product,substractProduct,addProduct,onAddFirstPurchase,onDeleteFirstPurchase,
+        getSizeValue,productInfo,getOneProduct,addProductShoppingCart }
 }
 
 export { useGetTotalPurchase }

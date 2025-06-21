@@ -6,14 +6,21 @@ import minusProduct from '../../assets/logos/product-minus-gray.svg';
 import plusProduct from '../../assets/logos/product-plus-gray.svg';
 import { useEffect } from "react";
 
-const ShoppingCartTarget = ({name,urlImage,color,unities,totals,size,id}) => {
-const { deletePurchase } = useContext(ShoppgingCartContext);
+const ShoppingCartTarget = ({name,urlImage,color,unities,totals,id}) => {
+const { product,onDeleteFirstPurchase,substractProduct,addProductShoppingCart } = useContext(ShoppgingCartContext);
+
+//console.log(product.purchase.unities)
 const [quantityProducts,setQuantityProducts] = useState(Number(unities)); 
 let [ cartInputMarker,setCartInputMarker ] = useState(0);
 
-const addNewProducts = (e) =>{
-  e.preventDefault()
-  if(quantityProducts>=0 && quantityProducts<=3) setQuantityProducts(quantityProducts=>quantityProducts+1);
+//const filteredProduct = product.purchase.find((item)=>item.id ===idProduct);
+//console.log(filteredProduct)
+
+const addNewProducts = (e)=>{
+  e.preventDefault();
+  const idProduct = id;
+  console.log(idProduct)
+  addProductShoppingCart(idProduct)
 }
 
 const substractNewPorducts = (e) =>{
@@ -77,7 +84,7 @@ useEffect(()=>{
     <form className="shopping-cart-target">
             <img src={urlImage} className="shopping-cart-image"/>
             <h2 className="shopping-cart-name">{name}</h2>
-            <img src={discardPurchase}  className="shopping-cart-discard-purchase" onClick={()=>{deletePurchase(id)}}/>
+            <img src={discardPurchase}  className="shopping-cart-discard-purchase" onClick={()=>{onDeleteFirstPurchase(id)}}/>
             <section className='shopping-cart-size-selector'>
                 <article className='shopping-cart-size-numbers' ref={sizeCollectionRef}>
                     <label className='shopping-cart-size-button' onClick={()=>{handleChangeSize(0)}}>
@@ -105,8 +112,8 @@ useEffect(()=>{
             </section>
             <section className='shopping-cart-info-selector'>
               <article className='shopping-cart-info-counter'>
-                <button className='shopping-cart-info-minus' onClick={substractNewPorducts}><img src={minusProduct}/></button>
-                <input className='shopping-cart-info-number' type='number' name="unities" value={quantityProducts} min="1" max="20"/>
+                <button className='shopping-cart-info-minus' onClick={substractProduct}><img src={minusProduct}/></button>
+                <input className='shopping-cart-info-number' type='number' name="unities" value={product.unities} min="1" max="20"/>
                 <button className='shopping-cart-info-plus' onClick={addNewProducts}><img src={plusProduct} /></button>
               </article>
               <p className='shopping-cart-info-unities'>Unidades</p>

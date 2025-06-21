@@ -10,13 +10,12 @@ import { ShoppgingCartContext } from '../../context/StoreContext';
 const ProductDetail = () => {
    /*funcion para cargar la información de un solo producto*/
    let { id } = useParams();
-   //const [productInfo, setProductInfo] = useState([])
-   const { productInfo,getOneProduct } =useContext(ShoppgingCartContext)
    
+  const { productInfo,getOneProduct } =useContext(ShoppgingCartContext)
   useEffect(()=>{
     getOneProduct(id);
   },[id])
-
+  
   return (
     <>
      <section className='product-description-container'>

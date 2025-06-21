@@ -27,7 +27,6 @@ export function FirstPurchaseReducer(state,action){
             id: action.NextId,
             total: state.price * state.unities,
         }
-        
         case 'add-purchase':
             return{
                 ...state,
@@ -38,10 +37,25 @@ export function FirstPurchaseReducer(state,action){
                 category: state.category,
                 color: state.color,
                 id: state.id,
-                unities: state.unities,
+                unities: action.unities,
                 size: state.size,
                 total: state.price * state.unities,
             }]
+        }
+        case 'delete-purchase':
+          return{
+                ...state,
+                purchase: state.purchase.filter(t=>t.id!==action.id),
             }
+
+        case 'add-products-shopping':
+            const myObject = state.purchase;
+            //let myUnities = myObject.unities + 1;
+            
+            return {
+                ...state,
+                purchase: state.purchase
+            }
+
     }
 }
